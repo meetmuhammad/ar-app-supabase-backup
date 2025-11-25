@@ -60,13 +60,23 @@ jobs:
           echo "Skipping roles backup - Supabase manages roles automatically"
           echo "Roles are preserved in the schema backup"
 
+      - name: Install PostgreSQL client
+        if: env.BACKUP_ENABLED == 'true'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y postgresql-client
+
       - name: Backup schema
         if: env.BACKUP_ENABLED == 'true'
-        run: supabase db dump --db-url "$SUPABASE_DB_URL" -f prisma/backups/schema.sql
+        run: |
+          pg_dump "$SUPABASE_DB_URL" --schema-only --no-owner --no-privileges > prisma/backups/schema.sql
+          echo "Schema backup completed: $(wc -l < prisma/backups/schema.sql) lines"
 
       - name: Backup data
         if: env.BACKUP_ENABLED == 'true'
-        run: supabase db dump --db-url "$SUPABASE_DB_URL" -f prisma/backups/data.sql --data-only --use-copy
+        run: |
+          pg_dump "$SUPABASE_DB_URL" --data-only --no-owner --no-privileges > prisma/backups/data.sql
+          echo "Data backup completed: $(wc -l < prisma/backups/data.sql) lines"
 
       - name: Commit backups
         if: env.BACKUP_ENABLED == 'true'
