@@ -38,6 +38,18 @@ jobs:
         with:
           version: latest
 
+      - name: Debug - Check SUPABASE_DB_URL
+        if: env.BACKUP_ENABLED == 'true'
+        run: |
+          if [ -z "$SUPABASE_DB_URL" ]; then
+            echo "ERROR: SUPABASE_DB_URL is empty or not set"
+            exit 1
+          else
+            echo "SUPABASE_DB_URL is set"
+            # Show only the protocol and host (masked for security)
+            echo "URL format check: ${SUPABASE_DB_URL:0:15}...${SUPABASE_DB_URL: -10}"
+          fi
+
       - name: Create timestamp folder
         if: env.BACKUP_ENABLED == 'true'
         run: mkdir -p prisma/backups
