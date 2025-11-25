@@ -38,45 +38,21 @@ jobs:
         with:
           version: latest
 
-      - name: Debug - Check SUPABASE_DB_URL
-        if: env.BACKUP_ENABLED == 'true'
-        run: |
-          if [ -z "$SUPABASE_DB_URL" ]; then
-            echo "ERROR: SUPABASE_DB_URL is empty or not set"
-            exit 1
-          else
-            echo "SUPABASE_DB_URL is set"
-            # Show only the protocol and host (masked for security)
-            echo "URL format check: ${SUPABASE_DB_URL:0:15}...${SUPABASE_DB_URL: -10}"
-          fi
-
       - name: Create timestamp folder
         if: env.BACKUP_ENABLED == 'true'
         run: mkdir -p prisma/backups
 
       - name: Backup roles
         if: env.BACKUP_ENABLED == 'true'
-        run: |
-          echo "Skipping roles backup - Supabase manages roles automatically"
-          echo "Roles are preserved in the schema backup"
-
-      - name: Install PostgreSQL client
-        if: env.BACKUP_ENABLED == 'true'
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y postgresql-client
+        run: supabase db dump --db-url "$SUPABASE_DB_URL" -f prisma/backups/roles.sql --role-only
 
       - name: Backup schema
         if: env.BACKUP_ENABLED == 'true'
-        run: |
-          pg_dump "$SUPABASE_DB_URL" --schema-only --no-owner --no-privileges > prisma/backups/schema.sql
-          echo "Schema backup completed: $(wc -l < prisma/backups/schema.sql) lines"
+        run: supabase db dump --db-url "$SUPABASE_DB_URL" -f prisma/backups/schema.sql
 
       - name: Backup data
         if: env.BACKUP_ENABLED == 'true'
-        run: |
-          pg_dump "$SUPABASE_DB_URL" --data-only --no-owner --no-privileges > prisma/backups/data.sql
-          echo "Data backup completed: $(wc -l < prisma/backups/data.sql) lines"
+        run: supabase db dump --db-url "$SUPABASE_DB_URL" -f prisma/backups/data.sql --data-only --use-copy
 
       - name: Commit backups
         if: env.BACKUP_ENABLED == 'true'
