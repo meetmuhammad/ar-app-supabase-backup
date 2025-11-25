@@ -56,7 +56,9 @@ jobs:
 
       - name: Backup roles
         if: env.BACKUP_ENABLED == 'true'
-        run: supabase db dump --db-url "$SUPABASE_DB_URL" -f prisma/backups/roles.sql --role-only
+        run: |
+          echo "Skipping roles backup - Supabase manages roles automatically"
+          echo "Roles are preserved in the schema backup"
 
       - name: Backup schema
         if: env.BACKUP_ENABLED == 'true'
