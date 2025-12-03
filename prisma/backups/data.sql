@@ -4,7 +4,7 @@ SET session_replication_role = replica;
 -- PostgreSQL database dump
 --
 
--- \restrict M4gyBiDv7qUHYH9prCdxfAC67qtKChafZh4lEOD5wUguTDlx63zJLBP4Cc8844z
+-- \restrict wWg89GKyRlmSQMFv7hyvomgf1LdVRenmOVaaIzrRo1iT4gbAlfl7yq7YHfHYQjQ
 
 -- Dumped from database version 17.4
 -- Dumped by pg_dump version 17.6
@@ -602,6 +602,47 @@ COPY "auth"."audit_log_entries" ("instance_id", "id", "payload", "created_at", "
 00000000-0000-0000-0000-000000000000	1fba500e-e61d-4527-ac1d-bb98d7e397f5	{"action":"token_revoked","actor_id":"755c0f15-990a-4e0d-9a1d-03d5de1be7ed","actor_username":"ahsantariq.ar@gmail.com","actor_via_sso":false,"log_type":"token"}	2025-12-01 15:37:56.805391+00	
 00000000-0000-0000-0000-000000000000	7bc1c674-4f13-4e49-8257-3e6aef5ff51e	{"action":"token_refreshed","actor_id":"755c0f15-990a-4e0d-9a1d-03d5de1be7ed","actor_username":"ahsantariq.ar@gmail.com","actor_via_sso":false,"log_type":"token"}	2025-12-01 16:40:24.745967+00	
 00000000-0000-0000-0000-000000000000	df439295-3e54-4b54-bf69-3006b49c1a6d	{"action":"token_revoked","actor_id":"755c0f15-990a-4e0d-9a1d-03d5de1be7ed","actor_username":"ahsantariq.ar@gmail.com","actor_via_sso":false,"log_type":"token"}	2025-12-01 16:40:24.764799+00	
+00000000-0000-0000-0000-000000000000	3c497074-5586-42c3-a2a4-107d4efb7813	{"action":"token_refreshed","actor_id":"755c0f15-990a-4e0d-9a1d-03d5de1be7ed","actor_username":"ahsantariq.ar@gmail.com","actor_via_sso":false,"log_type":"token"}	2025-12-02 09:11:22.231606+00	
+00000000-0000-0000-0000-000000000000	857f0ec4-fb85-4f64-bc9f-95ecf723ab1e	{"action":"token_revoked","actor_id":"755c0f15-990a-4e0d-9a1d-03d5de1be7ed","actor_username":"ahsantariq.ar@gmail.com","actor_via_sso":false,"log_type":"token"}	2025-12-02 09:11:22.245349+00	
+00000000-0000-0000-0000-000000000000	16544672-7736-475c-8131-ed91db8ccf07	{"action":"token_refreshed","actor_id":"755c0f15-990a-4e0d-9a1d-03d5de1be7ed","actor_username":"ahsantariq.ar@gmail.com","actor_via_sso":false,"log_type":"token"}	2025-12-02 10:25:39.477788+00	
+00000000-0000-0000-0000-000000000000	fef86ca2-7aa4-4d56-b74e-5a26aba2c951	{"action":"token_revoked","actor_id":"755c0f15-990a-4e0d-9a1d-03d5de1be7ed","actor_username":"ahsantariq.ar@gmail.com","actor_via_sso":false,"log_type":"token"}	2025-12-02 10:25:39.498089+00	
+00000000-0000-0000-0000-000000000000	5fa43ead-ba4f-4210-9636-ba4c52d6c07b	{"action":"token_refreshed","actor_id":"755c0f15-990a-4e0d-9a1d-03d5de1be7ed","actor_username":"ahsantariq.ar@gmail.com","actor_via_sso":false,"log_type":"token"}	2025-12-02 19:04:49.285022+00	
+00000000-0000-0000-0000-000000000000	4d3aae6f-0e2d-40e0-9bdf-650612bd9c00	{"action":"token_revoked","actor_id":"755c0f15-990a-4e0d-9a1d-03d5de1be7ed","actor_username":"ahsantariq.ar@gmail.com","actor_via_sso":false,"log_type":"token"}	2025-12-02 19:04:49.305711+00	
+00000000-0000-0000-0000-000000000000	d17f2056-0973-4d0d-a5d8-c4f44234dc4c	{"action":"login","actor_id":"755c0f15-990a-4e0d-9a1d-03d5de1be7ed","actor_username":"ahsantariq.ar@gmail.com","actor_via_sso":false,"log_type":"account","traits":{"provider":"email"}}	2025-12-02 19:05:08.053162+00	
+00000000-0000-0000-0000-000000000000	57589dfa-b5f8-4463-945d-d937b9b18e12	{"action":"login","actor_id":"755c0f15-990a-4e0d-9a1d-03d5de1be7ed","actor_username":"ahsantariq.ar@gmail.com","actor_via_sso":false,"log_type":"account","traits":{"provider":"email"}}	2025-12-02 19:06:28.218329+00	
+00000000-0000-0000-0000-000000000000	7f47ca64-fd77-4e51-848c-43aff1074077	{"action":"logout","actor_id":"755c0f15-990a-4e0d-9a1d-03d5de1be7ed","actor_username":"ahsantariq.ar@gmail.com","actor_via_sso":false,"log_type":"account"}	2025-12-02 19:07:36.703617+00	
+00000000-0000-0000-0000-000000000000	11defdd7-eefe-47bb-9e16-1d2515a4e679	{"action":"login","actor_id":"755c0f15-990a-4e0d-9a1d-03d5de1be7ed","actor_username":"ahsantariq.ar@gmail.com","actor_via_sso":false,"log_type":"account","traits":{"provider":"email"}}	2025-12-02 19:10:18.473798+00	
+00000000-0000-0000-0000-000000000000	5ec2a4d0-91d0-4fdf-888a-3f3549c62f3a	{"action":"login","actor_id":"755c0f15-990a-4e0d-9a1d-03d5de1be7ed","actor_username":"ahsantariq.ar@gmail.com","actor_via_sso":false,"log_type":"account","traits":{"provider":"email"}}	2025-12-02 19:16:50.761532+00	
+00000000-0000-0000-0000-000000000000	d07f80ea-bbc0-443a-88ff-c8961870cbb6	{"action":"login","actor_id":"755c0f15-990a-4e0d-9a1d-03d5de1be7ed","actor_username":"ahsantariq.ar@gmail.com","actor_via_sso":false,"log_type":"account","traits":{"provider":"email"}}	2025-12-02 19:23:02.842314+00	
+00000000-0000-0000-0000-000000000000	bda673c4-19cd-4526-b222-a7e764ebcb28	{"action":"logout","actor_id":"755c0f15-990a-4e0d-9a1d-03d5de1be7ed","actor_username":"ahsantariq.ar@gmail.com","actor_via_sso":false,"log_type":"account"}	2025-12-02 19:36:48.403224+00	
+00000000-0000-0000-0000-000000000000	f0bc07d2-1baf-4031-8333-1242a33a2672	{"action":"login","actor_id":"755c0f15-990a-4e0d-9a1d-03d5de1be7ed","actor_username":"ahsantariq.ar@gmail.com","actor_via_sso":false,"log_type":"account","traits":{"provider":"email"}}	2025-12-02 19:36:59.142894+00	
+00000000-0000-0000-0000-000000000000	86690d49-2a87-477c-abb2-602c1edb683c	{"action":"logout","actor_id":"755c0f15-990a-4e0d-9a1d-03d5de1be7ed","actor_username":"ahsantariq.ar@gmail.com","actor_via_sso":false,"log_type":"account"}	2025-12-02 19:37:04.77531+00	
+00000000-0000-0000-0000-000000000000	1fa2694d-3651-47b4-87ee-f05e08787037	{"action":"login","actor_id":"755c0f15-990a-4e0d-9a1d-03d5de1be7ed","actor_username":"ahsantariq.ar@gmail.com","actor_via_sso":false,"log_type":"account","traits":{"provider":"email"}}	2025-12-02 19:40:29.566924+00	
+00000000-0000-0000-0000-000000000000	2b60ad8f-29f5-47da-b863-8a7d16c8dc95	{"action":"logout","actor_id":"755c0f15-990a-4e0d-9a1d-03d5de1be7ed","actor_username":"ahsantariq.ar@gmail.com","actor_via_sso":false,"log_type":"account"}	2025-12-02 19:42:39.64276+00	
+00000000-0000-0000-0000-000000000000	8fd19742-d705-4a5e-8239-73359caab354	{"action":"login","actor_id":"755c0f15-990a-4e0d-9a1d-03d5de1be7ed","actor_username":"ahsantariq.ar@gmail.com","actor_via_sso":false,"log_type":"account","traits":{"provider":"email"}}	2025-12-02 19:42:49.906418+00	
+00000000-0000-0000-0000-000000000000	b68356dd-98de-4992-aa2e-4fe8a7bbc6d7	{"action":"logout","actor_id":"755c0f15-990a-4e0d-9a1d-03d5de1be7ed","actor_username":"ahsantariq.ar@gmail.com","actor_via_sso":false,"log_type":"account"}	2025-12-02 19:42:53.667611+00	
+00000000-0000-0000-0000-000000000000	773a6d59-9d59-404b-becb-3375bfd29209	{"action":"user_signedup","actor_id":"00000000-0000-0000-0000-000000000000","actor_username":"service_role","actor_via_sso":false,"log_type":"team","traits":{"provider":"email","user_email":"ahsantariq1991@gmail.com","user_id":"f2055315-e56b-4927-bf6d-af94107a5527","user_phone":""}}	2025-12-02 19:48:33.462392+00	
+00000000-0000-0000-0000-000000000000	7d8204fe-ee49-4a11-8afb-435cca0c8f69	{"action":"login","actor_id":"f2055315-e56b-4927-bf6d-af94107a5527","actor_username":"ahsantariq1991@gmail.com","actor_via_sso":false,"log_type":"account","traits":{"provider":"email"}}	2025-12-02 19:49:28.095851+00	
+00000000-0000-0000-0000-000000000000	86bd2584-c30c-4524-a664-6c20992ebae3	{"action":"logout","actor_id":"f2055315-e56b-4927-bf6d-af94107a5527","actor_username":"ahsantariq1991@gmail.com","actor_via_sso":false,"log_type":"account"}	2025-12-02 20:04:13.601182+00	
+00000000-0000-0000-0000-000000000000	57ebd711-8a4f-4479-b114-a50e8962611d	{"action":"login","actor_id":"f2055315-e56b-4927-bf6d-af94107a5527","actor_username":"ahsantariq1991@gmail.com","actor_via_sso":false,"log_type":"account","traits":{"provider":"email"}}	2025-12-02 20:16:14.475076+00	
+00000000-0000-0000-0000-000000000000	5cb114eb-ee62-4b76-83d9-16f42957cc09	{"action":"login","actor_id":"f2055315-e56b-4927-bf6d-af94107a5527","actor_username":"ahsantariq1991@gmail.com","actor_via_sso":false,"log_type":"account","traits":{"provider":"email"}}	2025-12-02 20:17:35.992996+00	
+00000000-0000-0000-0000-000000000000	2f4ced13-c4c7-4aaf-9c42-7ce24f7ea196	{"action":"token_refreshed","actor_id":"f2055315-e56b-4927-bf6d-af94107a5527","actor_username":"ahsantariq1991@gmail.com","actor_via_sso":false,"log_type":"token"}	2025-12-02 22:45:40.849229+00	
+00000000-0000-0000-0000-000000000000	84b477ed-3cbc-488d-bd07-d62c1895a227	{"action":"token_revoked","actor_id":"f2055315-e56b-4927-bf6d-af94107a5527","actor_username":"ahsantariq1991@gmail.com","actor_via_sso":false,"log_type":"token"}	2025-12-02 22:45:40.868827+00	
+00000000-0000-0000-0000-000000000000	e6a118ca-8198-4514-b57d-60db1b3b6253	{"action":"login","actor_id":"755c0f15-990a-4e0d-9a1d-03d5de1be7ed","actor_username":"ahsantariq.ar@gmail.com","actor_via_sso":false,"log_type":"account","traits":{"provider":"email"}}	2025-12-03 10:35:25.585344+00	
+00000000-0000-0000-0000-000000000000	9947b3b5-1530-4331-80fd-0d20a7d38b1b	{"action":"token_refreshed","actor_id":"f2055315-e56b-4927-bf6d-af94107a5527","actor_username":"ahsantariq1991@gmail.com","actor_via_sso":false,"log_type":"token"}	2025-12-03 12:48:06.726701+00	
+00000000-0000-0000-0000-000000000000	0b057b18-df8b-4d4f-a1d5-d2fe5d4d37ed	{"action":"token_revoked","actor_id":"f2055315-e56b-4927-bf6d-af94107a5527","actor_username":"ahsantariq1991@gmail.com","actor_via_sso":false,"log_type":"token"}	2025-12-03 12:48:06.738981+00	
+00000000-0000-0000-0000-000000000000	cb7f6df3-0d95-4f87-a90d-044b01df7e60	{"action":"login","actor_id":"f2055315-e56b-4927-bf6d-af94107a5527","actor_username":"ahsantariq1991@gmail.com","actor_via_sso":false,"log_type":"account","traits":{"provider":"email"}}	2025-12-03 13:00:01.539528+00	
+00000000-0000-0000-0000-000000000000	6ba9e901-6923-4589-bf7c-d15d8602dbbe	{"action":"logout","actor_id":"f2055315-e56b-4927-bf6d-af94107a5527","actor_username":"ahsantariq1991@gmail.com","actor_via_sso":false,"log_type":"account"}	2025-12-03 13:44:56.194424+00	
+00000000-0000-0000-0000-000000000000	67a01728-4f6f-4b4a-932b-a6ff807a0e35	{"action":"login","actor_id":"f2055315-e56b-4927-bf6d-af94107a5527","actor_username":"ahsantariq1991@gmail.com","actor_via_sso":false,"log_type":"account","traits":{"provider":"email"}}	2025-12-03 13:45:20.129949+00	
+00000000-0000-0000-0000-000000000000	d4a805b2-5e5f-4ce0-b40d-eb4893793c99	{"action":"token_refreshed","actor_id":"f2055315-e56b-4927-bf6d-af94107a5527","actor_username":"ahsantariq1991@gmail.com","actor_via_sso":false,"log_type":"token"}	2025-12-03 14:56:43.59308+00	
+00000000-0000-0000-0000-000000000000	e587a013-4a8d-4b58-8e3b-50395ac2bac0	{"action":"token_revoked","actor_id":"f2055315-e56b-4927-bf6d-af94107a5527","actor_username":"ahsantariq1991@gmail.com","actor_via_sso":false,"log_type":"token"}	2025-12-03 14:56:43.619674+00	
+00000000-0000-0000-0000-000000000000	d5021ba0-c2f6-4753-b197-ebdd1e8e39e5	{"action":"login","actor_id":"f2055315-e56b-4927-bf6d-af94107a5527","actor_username":"ahsantariq1991@gmail.com","actor_via_sso":false,"log_type":"account","traits":{"provider":"email"}}	2025-12-03 15:01:23.845064+00	
+00000000-0000-0000-0000-000000000000	7db3dcab-ce13-4596-bb78-145aa904f542	{"action":"login","actor_id":"755c0f15-990a-4e0d-9a1d-03d5de1be7ed","actor_username":"ahsantariq.ar@gmail.com","actor_via_sso":false,"log_type":"account","traits":{"provider":"email"}}	2025-12-03 15:17:43.506027+00	
+00000000-0000-0000-0000-000000000000	c4fe0f9d-9887-4633-a5a6-73f6c53ae939	{"action":"token_refreshed","actor_id":"f2055315-e56b-4927-bf6d-af94107a5527","actor_username":"ahsantariq1991@gmail.com","actor_via_sso":false,"log_type":"token"}	2025-12-03 15:54:44.446654+00	
+00000000-0000-0000-0000-000000000000	37bbc372-87dc-40ec-880a-1c05d468fc0a	{"action":"token_revoked","actor_id":"f2055315-e56b-4927-bf6d-af94107a5527","actor_username":"ahsantariq1991@gmail.com","actor_via_sso":false,"log_type":"token"}	2025-12-03 15:54:44.470402+00	
+00000000-0000-0000-0000-000000000000	23c264e9-00d1-4612-a016-c111a7239eb2	{"action":"login","actor_id":"f2055315-e56b-4927-bf6d-af94107a5527","actor_username":"ahsantariq1991@gmail.com","actor_via_sso":false,"log_type":"account","traits":{"provider":"email"}}	2025-12-03 15:58:49.121275+00	
+00000000-0000-0000-0000-000000000000	040dac80-f962-4114-9b50-2ddf7d188939	{"action":"logout","actor_id":"f2055315-e56b-4927-bf6d-af94107a5527","actor_username":"ahsantariq1991@gmail.com","actor_via_sso":false,"log_type":"account"}	2025-12-03 16:30:03.870098+00	
+00000000-0000-0000-0000-000000000000	730e6e49-9794-4601-b228-616562ceddac	{"action":"login","actor_id":"f2055315-e56b-4927-bf6d-af94107a5527","actor_username":"ahsantariq1991@gmail.com","actor_via_sso":false,"log_type":"account","traits":{"provider":"email"}}	2025-12-03 16:32:31.00282+00	
 \.
 
 
@@ -618,7 +659,8 @@ COPY "auth"."flow_state" ("id", "user_id", "auth_code", "code_challenge_method",
 --
 
 COPY "auth"."users" ("instance_id", "id", "aud", "role", "email", "encrypted_password", "email_confirmed_at", "invited_at", "confirmation_token", "confirmation_sent_at", "recovery_token", "recovery_sent_at", "email_change_token_new", "email_change", "email_change_sent_at", "last_sign_in_at", "raw_app_meta_data", "raw_user_meta_data", "is_super_admin", "created_at", "updated_at", "phone", "phone_confirmed_at", "phone_change", "phone_change_token", "phone_change_sent_at", "email_change_token_current", "email_change_confirm_status", "banned_until", "reauthentication_token", "reauthentication_sent_at", "is_sso_user", "deleted_at", "is_anonymous") FROM stdin;
-00000000-0000-0000-0000-000000000000	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	authenticated	authenticated	ahsantariq.ar@gmail.com	$2a$10$3DpBPdcFmLkNWZci/zEWR.H.Ix5zP7oVx3xpELlREmYs/nZzCt8K6	2025-09-25 01:41:16.910245+00	\N		\N		\N			\N	2025-11-19 09:46:54.892263+00	{"provider": "email", "providers": ["email"]}	{"email_verified": true}	\N	2025-09-25 01:41:16.891607+00	2025-12-01 16:40:24.789651+00	\N	\N			\N		0	\N		\N	f	\N	f
+00000000-0000-0000-0000-000000000000	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	authenticated	authenticated	ahsantariq.ar@gmail.com	$2a$10$3DpBPdcFmLkNWZci/zEWR.H.Ix5zP7oVx3xpELlREmYs/nZzCt8K6	2025-09-25 01:41:16.910245+00	\N		\N		\N			\N	2025-12-03 15:17:43.513799+00	{"provider": "email", "providers": ["email"]}	{"email_verified": true}	\N	2025-09-25 01:41:16.891607+00	2025-12-03 15:17:43.535484+00	\N	\N			\N		0	\N		\N	f	\N	f
+00000000-0000-0000-0000-000000000000	f2055315-e56b-4927-bf6d-af94107a5527	authenticated	authenticated	ahsantariq1991@gmail.com	$2a$10$bhbi78dwWT3zhWCqXmTjTeWQaWoYGLeq2CrUcZFz3KjtLVuNUsyBK	2025-12-02 19:48:33.466079+00	\N		\N		\N			\N	2025-12-03 16:32:31.007776+00	{"provider": "email", "providers": ["email"]}	{"email_verified": true}	\N	2025-12-02 19:48:33.437278+00	2025-12-03 16:32:31.021026+00	\N	\N			\N		0	\N		\N	f	\N	f
 \.
 
 
@@ -628,6 +670,7 @@ COPY "auth"."users" ("instance_id", "id", "aud", "role", "email", "encrypted_pas
 
 COPY "auth"."identities" ("provider_id", "user_id", "identity_data", "provider", "last_sign_in_at", "created_at", "updated_at", "id") FROM stdin;
 755c0f15-990a-4e0d-9a1d-03d5de1be7ed	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	{"sub": "755c0f15-990a-4e0d-9a1d-03d5de1be7ed", "email": "ahsantariq.ar@gmail.com", "email_verified": false, "phone_verified": false}	email	2025-09-25 01:41:16.902915+00	2025-09-25 01:41:16.902965+00	2025-09-25 01:41:16.902965+00	501c84bd-f8a7-4d6c-a523-59fec4dfe401
+f2055315-e56b-4927-bf6d-af94107a5527	f2055315-e56b-4927-bf6d-af94107a5527	{"sub": "f2055315-e56b-4927-bf6d-af94107a5527", "email": "ahsantariq1991@gmail.com", "email_verified": false, "phone_verified": false}	email	2025-12-02 19:48:33.457246+00	2025-12-02 19:48:33.457326+00	2025-12-02 19:48:33.457326+00	881dd7bf-3d08-41b2-b886-12abc67688bc
 \.
 
 
@@ -652,26 +695,9 @@ COPY "auth"."oauth_clients" ("id", "client_secret_hash", "registration_type", "r
 --
 
 COPY "auth"."sessions" ("id", "user_id", "created_at", "updated_at", "factor_id", "aal", "not_after", "refreshed_at", "user_agent", "ip", "tag", "oauth_client_id", "refresh_token_hmac_key", "refresh_token_counter", "scopes") FROM stdin;
-41809255-1f07-4cb5-9b66-2fea3ec22354	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	2025-11-06 23:31:11.126674+00	2025-11-28 07:36:46.19738+00	\N	aal1	\N	2025-11-28 07:36:46.197255	Mozilla/5.0 (iPhone; CPU iPhone OS 18_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Mobile/15E148 Safari/604.1	154.81.235.125	\N	\N	\N	\N	\N
-abace976-71bb-43b7-8c1f-90555fd1537f	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	2025-11-06 23:26:58.07945+00	2025-11-06 23:26:58.07945+00	\N	aal1	\N	\N	Mozilla/5.0 (iPhone; CPU iPhone OS 18_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Mobile/15E148 Safari/604.1	39.63.210.79	\N	\N	\N	\N	\N
-9f468faa-65d8-4c54-8ecc-646234a63692	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	2025-11-07 10:15:25.039293+00	2025-11-08 00:42:19.191258+00	\N	aal1	\N	2025-11-08 00:42:19.191155	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	39.63.252.49	\N	\N	\N	\N	\N
-9a029257-5dea-4d1a-bff3-a20351bf6c02	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	2025-10-06 12:35:07.604839+00	2025-10-08 12:22:01.563343+00	\N	aal1	\N	2025-10-08 12:22:01.563238	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36	72.255.39.46	\N	\N	\N	\N	\N
-a7703d2c-ea30-47a7-a156-9e9d5d2f286c	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	2025-10-06 12:40:47.668442+00	2025-10-09 13:12:52.523251+00	\N	aal1	\N	2025-10-09 13:12:52.521395	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36	72.255.39.46	\N	\N	\N	\N	\N
-3886913b-c444-487f-888d-4dd8b009b031	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	2025-11-07 10:13:00.572724+00	2025-11-07 10:13:00.572724+00	\N	aal1	\N	\N	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	119.154.229.106	\N	\N	\N	\N	\N
-80f5e82e-e991-4c1c-a4ca-80103ca4b1f2	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	2025-10-18 23:24:15.244196+00	2025-10-18 23:24:15.244196+00	\N	aal1	\N	\N	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36	223.123.2.55	\N	\N	\N	\N	\N
-3bd3fe27-43bb-48b0-b69d-0bec7f4db67e	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	2025-10-18 23:47:35.079455+00	2025-10-18 23:47:35.079455+00	\N	aal1	\N	\N	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36	223.123.2.55	\N	\N	\N	\N	\N
-e22935f4-04fd-4ad1-be69-e0182f5e12b3	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	2025-10-06 12:28:05.072455+00	2025-10-06 12:28:05.072455+00	\N	aal1	\N	\N	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36	72.255.39.46	\N	\N	\N	\N	\N
-15afec8e-a869-4276-8e8e-bddfec6a1416	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	2025-10-06 12:28:50.420332+00	2025-10-06 12:28:50.420332+00	\N	aal1	\N	\N	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36	72.255.51.34	\N	\N	\N	\N	\N
-e39c8284-9744-4dea-9d0c-57a8c3b90b5e	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	2025-10-06 12:54:55.573203+00	2025-11-25 18:51:22.778152+00	\N	aal1	\N	2025-11-25 18:51:22.777396	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36	175.107.239.186	\N	\N	\N	\N	\N
-e6599d19-0a64-427a-aaf0-85d811d2da3f	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	2025-10-18 23:55:30.420211+00	2025-10-18 23:55:30.420211+00	\N	aal1	\N	\N	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36	223.123.2.55	\N	\N	\N	\N	\N
-35ba656d-4d1f-45e0-9c58-8fdea773e3ee	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	2025-11-10 12:07:09.932841+00	2025-11-30 10:56:26.342048+00	\N	aal1	\N	2025-11-30 10:56:26.3419	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	154.192.167.103	\N	\N	\N	\N	\N
-968edd83-f007-47b9-97ed-85aeb6cbfd02	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	2025-10-29 10:54:30.399045+00	2025-11-26 14:18:06.856207+00	\N	aal1	\N	2025-11-26 14:18:06.856033	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	39.56.55.58	\N	\N	\N	\N	\N
-01ec7178-09fc-486b-a96a-75a3f2a8c51e	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	2025-11-19 09:46:54.894335+00	2025-11-19 14:58:48.180505+00	\N	aal1	\N	2025-11-19 14:58:48.180278	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	39.63.239.211	\N	\N	\N	\N	\N
-7794ab33-c4f7-40d2-8ff5-863148ceecf2	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	2025-10-18 21:48:36.085574+00	2025-11-19 19:27:29.793211+00	\N	aal1	\N	2025-11-19 19:27:29.79305	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36	175.107.239.186	\N	\N	\N	\N	\N
-9828f57c-c3ba-45a5-8893-278a7f2af2cc	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	2025-11-04 09:52:11.197519+00	2025-11-08 14:44:48.626996+00	\N	aal1	\N	2025-11-08 14:44:48.626885	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	154.192.167.173	\N	\N	\N	\N	\N
-86af5c98-ead8-4df2-9b9c-7b34e06127b0	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	2025-10-18 22:23:42.70077+00	2025-12-01 16:40:24.7977+00	\N	aal1	\N	2025-12-01 16:40:24.797577	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	154.192.164.30	\N	\N	\N	\N	\N
-d2e58dcb-1bdd-4d65-97ad-ae4d9e2da191	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	2025-11-03 15:12:01.583699+00	2025-11-08 21:27:30.863105+00	\N	aal1	\N	2025-11-08 21:27:30.862974	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	154.192.167.173	\N	\N	\N	\N	\N
-7a257ef6-c32e-49e4-8575-e06e39100c9f	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	2025-10-27 15:10:20.101336+00	2025-11-16 20:18:46.617133+00	\N	aal1	\N	2025-11-16 20:18:46.616992	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	175.107.239.186	\N	\N	\N	\N	\N
+983b89b7-cc1e-4106-a772-76cbdeb2c479	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	2025-12-03 15:17:43.51507+00	2025-12-03 15:17:43.51507+00	\N	aal1	\N	\N	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	154.192.167.15	\N	\N	\N	\N	\N
+1c215a10-d25b-4f18-80ee-369db2619987	f2055315-e56b-4927-bf6d-af94107a5527	2025-12-03 16:32:31.007892+00	2025-12-03 16:32:31.007892+00	\N	aal1	\N	\N	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36	72.255.51.34	\N	\N	\N	\N	\N
+fc8bf150-aa1c-4847-8a83-2a041d09402f	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	2025-12-03 10:35:25.612968+00	2025-12-03 10:35:25.612968+00	\N	aal1	\N	\N	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	154.192.167.15	\N	\N	\N	\N	\N
 \.
 
 
@@ -680,26 +706,9 @@ d2e58dcb-1bdd-4d65-97ad-ae4d9e2da191	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	2025-1
 --
 
 COPY "auth"."mfa_amr_claims" ("session_id", "created_at", "updated_at", "authentication_method", "id") FROM stdin;
-e22935f4-04fd-4ad1-be69-e0182f5e12b3	2025-10-06 12:28:05.093824+00	2025-10-06 12:28:05.093824+00	password	1498b547-8e71-4f4e-8041-f4522412512f
-15afec8e-a869-4276-8e8e-bddfec6a1416	2025-10-06 12:28:50.424794+00	2025-10-06 12:28:50.424794+00	password	38473eeb-8642-4157-986d-91ee62beffd1
-9a029257-5dea-4d1a-bff3-a20351bf6c02	2025-10-06 12:35:07.630783+00	2025-10-06 12:35:07.630783+00	password	3b6b8698-18ab-45b5-8aaa-a5810056d8ef
-a7703d2c-ea30-47a7-a156-9e9d5d2f286c	2025-10-06 12:40:47.672352+00	2025-10-06 12:40:47.672352+00	password	c985fe82-ae1d-4230-8e94-9df054625d86
-e39c8284-9744-4dea-9d0c-57a8c3b90b5e	2025-10-06 12:54:55.627129+00	2025-10-06 12:54:55.627129+00	password	3062058b-d717-4f6a-8372-fb3be271b85b
-7794ab33-c4f7-40d2-8ff5-863148ceecf2	2025-10-18 21:48:36.129435+00	2025-10-18 21:48:36.129435+00	password	e0504b06-9bd3-480c-aff7-e6a85ab96bfd
-86af5c98-ead8-4df2-9b9c-7b34e06127b0	2025-10-18 22:23:42.758127+00	2025-10-18 22:23:42.758127+00	password	a63f52e8-f208-47b8-9e0e-7aa6c93af7a9
-80f5e82e-e991-4c1c-a4ca-80103ca4b1f2	2025-10-18 23:24:15.315106+00	2025-10-18 23:24:15.315106+00	password	d8d97140-eb6a-4a16-98cb-42edc474b83c
-3bd3fe27-43bb-48b0-b69d-0bec7f4db67e	2025-10-18 23:47:35.109844+00	2025-10-18 23:47:35.109844+00	password	dd1a137f-3f7e-4ada-a54b-4e76df2926ba
-e6599d19-0a64-427a-aaf0-85d811d2da3f	2025-10-18 23:55:30.425906+00	2025-10-18 23:55:30.425906+00	password	85b31335-e668-497e-a5b1-a0e99db40322
-7a257ef6-c32e-49e4-8575-e06e39100c9f	2025-10-27 15:10:20.198005+00	2025-10-27 15:10:20.198005+00	password	0d62dc06-b56d-4124-876f-7c1e845e8a64
-968edd83-f007-47b9-97ed-85aeb6cbfd02	2025-10-29 10:54:30.434695+00	2025-10-29 10:54:30.434695+00	password	6bb15834-27c3-43ca-a046-626d98ea4984
-d2e58dcb-1bdd-4d65-97ad-ae4d9e2da191	2025-11-03 15:12:01.61457+00	2025-11-03 15:12:01.61457+00	password	ff7d17a6-851f-4bfc-917e-0423b87663da
-9828f57c-c3ba-45a5-8893-278a7f2af2cc	2025-11-04 09:52:11.298435+00	2025-11-04 09:52:11.298435+00	password	c741c5d5-cb50-42b3-9222-dd7bb4f6d68e
-abace976-71bb-43b7-8c1f-90555fd1537f	2025-11-06 23:26:58.125457+00	2025-11-06 23:26:58.125457+00	password	fbd82033-f3ad-4e74-b99c-d3bc0a6ba847
-41809255-1f07-4cb5-9b66-2fea3ec22354	2025-11-06 23:31:11.133345+00	2025-11-06 23:31:11.133345+00	password	ca3e2733-bd94-496e-93ad-cc2eaaabbb21
-3886913b-c444-487f-888d-4dd8b009b031	2025-11-07 10:13:00.662215+00	2025-11-07 10:13:00.662215+00	password	55a22486-01d0-4b0a-a574-796d708b41e8
-9f468faa-65d8-4c54-8ecc-646234a63692	2025-11-07 10:15:25.043842+00	2025-11-07 10:15:25.043842+00	password	763f3c45-ccac-416a-bb33-09cc5812e0fe
-35ba656d-4d1f-45e0-9c58-8fdea773e3ee	2025-11-10 12:07:09.950448+00	2025-11-10 12:07:09.950448+00	password	6655bb0c-93b6-4648-b2fd-9bea702e080f
-01ec7178-09fc-486b-a96a-75a3f2a8c51e	2025-11-19 09:46:55.008693+00	2025-11-19 09:46:55.008693+00	password	a70cbfe7-5fc1-43dd-9033-f9e76211ac99
+fc8bf150-aa1c-4847-8a83-2a041d09402f	2025-12-03 10:35:25.693402+00	2025-12-03 10:35:25.693402+00	password	b94cba08-b2e3-481c-beeb-766fec997604
+983b89b7-cc1e-4106-a772-76cbdeb2c479	2025-12-03 15:17:43.538669+00	2025-12-03 15:17:43.538669+00	password	e4b49739-e9fd-474d-99eb-1576c9642264
+1c215a10-d25b-4f18-80ee-369db2619987	2025-12-03 16:32:31.021853+00	2025-12-03 16:32:31.021853+00	password	f02a84ef-7925-429f-92c9-9200b90f3d87
 \.
 
 
@@ -748,239 +757,9 @@ COPY "auth"."one_time_tokens" ("id", "user_id", "token_type", "token_hash", "rel
 --
 
 COPY "auth"."refresh_tokens" ("instance_id", "id", "token", "user_id", "revoked", "created_at", "updated_at", "parent", "session_id") FROM stdin;
-00000000-0000-0000-0000-000000000000	83	goqqyaiqhyk2	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	f	2025-10-06 12:28:50.421611+00	2025-10-06 12:28:50.421611+00	\N	15afec8e-a869-4276-8e8e-bddfec6a1416
-00000000-0000-0000-0000-000000000000	114	d55jg5dgtgug	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-19 14:20:11.379915+00	2025-11-17 10:49:26.800644+00	5y6vcngnuhc2	e39c8284-9744-4dea-9d0c-57a8c3b90b5e
-00000000-0000-0000-0000-000000000000	154	a5mzc5gg5msi	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-03 15:12:01.599207+00	2025-11-03 16:18:25.806167+00	\N	d2e58dcb-1bdd-4d65-97ad-ae4d9e2da191
-00000000-0000-0000-0000-000000000000	84	evx7wo6fpsjm	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-06 12:35:07.617185+00	2025-10-06 14:18:49.006515+00	\N	9a029257-5dea-4d1a-bff3-a20351bf6c02
-00000000-0000-0000-0000-000000000000	85	eb4kzmxvkeav	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-06 12:40:47.669827+00	2025-10-06 14:18:49.025071+00	\N	a7703d2c-ea30-47a7-a156-9e9d5d2f286c
-00000000-0000-0000-0000-000000000000	88	k7pyvsohgowt	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-06 14:18:49.026747+00	2025-10-06 15:19:27.979427+00	evx7wo6fpsjm	9a029257-5dea-4d1a-bff3-a20351bf6c02
-00000000-0000-0000-0000-000000000000	89	xs5572uv6zad	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-06 15:19:27.994095+00	2025-10-07 10:33:53.075142+00	k7pyvsohgowt	9a029257-5dea-4d1a-bff3-a20351bf6c02
-00000000-0000-0000-0000-000000000000	90	l6iaosuaupc6	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-07 10:33:53.10226+00	2025-10-07 11:31:58.74552+00	xs5572uv6zad	9a029257-5dea-4d1a-bff3-a20351bf6c02
-00000000-0000-0000-0000-000000000000	91	fykzs6hec4he	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-07 11:31:58.759889+00	2025-10-07 12:30:08.066413+00	l6iaosuaupc6	9a029257-5dea-4d1a-bff3-a20351bf6c02
-00000000-0000-0000-0000-000000000000	92	ekcdiz6fk6so	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-07 12:30:08.081134+00	2025-10-07 13:28:26.425818+00	fykzs6hec4he	9a029257-5dea-4d1a-bff3-a20351bf6c02
-00000000-0000-0000-0000-000000000000	93	ci5cavpy6oas	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-07 13:28:26.439208+00	2025-10-07 14:43:49.511295+00	ekcdiz6fk6so	9a029257-5dea-4d1a-bff3-a20351bf6c02
-00000000-0000-0000-0000-000000000000	94	no5mraanhojt	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-07 14:43:49.523746+00	2025-10-07 20:59:52.759968+00	ci5cavpy6oas	9a029257-5dea-4d1a-bff3-a20351bf6c02
-00000000-0000-0000-0000-000000000000	87	jl5ftqlgoohp	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-06 14:18:49.026756+00	2025-10-08 10:56:50.928548+00	eb4kzmxvkeav	a7703d2c-ea30-47a7-a156-9e9d5d2f286c
-00000000-0000-0000-0000-000000000000	96	hh6q3mggex7n	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-08 10:56:50.948445+00	2025-10-08 12:18:51.085972+00	jl5ftqlgoohp	a7703d2c-ea30-47a7-a156-9e9d5d2f286c
-00000000-0000-0000-0000-000000000000	95	5fciw3ggwspn	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-07 20:59:52.781328+00	2025-10-08 12:22:01.549711+00	no5mraanhojt	9a029257-5dea-4d1a-bff3-a20351bf6c02
-00000000-0000-0000-0000-000000000000	98	y7dojvmosxxr	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	f	2025-10-08 12:22:01.553871+00	2025-10-08 12:22:01.553871+00	5fciw3ggwspn	9a029257-5dea-4d1a-bff3-a20351bf6c02
-00000000-0000-0000-0000-000000000000	97	tug4tjweudf7	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-08 12:18:51.105079+00	2025-10-08 15:15:16.134717+00	hh6q3mggex7n	a7703d2c-ea30-47a7-a156-9e9d5d2f286c
-00000000-0000-0000-0000-000000000000	99	7rc23b5vaw6t	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-08 15:15:16.148856+00	2025-10-09 11:15:05.91689+00	tug4tjweudf7	a7703d2c-ea30-47a7-a156-9e9d5d2f286c
-00000000-0000-0000-0000-000000000000	100	2tttwyfwcxvu	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-09 11:15:05.943653+00	2025-10-09 13:12:52.492547+00	7rc23b5vaw6t	a7703d2c-ea30-47a7-a156-9e9d5d2f286c
-00000000-0000-0000-0000-000000000000	101	mwhn7ha6wrgw	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	f	2025-10-09 13:12:52.50561+00	2025-10-09 13:12:52.50561+00	2tttwyfwcxvu	a7703d2c-ea30-47a7-a156-9e9d5d2f286c
-00000000-0000-0000-0000-000000000000	86	wtcozdnox3mm	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-06 12:54:55.594399+00	2025-10-18 22:50:21.740983+00	\N	e39c8284-9744-4dea-9d0c-57a8c3b90b5e
-00000000-0000-0000-0000-000000000000	102	ngdrsi3fa2oc	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-18 21:48:36.114463+00	2025-10-18 22:57:24.882485+00	\N	7794ab33-c4f7-40d2-8ff5-863148ceecf2
-00000000-0000-0000-0000-000000000000	106	wpmcyeralmky	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	f	2025-10-18 23:24:15.28379+00	2025-10-18 23:24:15.28379+00	\N	80f5e82e-e991-4c1c-a4ca-80103ca4b1f2
-00000000-0000-0000-0000-000000000000	107	jdctbgwwd5tx	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	f	2025-10-18 23:47:35.090805+00	2025-10-18 23:47:35.090805+00	\N	3bd3fe27-43bb-48b0-b69d-0bec7f4db67e
-00000000-0000-0000-0000-000000000000	103	nbnayo3rt4ly	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-18 22:23:42.725453+00	2025-10-18 23:52:16.166057+00	\N	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	109	xeoemh4hsh43	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	f	2025-10-18 23:55:30.422924+00	2025-10-18 23:55:30.422924+00	\N	e6599d19-0a64-427a-aaf0-85d811d2da3f
-00000000-0000-0000-0000-000000000000	104	lrbut25p67kg	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-18 22:50:21.746375+00	2025-10-19 00:01:07.852837+00	wtcozdnox3mm	e39c8284-9744-4dea-9d0c-57a8c3b90b5e
-00000000-0000-0000-0000-000000000000	105	k7hfmu3grnzt	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-18 22:57:24.885177+00	2025-10-19 00:28:50.729476+00	ngdrsi3fa2oc	7794ab33-c4f7-40d2-8ff5-863148ceecf2
-00000000-0000-0000-0000-000000000000	108	xu4vbm3xjipw	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-18 23:52:16.173231+00	2025-10-19 13:33:40.00547+00	nbnayo3rt4ly	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	111	qc73jj5mdgq5	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-19 00:28:50.7383+00	2025-10-19 14:18:16.612766+00	k7hfmu3grnzt	7794ab33-c4f7-40d2-8ff5-863148ceecf2
-00000000-0000-0000-0000-000000000000	110	5y6vcngnuhc2	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-19 00:01:07.854854+00	2025-10-19 14:20:11.378464+00	lrbut25p67kg	e39c8284-9744-4dea-9d0c-57a8c3b90b5e
-00000000-0000-0000-0000-000000000000	113	uc5lx2yzzbr4	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-19 14:18:16.618374+00	2025-10-20 08:51:00.445631+00	qc73jj5mdgq5	7794ab33-c4f7-40d2-8ff5-863148ceecf2
-00000000-0000-0000-0000-000000000000	115	z6yb4qottesx	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-20 08:51:00.46973+00	2025-10-21 05:56:23.701967+00	uc5lx2yzzbr4	7794ab33-c4f7-40d2-8ff5-863148ceecf2
-00000000-0000-0000-0000-000000000000	112	qnldaekvpd2o	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-19 13:33:40.027507+00	2025-10-21 10:42:54.709677+00	xu4vbm3xjipw	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	82	6zjhkxd54uxi	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	f	2025-10-06 12:28:05.082672+00	2025-10-06 12:28:05.082672+00	\N	e22935f4-04fd-4ad1-be69-e0182f5e12b3
-00000000-0000-0000-0000-000000000000	117	6j6w2ia5vfho	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-21 10:42:54.72583+00	2025-10-21 15:54:47.835272+00	qnldaekvpd2o	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	118	m7sfg65blgts	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-21 15:54:47.851087+00	2025-10-21 17:28:51.001687+00	6j6w2ia5vfho	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	119	irmmsufgmjvc	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-21 17:28:51.030941+00	2025-10-21 20:22:31.00387+00	m7sfg65blgts	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	120	vx4t4d74kwvi	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-21 20:22:31.018038+00	2025-10-21 23:34:08.648936+00	irmmsufgmjvc	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	121	oafe2r6b2his	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-21 23:34:08.664943+00	2025-10-22 13:44:49.214472+00	vx4t4d74kwvi	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	123	rwhodcpxczk4	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-27 15:10:20.152252+00	2025-10-27 16:13:08.932151+00	\N	7a257ef6-c32e-49e4-8575-e06e39100c9f
-00000000-0000-0000-0000-000000000000	124	3wcg67wzgxze	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-27 16:13:08.955422+00	2025-10-27 17:14:33.512881+00	rwhodcpxczk4	7a257ef6-c32e-49e4-8575-e06e39100c9f
-00000000-0000-0000-0000-000000000000	122	fiqx7i4hccbg	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-22 13:44:49.238638+00	2025-10-29 10:46:32.318617+00	oafe2r6b2his	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	127	fihsssydpvmr	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-29 10:54:30.421842+00	2025-10-29 13:14:00.319175+00	\N	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	128	2vs3fivcvkv4	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-29 13:14:00.341713+00	2025-10-29 14:27:38.404417+00	fihsssydpvmr	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	126	gjyelovae5vg	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-29 10:46:32.342504+00	2025-10-29 20:11:29.482266+00	fiqx7i4hccbg	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	129	c7zcfsjmo325	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-29 14:27:38.420064+00	2025-10-30 11:54:49.296535+00	2vs3fivcvkv4	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	131	6xwboafwiyen	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-30 11:54:49.322583+00	2025-10-30 14:19:44.928991+00	c7zcfsjmo325	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	132	r72ln52pcp6q	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-30 14:19:44.939227+00	2025-10-30 17:32:35.483026+00	6xwboafwiyen	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	130	rl2y27z6k5op	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-29 20:11:29.505536+00	2025-11-02 19:46:38.028115+00	gjyelovae5vg	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	125	lfddmp4ssqcp	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-27 17:14:33.525962+00	2025-10-30 15:53:05.352644+00	3wcg67wzgxze	7a257ef6-c32e-49e4-8575-e06e39100c9f
-00000000-0000-0000-0000-000000000000	133	urhdcn4cwzgk	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-30 15:53:05.375873+00	2025-10-30 16:51:35.622137+00	lfddmp4ssqcp	7a257ef6-c32e-49e4-8575-e06e39100c9f
-00000000-0000-0000-0000-000000000000	150	xbjr5sn26yfj	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-03 12:57:51.253133+00	2025-11-03 16:21:48.111387+00	rsr2mixrf5xl	7a257ef6-c32e-49e4-8575-e06e39100c9f
-00000000-0000-0000-0000-000000000000	135	ykeubsbkbu4a	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-30 17:32:35.491441+00	2025-10-30 18:32:08.347328+00	r72ln52pcp6q	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	153	5cbdoldxygdb	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-03 14:43:21.47999+00	2025-11-03 16:30:58.02865+00	almhien2z2zp	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	136	iqwcriqxeljd	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-30 18:32:08.356733+00	2025-10-30 19:30:38.860894+00	ykeubsbkbu4a	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	137	welqv2wutdc3	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-30 19:30:38.86977+00	2025-10-31 15:50:57.096858+00	iqwcriqxeljd	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	156	5px7jtbknvvc	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-03 16:21:48.1123+00	2025-11-03 17:20:04.465989+00	xbjr5sn26yfj	7a257ef6-c32e-49e4-8575-e06e39100c9f
-00000000-0000-0000-0000-000000000000	138	e5vosf4hs6tz	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-31 15:50:57.113066+00	2025-10-31 16:49:12.993142+00	welqv2wutdc3	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	139	6d4ljpgmxh2g	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-31 16:49:13.019279+00	2025-11-01 07:54:58.52573+00	e5vosf4hs6tz	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	157	dydz7hskqbx4	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-03 16:30:58.031322+00	2025-11-03 17:36:51.832624+00	5cbdoldxygdb	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	140	dewsxdt4rirv	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-01 07:54:58.544625+00	2025-11-01 11:54:05.529345+00	6d4ljpgmxh2g	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	141	3bdbdvhqyyxo	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-01 11:54:05.543275+00	2025-11-01 12:58:25.886748+00	dewsxdt4rirv	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	159	ozrlov2cnyko	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-03 17:36:51.842138+00	2025-11-03 18:55:45.828845+00	dydz7hskqbx4	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	142	mtdx3mq3wcn5	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-01 12:58:25.899403+00	2025-11-01 18:04:18.682147+00	3bdbdvhqyyxo	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	158	z3ineovxehbp	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-03 17:20:04.489125+00	2025-11-03 19:00:11.480769+00	5px7jtbknvvc	7a257ef6-c32e-49e4-8575-e06e39100c9f
-00000000-0000-0000-0000-000000000000	134	zhghczijs3l2	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-30 16:51:35.634969+00	2025-11-02 19:58:11.082401+00	urhdcn4cwzgk	7a257ef6-c32e-49e4-8575-e06e39100c9f
-00000000-0000-0000-0000-000000000000	144	bdekqnhmvn4y	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-02 19:46:38.053875+00	2025-11-02 22:03:10.703354+00	rl2y27z6k5op	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	146	yli6tnmw4lsl	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-02 22:03:10.721633+00	2025-11-02 23:07:36.805875+00	bdekqnhmvn4y	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	152	rbi3czelcar7	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-03 14:40:00.855879+00	2025-11-04 09:52:27.163213+00	m24cl6bvgdan	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	147	2nxmtsh4dsdv	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-02 23:07:36.814823+00	2025-11-03 00:12:25.522051+00	yli6tnmw4lsl	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	145	ncnmumo2jkpo	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-02 19:58:11.090883+00	2025-11-03 01:55:08.718006+00	zhghczijs3l2	7a257ef6-c32e-49e4-8575-e06e39100c9f
-00000000-0000-0000-0000-000000000000	163	ynaijqvkbann	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-04 09:52:27.167252+00	2025-11-04 10:52:33.61931+00	rbi3czelcar7	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	149	rsr2mixrf5xl	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-03 01:55:08.732078+00	2025-11-03 12:57:51.229243+00	ncnmumo2jkpo	7a257ef6-c32e-49e4-8575-e06e39100c9f
-00000000-0000-0000-0000-000000000000	148	3albvefp73ez	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-03 00:12:25.531985+00	2025-11-03 13:45:07.183348+00	2nxmtsh4dsdv	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	143	m24cl6bvgdan	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-01 18:04:18.701361+00	2025-11-03 14:40:00.845725+00	mtdx3mq3wcn5	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	151	almhien2z2zp	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-03 13:45:07.195863+00	2025-11-03 14:43:21.473607+00	3albvefp73ez	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	164	tmdnvqa6rd4n	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-04 10:52:33.633892+00	2025-11-04 12:44:27.018812+00	ynaijqvkbann	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	162	txtft2lymjej	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-04 09:52:11.244928+00	2025-11-04 12:44:45.133866+00	\N	9828f57c-c3ba-45a5-8893-278a7f2af2cc
-00000000-0000-0000-0000-000000000000	160	zaunqhrgwcib	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-03 18:55:45.845071+00	2025-11-04 13:23:23.587633+00	ozrlov2cnyko	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	165	didoy2xlpfz2	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-04 12:44:27.026486+00	2025-11-04 15:14:38.239996+00	tmdnvqa6rd4n	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	167	6j76qhjablt6	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-04 13:23:23.602338+00	2025-11-04 22:07:03.729404+00	zaunqhrgwcib	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	169	r5emgpo6zpkd	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-04 22:07:03.751497+00	2025-11-04 23:06:33.061993+00	6j76qhjablt6	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	166	lxoj4elxhb34	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-04 12:44:45.134359+00	2025-11-05 12:08:04.581402+00	txtft2lymjej	9828f57c-c3ba-45a5-8893-278a7f2af2cc
-00000000-0000-0000-0000-000000000000	170	joiy3w5niupx	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-04 23:06:33.073962+00	2025-11-06 10:55:16.164648+00	r5emgpo6zpkd	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	168	isgznqo6duva	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-04 15:14:38.247277+00	2025-11-06 11:25:50.77029+00	didoy2xlpfz2	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	173	owdqvc6w253v	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-06 11:25:50.779245+00	2025-11-06 13:47:43.270199+00	isgznqo6duva	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	172	a5redlx67hib	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-06 10:55:16.188106+00	2025-11-06 20:00:38.984743+00	joiy3w5niupx	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	175	nfqo5huyfowq	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-06 20:00:39.001376+00	2025-11-06 21:02:04.849986+00	a5redlx67hib	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	155	nlysutkfic6w	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-03 16:18:25.818407+00	2025-11-06 22:09:18.558924+00	a5mzc5gg5msi	d2e58dcb-1bdd-4d65-97ad-ae4d9e2da191
-00000000-0000-0000-0000-000000000000	161	ajko2ipazbcq	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-03 19:00:11.482231+00	2025-11-06 22:45:52.042842+00	z3ineovxehbp	7a257ef6-c32e-49e4-8575-e06e39100c9f
-00000000-0000-0000-0000-000000000000	176	safi6mu6l6n3	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-06 21:02:04.866454+00	2025-11-06 23:18:49.956866+00	nfqo5huyfowq	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	180	q26zocuyvmf7	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	f	2025-11-06 23:26:58.104686+00	2025-11-06 23:26:58.104686+00	\N	abace976-71bb-43b7-8c1f-90555fd1537f
-00000000-0000-0000-0000-000000000000	177	4gkp4ujuojzg	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-06 22:09:18.573881+00	2025-11-06 23:33:19.401322+00	nlysutkfic6w	d2e58dcb-1bdd-4d65-97ad-ae4d9e2da191
-00000000-0000-0000-0000-000000000000	179	ysz3eicsxoax	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-06 23:18:49.965744+00	2025-11-07 00:20:57.670999+00	safi6mu6l6n3	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	182	hlh6h3k7qydp	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-06 23:33:19.403778+00	2025-11-07 01:05:05.201204+00	4gkp4ujuojzg	d2e58dcb-1bdd-4d65-97ad-ae4d9e2da191
-00000000-0000-0000-0000-000000000000	178	qotqi42x3mlp	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-06 22:45:52.05544+00	2025-11-07 01:35:23.579325+00	ajko2ipazbcq	7a257ef6-c32e-49e4-8575-e06e39100c9f
-00000000-0000-0000-0000-000000000000	181	bmq6ntfhz46s	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-06 23:31:11.12878+00	2025-11-07 10:28:00.580781+00	\N	41809255-1f07-4cb5-9b66-2fea3ec22354
-00000000-0000-0000-0000-000000000000	171	ukxvcjueea7n	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-05 12:08:04.59085+00	2025-11-08 10:13:01.307511+00	lxoj4elxhb34	9828f57c-c3ba-45a5-8893-278a7f2af2cc
-00000000-0000-0000-0000-000000000000	174	4ikowpfdtsjb	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-06 13:47:43.283628+00	2025-11-08 13:34:19.400296+00	owdqvc6w253v	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	240	p6sogmt3nw7u	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-14 18:31:01.029512+00	2025-11-15 10:21:54.644516+00	5xubqgt2l324	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	220	2rjvedixlo6c	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-11 13:35:21.951415+00	2025-11-16 20:18:46.589666+00	a4u7lgci2dyl	7a257ef6-c32e-49e4-8575-e06e39100c9f
-00000000-0000-0000-0000-000000000000	185	zjpjas2z5rgd	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-07 01:35:23.594284+00	2025-11-07 10:10:24.072897+00	qotqi42x3mlp	7a257ef6-c32e-49e4-8575-e06e39100c9f
-00000000-0000-0000-0000-000000000000	187	lpxjtbcdwqer	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	f	2025-11-07 10:13:00.623375+00	2025-11-07 10:13:00.623375+00	\N	3886913b-c444-487f-888d-4dd8b009b031
-00000000-0000-0000-0000-000000000000	183	fwxkbno2y6er	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-07 00:20:57.683916+00	2025-11-07 12:58:46.691261+00	ysz3eicsxoax	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	189	vzq65uwlsbvq	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-07 10:28:00.588852+00	2025-11-07 17:25:32.004399+00	bmq6ntfhz46s	41809255-1f07-4cb5-9b66-2fea3ec22354
-00000000-0000-0000-0000-000000000000	186	nvcbaqcwnpcz	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-07 10:10:24.082797+00	2025-11-07 20:10:17.567154+00	zjpjas2z5rgd	7a257ef6-c32e-49e4-8575-e06e39100c9f
-00000000-0000-0000-0000-000000000000	190	4yk6z3kc4fuk	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-07 12:58:46.715615+00	2025-11-07 21:23:26.524473+00	fwxkbno2y6er	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	184	hy7fz6c5ze26	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-07 01:05:05.20921+00	2025-11-07 22:13:35.009071+00	hlh6h3k7qydp	d2e58dcb-1bdd-4d65-97ad-ae4d9e2da191
-00000000-0000-0000-0000-000000000000	194	c6kwug37v3rz	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-07 22:13:35.021857+00	2025-11-07 23:11:36.312588+00	hy7fz6c5ze26	d2e58dcb-1bdd-4d65-97ad-ae4d9e2da191
-00000000-0000-0000-0000-000000000000	188	5f5mmvgv4zwj	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-07 10:15:25.041475+00	2025-11-07 23:38:03.917056+00	\N	9f468faa-65d8-4c54-8ecc-646234a63692
-00000000-0000-0000-0000-000000000000	192	k2ot3shbvu3n	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-07 20:10:17.580432+00	2025-11-08 00:24:01.933688+00	nvcbaqcwnpcz	7a257ef6-c32e-49e4-8575-e06e39100c9f
-00000000-0000-0000-0000-000000000000	193	fcpgpjzsdxuk	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-07 21:23:26.54715+00	2025-11-08 00:42:14.187456+00	4yk6z3kc4fuk	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	196	rd627z3scfvc	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-07 23:38:03.924754+00	2025-11-08 00:42:19.185646+00	5f5mmvgv4zwj	9f468faa-65d8-4c54-8ecc-646234a63692
-00000000-0000-0000-0000-000000000000	199	qq6pgay4i6et	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	f	2025-11-08 00:42:19.186234+00	2025-11-08 00:42:19.186234+00	rd627z3scfvc	9f468faa-65d8-4c54-8ecc-646234a63692
-00000000-0000-0000-0000-000000000000	195	7dgbjszev7lj	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-07 23:11:36.325592+00	2025-11-08 00:54:18.994414+00	c6kwug37v3rz	d2e58dcb-1bdd-4d65-97ad-ae4d9e2da191
-00000000-0000-0000-0000-000000000000	200	ysbncz2oriji	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-08 00:54:19.015435+00	2025-11-08 01:52:24.593441+00	7dgbjszev7lj	d2e58dcb-1bdd-4d65-97ad-ae4d9e2da191
-00000000-0000-0000-0000-000000000000	198	vrolsax5l6bt	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-08 00:42:14.194055+00	2025-11-08 02:08:11.114071+00	fcpgpjzsdxuk	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	202	sra2nkqqspp2	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-08 02:08:11.123078+00	2025-11-08 10:51:04.241413+00	vrolsax5l6bt	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	203	h6zabrl3ic7f	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-08 10:13:01.33338+00	2025-11-08 13:46:21.972228+00	ukxvcjueea7n	9828f57c-c3ba-45a5-8893-278a7f2af2cc
-00000000-0000-0000-0000-000000000000	206	okz44mtpjfyc	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-08 13:46:21.979212+00	2025-11-08 14:44:48.58757+00	h6zabrl3ic7f	9828f57c-c3ba-45a5-8893-278a7f2af2cc
-00000000-0000-0000-0000-000000000000	207	3uncc2q4apdc	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	f	2025-11-08 14:44:48.608096+00	2025-11-08 14:44:48.608096+00	okz44mtpjfyc	9828f57c-c3ba-45a5-8893-278a7f2af2cc
-00000000-0000-0000-0000-000000000000	191	qx2zn73saft7	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-07 17:25:32.018102+00	2025-11-08 15:56:16.081185+00	vzq65uwlsbvq	41809255-1f07-4cb5-9b66-2fea3ec22354
-00000000-0000-0000-0000-000000000000	201	lc4vo6oqsneb	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-08 01:52:24.608656+00	2025-11-08 21:27:30.816309+00	ysbncz2oriji	d2e58dcb-1bdd-4d65-97ad-ae4d9e2da191
-00000000-0000-0000-0000-000000000000	209	riclm6djzx3b	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	f	2025-11-08 21:27:30.838345+00	2025-11-08 21:27:30.838345+00	lc4vo6oqsneb	d2e58dcb-1bdd-4d65-97ad-ae4d9e2da191
-00000000-0000-0000-0000-000000000000	204	caq3lxk5as6t	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-08 10:51:04.248039+00	2025-11-09 08:51:10.43266+00	sra2nkqqspp2	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	210	d5jndh6csqbr	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-09 08:51:10.457053+00	2025-11-09 10:01:34.125635+00	caq3lxk5as6t	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	211	gcndrrpz2do2	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-09 10:01:34.135318+00	2025-11-09 12:09:45.732886+00	d5jndh6csqbr	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	205	vhj3gth7x3tq	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-08 13:34:19.412935+00	2025-11-09 14:31:53.891995+00	4ikowpfdtsjb	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	213	72pa3vwzlhsz	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-09 14:31:53.906115+00	2025-11-10 12:02:03.436351+00	vhj3gth7x3tq	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	214	w6mlcp2vfc34	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-10 12:02:03.459952+00	2025-11-10 13:56:24.842595+00	72pa3vwzlhsz	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	212	hht5saey4syh	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-09 12:09:45.746884+00	2025-11-10 14:15:39.18083+00	gcndrrpz2do2	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	208	4x4pasqcnyxf	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-08 15:56:16.093222+00	2025-11-11 03:48:10.338081+00	qx2zn73saft7	41809255-1f07-4cb5-9b66-2fea3ec22354
-00000000-0000-0000-0000-000000000000	217	ksbuyo3fugsp	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-10 14:15:39.183767+00	2025-11-11 13:26:05.190866+00	hht5saey4syh	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	197	a4u7lgci2dyl	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-08 00:24:01.951073+00	2025-11-11 13:35:21.947162+00	k2ot3shbvu3n	7a257ef6-c32e-49e4-8575-e06e39100c9f
-00000000-0000-0000-0000-000000000000	219	tib4nrt4b63u	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-11 13:26:05.209171+00	2025-11-11 15:39:25.189444+00	ksbuyo3fugsp	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	221	mljaggibyah5	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-11 15:39:25.199665+00	2025-11-11 20:56:23.859063+00	tib4nrt4b63u	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	216	od5ph3w22txa	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-10 13:56:24.8574+00	2025-11-12 11:59:10.818908+00	w6mlcp2vfc34	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	223	s6x6l7ubrqkt	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-12 11:59:10.844632+00	2025-11-12 12:57:35.89418+00	od5ph3w22txa	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	224	uyz64iwqaq6x	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-12 12:57:35.905403+00	2025-11-12 13:55:58.177455+00	s6x6l7ubrqkt	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	225	vxdqzijvtla2	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-12 13:55:58.185898+00	2025-11-12 14:55:10.474473+00	uyz64iwqaq6x	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	222	w755aw67id46	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-11 20:56:23.887128+00	2025-11-12 15:12:30.687259+00	mljaggibyah5	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	226	nsdv3pcwz7st	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-12 14:55:10.491409+00	2025-11-13 10:52:32.340669+00	vxdqzijvtla2	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	228	ot3asrsgsy5j	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-13 10:52:32.367028+00	2025-11-13 12:13:53.847222+00	nsdv3pcwz7st	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	227	veqg7hodqphj	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-12 15:12:30.693846+00	2025-11-13 15:16:50.374148+00	w755aw67id46	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	229	s45hylz5qyps	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-13 12:13:53.863938+00	2025-11-13 17:36:51.052686+00	ot3asrsgsy5j	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	230	kjk3dczyquka	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-13 15:16:50.38522+00	2025-11-13 18:42:10.177591+00	veqg7hodqphj	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	232	arxxnl5i4on7	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-13 18:42:10.189124+00	2025-11-13 20:01:40.218021+00	kjk3dczyquka	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	231	d6dvwdjhmr4r	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-13 17:36:51.073453+00	2025-11-13 20:14:24.438147+00	s45hylz5qyps	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	215	2ulgxa2akheh	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-10 12:07:09.945953+00	2025-11-14 08:46:50.137205+00	\N	35ba656d-4d1f-45e0-9c58-8fdea773e3ee
-00000000-0000-0000-0000-000000000000	237	5xubqgt2l324	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-13 23:20:47.341068+00	2025-11-14 18:31:01.00545+00	oml3nwoacltz	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	234	qvatvyyqeast	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-13 20:14:24.446749+00	2025-11-13 21:24:05.370956+00	d6dvwdjhmr4r	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	241	msymrq5efskr	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-15 10:21:54.669598+00	2025-11-15 11:25:41.39897+00	p6sogmt3nw7u	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	235	zit4syheuhms	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-13 21:24:05.38696+00	2025-11-13 22:22:29.755473+00	qvatvyyqeast	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	236	oml3nwoacltz	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-13 22:22:29.767873+00	2025-11-13 23:20:47.33133+00	zit4syheuhms	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	233	dfrbt5islhjq	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-13 20:01:40.240044+00	2025-11-14 12:32:34.169175+00	arxxnl5i4on7	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	239	cf7ba3r4jt5y	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-14 12:32:34.181496+00	2025-11-15 11:55:33.729805+00	dfrbt5islhjq	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	242	34ip7tnlnbed	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-15 11:25:41.420391+00	2025-11-15 14:44:21.70787+00	msymrq5efskr	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	243	xrslbhryoqos	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-15 11:55:33.742468+00	2025-11-15 16:22:15.848265+00	cf7ba3r4jt5y	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	245	qru2l3y3rdjt	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-15 16:22:15.873373+00	2025-11-16 09:39:19.905903+00	xrslbhryoqos	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	246	ry26ibp6fu2x	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-16 09:39:19.923609+00	2025-11-16 15:24:59.139717+00	qru2l3y3rdjt	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	218	232gmnzjrraa	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-11 03:48:10.360216+00	2025-11-16 15:50:01.319109+00	4x4pasqcnyxf	41809255-1f07-4cb5-9b66-2fea3ec22354
-00000000-0000-0000-0000-000000000000	247	jpmfdvk7yxsk	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-16 15:24:59.160991+00	2025-11-16 20:01:20.255864+00	ry26ibp6fu2x	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	250	r3oej7epb4v5	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	f	2025-11-16 20:18:46.602284+00	2025-11-16 20:18:46.602284+00	2rjvedixlo6c	7a257ef6-c32e-49e4-8575-e06e39100c9f
-00000000-0000-0000-0000-000000000000	116	f3zea3bbrmxy	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-10-21 05:56:23.721619+00	2025-11-17 10:38:53.834143+00	z6yb4qottesx	7794ab33-c4f7-40d2-8ff5-863148ceecf2
-00000000-0000-0000-0000-000000000000	244	kymuucls2e6n	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-15 14:44:21.722378+00	2025-11-17 11:11:14.604228+00	34ip7tnlnbed	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	251	hkvtrpzgagfp	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-17 10:38:53.861487+00	2025-11-17 11:45:23.514893+00	f3zea3bbrmxy	7794ab33-c4f7-40d2-8ff5-863148ceecf2
-00000000-0000-0000-0000-000000000000	249	nmvdc4755hl5	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-16 20:01:20.277693+00	2025-11-17 11:49:55.111446+00	jpmfdvk7yxsk	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	252	ltv2up62h27m	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-17 10:49:26.807683+00	2025-11-17 11:55:30.601976+00	d55jg5dgtgug	e39c8284-9744-4dea-9d0c-57a8c3b90b5e
-00000000-0000-0000-0000-000000000000	254	x4aanm7th35n	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-17 11:45:23.521288+00	2025-11-17 12:44:21.501951+00	hkvtrpzgagfp	7794ab33-c4f7-40d2-8ff5-863148ceecf2
-00000000-0000-0000-0000-000000000000	256	uqkchs2tfusx	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-17 11:55:30.605317+00	2025-11-17 12:57:52.512988+00	ltv2up62h27m	e39c8284-9744-4dea-9d0c-57a8c3b90b5e
-00000000-0000-0000-0000-000000000000	258	nhpslhs6hnyg	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-17 12:57:52.518193+00	2025-11-17 15:41:48.762069+00	uqkchs2tfusx	e39c8284-9744-4dea-9d0c-57a8c3b90b5e
-00000000-0000-0000-0000-000000000000	257	ehzvjcsx2xed	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-17 12:44:21.50925+00	2025-11-17 15:41:49.653693+00	x4aanm7th35n	7794ab33-c4f7-40d2-8ff5-863148ceecf2
-00000000-0000-0000-0000-000000000000	260	fkwyfj3iuhdi	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-17 15:41:49.654232+00	2025-11-17 19:52:52.935745+00	ehzvjcsx2xed	7794ab33-c4f7-40d2-8ff5-863148ceecf2
-00000000-0000-0000-0000-000000000000	259	ykjnfn2ggo2f	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-17 15:41:48.784799+00	2025-11-17 20:16:36.257426+00	nhpslhs6hnyg	e39c8284-9744-4dea-9d0c-57a8c3b90b5e
-00000000-0000-0000-0000-000000000000	255	gddlvpmn7b5t	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-17 11:49:55.112651+00	2025-11-17 20:35:44.898799+00	nmvdc4755hl5	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	238	uz6nabxk3w3z	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-14 08:46:50.162987+00	2025-11-18 00:10:27.428042+00	2ulgxa2akheh	35ba656d-4d1f-45e0-9c58-8fdea773e3ee
-00000000-0000-0000-0000-000000000000	263	2maktgh5dxpz	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-17 20:35:44.91595+00	2025-11-18 10:10:46.579041+00	gddlvpmn7b5t	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	253	fq2nhq2yc6u7	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-17 11:11:14.609304+00	2025-11-18 10:27:43.697493+00	kymuucls2e6n	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	265	jlbybr774f5g	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-18 10:10:46.602615+00	2025-11-18 11:12:17.084596+00	2maktgh5dxpz	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	266	am5zi3ibyyof	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-18 10:27:43.705533+00	2025-11-18 11:58:08.066744+00	fq2nhq2yc6u7	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	267	pvoslc52ujzb	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-18 11:12:17.094506+00	2025-11-18 12:10:24.812458+00	jlbybr774f5g	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	269	ahjlqyy3tx7a	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-18 12:10:24.816876+00	2025-11-18 13:08:26.116518+00	pvoslc52ujzb	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	268	7vmaw6ddzdg6	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-18 11:58:08.072993+00	2025-11-18 14:18:12.153982+00	am5zi3ibyyof	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	270	bwjxro4msx4y	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-18 13:08:26.123042+00	2025-11-18 22:04:57.393074+00	ahjlqyy3tx7a	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	272	c6zzwe5qq3f2	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-18 22:04:57.410855+00	2025-11-19 09:48:34.723175+00	bwjxro4msx4y	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	274	ay7kqhbu642w	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-19 09:48:34.726808+00	2025-11-19 11:55:26.140833+00	c6zzwe5qq3f2	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	273	chb556tor54a	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-19 09:46:54.937548+00	2025-11-19 14:58:48.141+00	\N	01ec7178-09fc-486b-a96a-75a3f2a8c51e
-00000000-0000-0000-0000-000000000000	276	jkbew6h7ynrc	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	f	2025-11-19 14:58:48.159532+00	2025-11-19 14:58:48.159532+00	chb556tor54a	01ec7178-09fc-486b-a96a-75a3f2a8c51e
-00000000-0000-0000-0000-000000000000	261	uds4zolxsfa7	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-17 19:52:52.959512+00	2025-11-19 19:27:29.752778+00	fkwyfj3iuhdi	7794ab33-c4f7-40d2-8ff5-863148ceecf2
-00000000-0000-0000-0000-000000000000	277	34nhbwghi34c	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	f	2025-11-19 19:27:29.772308+00	2025-11-19 19:27:29.772308+00	uds4zolxsfa7	7794ab33-c4f7-40d2-8ff5-863148ceecf2
-00000000-0000-0000-0000-000000000000	275	zhfi2yl7z4oc	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-19 11:55:26.154281+00	2025-11-19 21:13:14.588975+00	ay7kqhbu642w	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	278	nh6kmw5xsy3e	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-19 21:13:14.598378+00	2025-11-20 10:08:31.694156+00	zhfi2yl7z4oc	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	279	54652k3kythp	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-20 10:08:31.717935+00	2025-11-22 10:26:41.613939+00	nh6kmw5xsy3e	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	271	guzr4crvfbxj	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-18 14:18:12.17775+00	2025-11-22 11:48:34.948225+00	7vmaw6ddzdg6	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	280	ekk3s7gs3yb4	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-22 10:26:41.63844+00	2025-11-22 12:49:56.947913+00	54652k3kythp	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	248	nvzmwixqttrx	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-16 15:50:01.331531+00	2025-11-24 08:31:47.23962+00	232gmnzjrraa	41809255-1f07-4cb5-9b66-2fea3ec22354
-00000000-0000-0000-0000-000000000000	281	bweueoakavrw	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-22 11:48:34.960784+00	2025-11-24 13:21:54.048117+00	guzr4crvfbxj	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	262	755ot42odps7	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-17 20:16:36.278128+00	2025-11-25 18:51:22.754857+00	ykjnfn2ggo2f	e39c8284-9744-4dea-9d0c-57a8c3b90b5e
-00000000-0000-0000-0000-000000000000	264	kj2bpwncljnq	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-18 00:10:27.456516+00	2025-11-26 15:04:20.857733+00	uz6nabxk3w3z	35ba656d-4d1f-45e0-9c58-8fdea773e3ee
-00000000-0000-0000-0000-000000000000	282	b7qf2gst5fu2	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-22 12:49:56.967063+00	2025-11-22 15:08:15.355736+00	ekk3s7gs3yb4	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	283	34r5bjxxasvk	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-22 15:08:15.374228+00	2025-11-22 20:57:21.721504+00	b7qf2gst5fu2	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	284	zfg46jgeb2x6	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-22 20:57:21.736339+00	2025-11-23 09:43:40.888667+00	34r5bjxxasvk	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	285	6m5vryzb36j7	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-23 09:43:40.91521+00	2025-11-23 11:56:34.686714+00	zfg46jgeb2x6	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	286	wtiko2cvvstz	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-23 11:56:34.70984+00	2025-11-23 13:58:51.61773+00	6m5vryzb36j7	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	287	qg2ruxux5cgx	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-23 13:58:51.629859+00	2025-11-23 15:21:46.560903+00	wtiko2cvvstz	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	288	3aamver5cawx	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-23 15:21:46.571342+00	2025-11-24 13:15:21.140658+00	qg2ruxux5cgx	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	291	2oimggk4zrv4	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-24 13:21:54.059327+00	2025-11-24 14:43:04.446719+00	bweueoakavrw	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	290	xsthx7e42a33	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-24 13:15:21.15549+00	2025-11-25 09:43:55.203158+00	3aamver5cawx	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	292	2qufwbworpz2	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-24 14:43:04.454569+00	2025-11-25 13:27:49.440921+00	2oimggk4zrv4	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	293	vsu5qvx2jdle	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-25 09:43:55.226844+00	2025-11-25 14:09:30.578616+00	xsthx7e42a33	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	294	e5j7m6obc6m2	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-25 13:27:49.457091+00	2025-11-25 18:09:31.561791+00	2qufwbworpz2	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	297	47tzbbd2b5ak	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	f	2025-11-25 18:51:22.766138+00	2025-11-25 18:51:22.766138+00	755ot42odps7	e39c8284-9744-4dea-9d0c-57a8c3b90b5e
-00000000-0000-0000-0000-000000000000	295	tke7zyo2fyb3	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-25 14:09:30.589099+00	2025-11-25 19:34:34.635228+00	vsu5qvx2jdle	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	296	z2rzbfwhi7ua	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-25 18:09:31.582268+00	2025-11-25 19:46:06.202331+00	e5j7m6obc6m2	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	298	hhsgarplx6mp	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-25 19:34:34.644393+00	2025-11-26 09:58:50.525281+00	tke7zyo2fyb3	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	299	drxzihnvht6y	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-25 19:46:06.211774+00	2025-11-26 13:12:10.402614+00	z2rzbfwhi7ua	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	301	jhj2lyzssw6f	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-26 13:12:10.422597+00	2025-11-26 14:18:06.826917+00	drxzihnvht6y	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	302	bopktzldbuvz	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	f	2025-11-26 14:18:06.838144+00	2025-11-26 14:18:06.838144+00	jhj2lyzssw6f	968edd83-f007-47b9-97ed-85aeb6cbfd02
-00000000-0000-0000-0000-000000000000	300	ejrn5kowcmmr	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-26 09:58:50.552698+00	2025-11-26 19:14:27.356942+00	hhsgarplx6mp	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	304	5n3jjcoez3eo	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-26 19:14:27.374893+00	2025-11-26 20:41:45.444752+00	ejrn5kowcmmr	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	289	mjhq4q3cjmuk	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-24 08:31:47.260245+00	2025-11-28 07:36:46.156771+00	nvzmwixqttrx	41809255-1f07-4cb5-9b66-2fea3ec22354
-00000000-0000-0000-0000-000000000000	306	dqrvzaukkj6t	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	f	2025-11-28 07:36:46.175102+00	2025-11-28 07:36:46.175102+00	mjhq4q3cjmuk	41809255-1f07-4cb5-9b66-2fea3ec22354
-00000000-0000-0000-0000-000000000000	303	laepquqqpkki	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-26 15:04:20.871121+00	2025-11-29 08:14:07.18633+00	kj2bpwncljnq	35ba656d-4d1f-45e0-9c58-8fdea773e3ee
-00000000-0000-0000-0000-000000000000	307	kfxq43fhv6tk	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-29 08:14:07.211131+00	2025-11-29 09:12:10.34351+00	laepquqqpkki	35ba656d-4d1f-45e0-9c58-8fdea773e3ee
-00000000-0000-0000-0000-000000000000	308	3jze6qzeltap	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-29 09:12:10.355472+00	2025-11-29 10:48:01.148263+00	kfxq43fhv6tk	35ba656d-4d1f-45e0-9c58-8fdea773e3ee
-00000000-0000-0000-0000-000000000000	305	q5bpngdopalg	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-26 20:41:45.462116+00	2025-11-29 10:51:34.527739+00	5n3jjcoez3eo	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	310	ils2phc3d55s	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-29 10:51:34.534304+00	2025-11-29 13:30:06.445074+00	q5bpngdopalg	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	309	jn4ld5kffexw	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-29 10:48:01.166805+00	2025-11-30 10:56:26.29508+00	3jze6qzeltap	35ba656d-4d1f-45e0-9c58-8fdea773e3ee
-00000000-0000-0000-0000-000000000000	312	fqtfldzfpgaj	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	f	2025-11-30 10:56:26.319725+00	2025-11-30 10:56:26.319725+00	jn4ld5kffexw	35ba656d-4d1f-45e0-9c58-8fdea773e3ee
-00000000-0000-0000-0000-000000000000	311	zsmbjtr5eplm	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-11-29 13:30:06.462334+00	2025-12-01 15:37:56.808204+00	ils2phc3d55s	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	313	dnq67654h2dc	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-12-01 15:37:56.835268+00	2025-12-01 16:40:24.766316+00	zsmbjtr5eplm	86af5c98-ead8-4df2-9b9c-7b34e06127b0
-00000000-0000-0000-0000-000000000000	314	b54ts43vvqfm	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	f	2025-12-01 16:40:24.781363+00	2025-12-01 16:40:24.781363+00	dnq67654h2dc	86af5c98-ead8-4df2-9b9c-7b34e06127b0
+00000000-0000-0000-0000-000000000000	330	4ttatcbceafg	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	f	2025-12-03 10:35:25.653173+00	2025-12-03 10:35:25.653173+00	\N	fc8bf150-aa1c-4847-8a83-2a041d09402f
+00000000-0000-0000-0000-000000000000	336	prhesk5rhmhl	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	f	2025-12-03 15:17:43.531162+00	2025-12-03 15:17:43.531162+00	\N	983b89b7-cc1e-4106-a772-76cbdeb2c479
+00000000-0000-0000-0000-000000000000	339	okku22xtibjy	f2055315-e56b-4927-bf6d-af94107a5527	f	2025-12-03 16:32:31.014979+00	2025-12-03 16:32:31.014979+00	\N	1c215a10-d25b-4f18-80ee-369db2619987
 \.
 
 
@@ -1204,8 +983,15 @@ ba1b87ab-4c34-4966-9549-80784ed0bf00	AR-00016	2585665c-d342-42e2-8add-bb4d0397ce
 --
 
 COPY "public"."vendors" ("id", "name", "contact_person", "phone", "email", "address", "notes", "created_at", "updated_at") FROM stdin;
-ea3ce610-a121-430d-bb49-df5d2f8aaa9a	Master Nadeem	\N	\N	\N	\N		2025-11-08 01:58:35.592884+00	2025-11-08 01:58:35.592884+00
-c162443d-f737-4f94-bd44-de3cc2566cc5	Jaffer	\N	\N	\N	\N		2025-11-08 00:54:46.373481+00	2025-11-08 02:39:44.639+00
+9aa5c4d0-304f-410f-b686-c2f682a3d06e	ASSETS	\N	\N	\N	\N	ASSETS & OLD FIXTURES	2025-12-02 20:27:40.609674+00	2025-12-02 20:27:40.609674+00
+ca601504-179b-4634-82e2-8dc07c4bf3ab	NADEEM	\N	\N	\N	\N	PANT COAT	2025-12-02 22:46:30.644481+00	2025-12-02 22:46:30.644481+00
+19610bbb-be04-49fb-a640-d6520d5b3eac	AJMAL UNCLE	\N	\N	\N	\N	SHALWAR QAMEEZ	2025-12-02 22:46:57.891058+00	2025-12-02 22:46:57.891058+00
+578d875b-28e6-4d89-8700-5512e91e4032	MASTER AMJAD	\N	\N	\N	\N	PANT COAT	2025-12-02 22:47:20.915811+00	2025-12-02 22:47:20.915811+00
+239a1b8d-930a-4a82-88e3-f9a33b6f2389	IDREES SUPERVISOR	\N	\N	\N	\N	ADDA WORK	2025-12-02 22:48:09.230296+00	2025-12-02 22:48:09.230296+00
+34c23231-d445-4bd6-af12-fd622353defb	JAFFAR	\N	\N	\N	\N	ADDA WORK	2025-12-02 22:48:30.029778+00	2025-12-02 22:48:30.029778+00
+2f62665d-f8d3-4168-a12e-cc24688535dd	MOLVI NAZEER	\N	\N	\N	\N	MACHINE EMBROIDERY	2025-12-02 22:49:24.726963+00	2025-12-02 22:49:24.726963+00
+fd678af2-a4c4-4370-8c3a-6864a4bd6da9	KIRAN SILK	\N	\N	\N	\N	LAHORE LIBERTY SHOP	2025-12-02 22:49:56.809979+00	2025-12-02 22:49:56.809979+00
+95f06160-1d36-419b-a272-6f302c7210fa	IKRA STUDIO	\N	\N	\N	\N	PRODUCTION MANAGER	2025-12-03 15:22:09.235579+00	2025-12-03 15:22:09.235579+00
 \.
 
 
@@ -1214,8 +1000,6 @@ c162443d-f737-4f94-bd44-de3cc2566cc5	Jaffer	\N	\N	\N	\N		2025-11-08 00:54:46.373
 --
 
 COPY "public"."vendor_tags" ("id", "vendor_id", "tag_name", "created_at", "updated_at") FROM stdin;
-ea625f91-7c8d-4497-a621-5502905f4703	c162443d-f737-4f94-bd44-de3cc2566cc5	Ammar, Ahsan, Some tags	2025-11-08 02:31:35.986805+00	2025-11-08 02:31:35.986805+00
-3d638b14-0034-4d59-b9cc-5049ed838813	c162443d-f737-4f94-bd44-de3cc2566cc5	testing, jkhkjh,mbnnbm,mbmnb	2025-11-08 02:39:45.077157+00	2025-11-08 02:39:45.077157+00
 \.
 
 
@@ -1224,65 +1008,76 @@ ea625f91-7c8d-4497-a621-5502905f4703	c162443d-f737-4f94-bd44-de3cc2566cc5	Ammar,
 --
 
 COPY "public"."general_ledger" ("id", "entry_date", "particulars", "debit", "credit", "balance", "entry_type", "notes", "order_id", "vendor_id", "created_at", "updated_at", "tag_id") FROM stdin;
-64df9b55-b254-4f10-b9b8-06ff7adf909d	2025-09-27	Advance Payment - Order AR-00027 from DANIYAL	150000.00	\N	3645000.00	order_payment	Advance payment recorded at booking via other	43f8792f-1a4c-4cf4-b507-d08e96ce4171	\N	2025-10-30 20:11:42.062294+00	2025-11-08 01:03:07.180769+00	\N
-bd1945a0-664e-4d46-9bf8-415a170020bf	2025-09-28	Advance Payment - Order AR-00028 from IMRAN ASLAM	40000.00	\N	3685000.00	order_payment	Advance payment recorded at booking via other	413e4b6e-5fc2-43a1-9013-e2df545f354e	\N	2025-10-30 20:16:20.958364+00	2025-11-08 01:03:07.180769+00	\N
-85c59f7d-aec4-4143-967f-983f67f73d18	2025-10-06	Advance Payment - Order AR-00029 from ARHAM	100000.00	\N	3785000.00	order_payment	Advance payment recorded at booking via other	6f789bd2-215f-4e5a-8ddd-cac4d2df783a	\N	2025-10-31 15:54:31.123902+00	2025-11-08 01:03:07.180769+00	\N
-de15420d-8209-4454-b0b7-f095370d1124	2025-10-06	Advance Payment - Order AR-00030 from UZAIR ALI 	100000.00	\N	3885000.00	order_payment	Advance payment recorded at booking via other	7f3f22a6-a7d5-443c-84cc-14dc1a8563bd	\N	2025-10-31 15:57:15.50019+00	2025-11-08 01:03:07.180769+00	\N
-a61cf635-928c-41c3-8d0a-c31a9d2ea71a	2025-07-17	Advance Payment - Order AR-00001 from SOHAIB RASHID	50000.00	\N	50000.00	order_payment	Advance payment recorded at booking via bank	15f5c2b5-fd18-4c1a-adad-2bf1cc627fc3	\N	2025-10-29 11:13:31.371105+00	2025-11-08 01:03:07.180769+00	\N
-b93f70f2-190e-48cb-99b7-3c295693b06c	2025-07-17	Advance Payment - Order AR-00002 from SOHAIB RASHID	385000.00	\N	435000.00	order_payment	Advance payment recorded at booking via other	85c7ee8e-0856-4e38-8478-9651a4aefcae	\N	2025-10-29 14:02:14.217317+00	2025-11-08 01:03:07.180769+00	\N
-915efd80-8f28-4eeb-bea5-64cc9b5656de	2025-07-21	Advance Payment - Order AR-00003 from MRS AMIR	100000.00	\N	535000.00	order_payment	Advance payment recorded at booking via other	5f5f7d80-b82a-46c2-afe4-c9a7cf6fd31a	\N	2025-10-30 14:40:07.951254+00	2025-11-08 01:03:07.180769+00	\N
-58221db0-e755-41aa-9fbc-74c3d45c9217	2025-07-24	Advance Payment - Order AR-00004 from M BASIT 	130000.00	\N	665000.00	order_payment	Advance payment recorded at booking via other	38e728dd-b176-444a-9180-976b32b3c318	\N	2025-10-30 14:56:39.542474+00	2025-11-08 01:03:07.180769+00	\N
-2673743e-ef5d-452d-a541-7d8c98fb5310	2025-08-02	Advance Payment - Order AR-00005 from HAMMAD SANI	150000.00	\N	815000.00	order_payment	Advance payment recorded at booking via other	8205d83a-576a-4eb4-b43c-224bfea1cde8	\N	2025-10-30 18:28:50.256211+00	2025-11-08 01:03:07.180769+00	\N
-acd1fd9a-a88b-47d3-ad44-91b1a1dd7bff	2025-08-06	Advance Payment - Order AR-00006 from SH ASIM	50000.00	\N	865000.00	order_payment	Advance payment recorded at booking via other	bafe46ef-6777-4b06-af1d-afd270354c0c	\N	2025-10-30 18:34:21.882956+00	2025-11-08 01:03:07.180769+00	\N
-efa74552-4d16-427c-b069-ce214b6a309d	2025-08-16	Advance Payment - Order AR-00009 from HASSAN AMIR	200000.00	\N	1065000.00	order_payment	Advance payment recorded at booking via other	7b5c58db-90b4-4a99-8bb6-60e04574f9de	\N	2025-10-30 18:57:50.71614+00	2025-11-08 01:03:07.180769+00	\N
-bc87241c-ca88-4fef-9fcb-ed890eea9a29	2025-08-30	Advance Payment - Order AR-00012 from ZOHAIB ZAHID 	160000.00	\N	1225000.00	order_payment	Advance payment recorded at booking via other	805c0bf2-b436-48e9-bac4-cfbbfe60b6aa	\N	2025-10-30 19:08:35.38308+00	2025-11-08 01:03:07.180769+00	\N
-40339123-4ca5-4daf-bf2d-8ee8b10ea40b	2025-09-01	Advance Payment - Order AR-00014 from ADEEL	145000.00	\N	1370000.00	order_payment	Advance payment recorded at booking via other	89436762-bc61-402f-817b-dd8291efb0d5	\N	2025-10-30 19:17:17.333474+00	2025-11-08 01:03:07.180769+00	\N
-808317df-b483-4b12-95b9-80a9f5646878	2025-09-02	Advance Payment - Order AR-00015 from ABDUL TAUHEED 	260000.00	\N	1630000.00	order_payment	Advance payment recorded at booking via other	8d0519bf-7dcb-4240-a514-2a05cc8614ab	\N	2025-10-30 19:22:50.711287+00	2025-11-08 01:03:07.180769+00	\N
-21aca052-60ad-4ac8-a6a4-d087f3d91303	2025-09-07	Advance Payment - Order AR-00016 from AUZAN NAEEM	200000.00	\N	1830000.00	order_payment	Advance payment recorded at booking via other	ba1b87ab-4c34-4966-9549-80784ed0bf00	\N	2025-10-30 19:28:12.330181+00	2025-11-08 01:03:07.180769+00	\N
-435a8d90-be4f-43a4-8403-e56334e3fce4	2025-09-08	Advance Payment - Order AR-00017 from SH HASSAN QASIM	100000.00	\N	1930000.00	order_payment	Advance payment recorded at booking via other	0205e1e2-f5e2-4f1f-98f7-4049c677a6ab	\N	2025-10-30 19:32:53.150034+00	2025-11-08 01:03:07.180769+00	\N
-dff8c9d6-0ca4-44b3-9e3a-a8c8b6c4e545	2025-09-10	Advance Payment - Order AR-00018 from HASEEB SALMAN	60000.00	\N	1990000.00	order_payment	Advance payment recorded at booking via other	c397149f-9f92-4478-8b7f-28b394753e39	\N	2025-10-30 19:35:22.035171+00	2025-11-08 01:03:07.180769+00	\N
-9256cf65-36f0-43fc-953b-8f219d65937d	2025-09-10	Advance Payment - Order AR-00019 from ADEEL & FARAZ	80000.00	\N	2070000.00	order_payment	Advance payment recorded at booking via other	41d8104f-2e5b-4f1c-9ebc-6260cf6b65df	\N	2025-10-30 19:37:50.471802+00	2025-11-08 01:03:07.180769+00	\N
-c08cd23e-84b3-4120-addc-37956b2a458c	2025-09-10	Advance Payment - Order AR-00020 from ANS MAHAD	275000.00	\N	2345000.00	order_payment	Advance payment recorded at booking via other	43ccc8ef-a034-46f5-ba89-7cc35f4fda0f	\N	2025-10-30 19:40:20.199601+00	2025-11-08 01:03:07.180769+00	\N
-326f0d0e-4c1d-4d50-9daf-7bd135f2b77a	2025-09-14	Advance Payment - Order AR-00021 from SAFEER REHMAN	200000.00	\N	2545000.00	order_payment	Advance payment recorded at booking via other	9307894a-b229-4bf1-8963-54bd58d547d2	\N	2025-10-30 19:43:40.167447+00	2025-11-08 01:03:07.180769+00	\N
-5b3a518e-f878-4ed7-a49b-db8d378c4c6c	2025-09-14	Advance Payment - Order AR-00022 from HARIS AMIN	100000.00	\N	2645000.00	order_payment	Advance payment recorded at booking via other	50e84559-282c-4165-a575-c30fd1917962	\N	2025-10-30 19:45:46.177969+00	2025-11-08 01:03:07.180769+00	\N
-383a153c-9fa5-4cb0-8761-1230fe209f7c	2025-09-15	Advance Payment - Order AR-00013 from HAJI ADEEL 	30000.00	\N	2675000.00	order_payment	Advance payment recorded at booking via other	997e880d-8c2b-44b3-93f9-5c6c5e5e7f50	\N	2025-10-30 19:13:23.292353+00	2025-11-08 01:03:07.180769+00	\N
-93e2505c-e1e9-472f-878d-389799fa52c8	2025-10-11	Advance Payment - Order AR-00031 from MR IMRAN 	20000.00	\N	3905000.00	order_payment	Advance payment recorded at booking via other	77790ff1-a2f1-4e2f-a0ec-446d064b3a2b	\N	2025-10-31 15:59:58.367335+00	2025-11-08 01:03:07.180769+00	\N
-8ba385b3-a5d3-4b9e-b86e-0806de35f46a	2025-10-11	Advance Payment - Order AR-00033 from AMMAR YOUSAF	90000.00	\N	3995000.00	order_payment	Advance payment recorded at booking via other	9752100d-0632-42f3-941c-f4d5b45b7ced	\N	2025-10-31 16:06:44.648299+00	2025-11-08 01:03:07.180769+00	\N
-05d73406-6b51-4896-af35-27b2050ec5c2	2025-09-16	Advance Payment - Order AR-00023 from ABDUL MOEEZ	200000.00	\N	2875000.00	order_payment	Advance payment recorded at booking via other	a34dd14c-fffc-41dc-a032-c9d52c1cca36	\N	2025-10-30 19:54:58.960791+00	2025-11-08 01:03:07.180769+00	\N
-bb106caa-7f0b-4e47-a91a-b6cd19a7ff1d	2025-09-21	Advance Payment - Order AR-00025 from SHERAZ	200000.00	\N	3075000.00	order_payment	Advance payment recorded at booking via other	40404163-9ad4-4994-a41f-6317ff41a08c	\N	2025-10-30 20:05:24.329104+00	2025-11-08 01:03:07.180769+00	\N
-ec855e74-ebfd-4d4a-8bc9-c5e401f9d8df	2025-10-12	Advance Payment - Order AR-00034 from UMAIR IMRAN	50000.00	\N	4045000.00	order_payment	Advance payment recorded at booking via other	f357a7c4-919d-47d4-a046-abd7411bef1d	\N	2025-10-31 16:08:51.369968+00	2025-11-08 01:03:07.180769+00	\N
-30d5aa8f-dec4-43e5-8845-8225ca2a7546	2025-10-13	Advance Payment - Order AR-00035 from ALI ( HARIS )	100000.00	\N	4145000.00	order_payment	Advance payment recorded at booking via other	be05b835-4149-4376-9eda-b197cbc31e62	\N	2025-10-31 16:12:44.005012+00	2025-11-08 01:03:07.180769+00	\N
-69b00c6e-f02a-411d-b781-00cca26343be	2025-10-16	Advance Payment - Order AR-00036 from NABEEL KHAWAR 	128000.00	\N	4273000.00	order_payment	Advance payment recorded at booking via other	ac05b210-81a0-4aaa-b947-504fd48c0754	\N	2025-10-31 16:17:40.050016+00	2025-11-08 01:03:07.180769+00	\N
-6d6db029-ffa1-43d3-9a92-615f98731e54	2025-10-27	Advance Payment - Order AR-00039 from HASHAM	40000.00	\N	4313000.00	order_payment	Advance payment recorded at booking via other	ac4c0655-e060-4847-b4a4-29205da4707f	\N	2025-10-31 16:32:14.438009+00	2025-11-08 01:03:07.180769+00	\N
-461b16c7-2134-479b-9c99-14aaf4cd8767	2025-10-28	Advance Payment - Order AR-00040 from UMAIR ALI	450000.00	\N	4763000.00	order_payment	Advance payment recorded at booking via other	53f6b83c-776f-401a-9f87-8c87ce26a4f9	\N	2025-10-31 16:36:31.424661+00	2025-11-08 01:03:07.180769+00	\N
-53d52653-a4ba-45be-9f86-f96ef18f1afe	2025-10-29	Advance Payment - Order AR-00041 from EHTASHAM	100000.00	\N	4863000.00	order_payment	Advance payment recorded at booking via other	0e6b0142-6ff4-4a7f-a816-b45030731631	\N	2025-11-01 08:07:52.121937+00	2025-11-08 01:03:07.180769+00	\N
-4ca5e69d-3deb-4856-a40b-5b99c8fdfddb	2025-11-03	Order Payment - AR-00001 from SOHAIB RASHID	65000.00	\N	4928000.00	order_payment	Payment via other	15f5c2b5-fd18-4c1a-adad-2bf1cc627fc3	\N	2025-11-03 13:49:20.643718+00	2025-11-08 01:03:07.180769+00	\N
-55f7d359-61b5-46dc-93a2-e15ffbb2aafc	2025-11-03	Order Payment - AR-00003 from MRS AMIR	50000.00	\N	4978000.00	order_payment	Payment via other	5f5f7d80-b82a-46c2-afe4-c9a7cf6fd31a	\N	2025-11-03 14:05:06.642609+00	2025-11-08 01:03:07.180769+00	\N
-12345276-5e8d-4fde-9f22-fbe78df582fc	2025-11-03	Order Payment - AR-00004 from M BASIT 	135000.00	\N	5113000.00	order_payment	Payment via other	38e728dd-b176-444a-9180-976b32b3c318	\N	2025-11-03 14:11:35.807227+00	2025-11-08 01:03:07.180769+00	\N
-743e7d69-f759-462f-b711-b2913621152f	2025-11-03	Order Payment - AR-00006 from SH ASIM	55000.00	\N	5168000.00	order_payment	Payment via other	bafe46ef-6777-4b06-af1d-afd270354c0c	\N	2025-11-03 14:14:30.955539+00	2025-11-08 01:03:07.180769+00	\N
-84c1ccd5-722b-4cda-a32f-76476ce5f64f	2025-11-03	Order Payment - AR-00007 from HASSAN SIALKOT	400000.00	\N	5568000.00	order_payment	Payment via other	72974b6f-fc69-49af-b02c-dde30673e0f2	\N	2025-11-03 14:16:25.588883+00	2025-11-08 01:03:07.180769+00	\N
-127a0092-ed22-4e04-8302-71ce13616bd7	2025-11-03	Order Payment - AR-00009 from HASSAN AMIR	100000.00	\N	5668000.00	order_payment	Payment via other	7b5c58db-90b4-4a99-8bb6-60e04574f9de	\N	2025-11-03 14:17:16.36386+00	2025-11-08 01:03:07.180769+00	\N
-ecd7e6a0-de4f-4aef-82ed-139b0a707056	2025-11-03	Order Payment - AR-00010 from AHSAN ASIF	100000.00	\N	5768000.00	order_payment	Payment via other	08bffa47-9ea5-44ee-8ea1-4cc71500503b	\N	2025-11-03 14:18:13.955211+00	2025-11-08 01:03:07.180769+00	\N
-42d6859f-9f12-4dfa-b22a-fab6a33d3c01	2025-11-03	Order Payment - AR-00013 from HAJI ADEEL 	40000.00	\N	5808000.00	order_payment	Payment via other	997e880d-8c2b-44b3-93f9-5c6c5e5e7f50	\N	2025-11-03 14:21:31.759203+00	2025-11-08 01:03:07.180769+00	\N
-cd2ff71a-ef73-4f11-b23f-a78caa1e36db	2025-11-03	Order Payment - AR-00014 from ADEEL	150000.00	\N	5958000.00	order_payment	Payment via other	89436762-bc61-402f-817b-dd8291efb0d5	\N	2025-11-03 14:22:59.666996+00	2025-11-08 01:03:07.180769+00	\N
-c8509461-4671-447e-8198-3e36018c7e8b	2025-11-03	Order Payment - AR-00017 from SH HASSAN QASIM	100000.00	\N	6058000.00	order_payment	Payment via other	0205e1e2-f5e2-4f1f-98f7-4049c677a6ab	\N	2025-11-03 14:24:26.283514+00	2025-11-08 01:03:07.180769+00	\N
-31238a4d-e8bd-4cd1-bc39-3561937a3c15	2025-11-03	Order Payment - AR-00021 from SAFEER REHMAN	100000.00	\N	6158000.00	order_payment	Payment via other	9307894a-b229-4bf1-8963-54bd58d547d2	\N	2025-11-03 14:29:31.599335+00	2025-11-08 01:03:07.180769+00	\N
-66e04cf9-7e04-40c2-8f51-4189e61980e2	2025-11-03	Order Payment - AR-00022 from HARIS AMIN	100000.00	\N	6258000.00	order_payment	Payment via other	50e84559-282c-4165-a575-c30fd1917962	\N	2025-11-03 14:30:12.210804+00	2025-11-08 01:03:07.180769+00	\N
-28486490-c0be-48c2-9834-a79a039f5b2c	2025-11-03	Order Payment - AR-00035 from ALI ( HARIS )	100000.00	\N	6358000.00	order_payment	Payment via other	be05b835-4149-4376-9eda-b197cbc31e62	\N	2025-11-03 14:37:23.682759+00	2025-11-08 01:03:07.180769+00	\N
-2bc5bafe-cdd4-4e87-ae18-323fca5ee292	2025-11-03	Advance Payment - Order AR-00042 from BILAL ( MRS NAVEED )	100000.00	\N	6458000.00	order_payment	Advance payment recorded at booking via other	a239a178-44af-4d3f-ad86-91f20de0f2a7	\N	2025-11-03 14:44:36.835314+00	2025-11-08 01:03:07.180769+00	\N
-a1c7909a-aeae-4950-a6c8-235d842a5dba	2025-11-03	Advance Payment - Order AR-00044 from HAMZA KAYANI	65000.00	\N	6523000.00	order_payment	Advance payment recorded at booking via other	508f9460-e0f4-446f-9c4b-efe4417fa439	\N	2025-11-03 14:46:05.219302+00	2025-11-08 01:03:07.180769+00	\N
-55afffb1-0bf0-494d-b30b-4c2806a5e306	2025-11-03	Advance Payment - Order AR-00045 from AMEER AFRICA	100000.00	\N	6623000.00	order_payment	Advance payment recorded at booking via other	9fc7dd4c-ea2b-4a1e-9ce3-c453344b6502	\N	2025-11-03 14:47:10.626347+00	2025-11-08 01:03:07.180769+00	\N
-d632a0b4-9dc4-4fa2-8963-b7016a19d8ce	2025-11-03	Advance Payment - Order AR-00046 from MOBEEN KHALIL	150000.00	\N	6773000.00	order_payment	Advance payment recorded at booking via other	54b6e9e7-4e95-463f-992b-f334691b7a2a	\N	2025-11-03 14:50:38.270982+00	2025-11-08 01:03:07.180769+00	\N
-e7b811a4-9812-4846-8cf4-b338815eee98	2025-11-03	Advance Payment - Order AR-00047 from BASIT FAMILY	800000.00	\N	7573000.00	order_payment	Advance payment recorded at booking via other	00ee4988-2414-4b6a-8801-015896824c95	\N	2025-11-03 14:52:08.300749+00	2025-11-08 01:03:07.180769+00	\N
-4bf2398f-eca1-4480-aeeb-1d007fc5ebca	2025-11-03	Advance Payment - Order AR-00048 from SADAQAT ISRA	100000.00	\N	7673000.00	order_payment	Advance payment recorded at booking via other	49974bee-454f-46c7-8c87-611e82b0eaab	\N	2025-11-03 14:53:36.272941+00	2025-11-08 01:03:07.180769+00	\N
-3057cea7-661e-4f69-9c75-5ed889a613e8	2025-11-03	Advance Payment - Order AR-00049 from UMAIR CHEEMA	125000.00	\N	7798000.00	order_payment	Advance payment recorded at booking via other	b573e9bc-d314-4e0a-8e34-216bea63cdfd	\N	2025-11-03 14:54:50.663134+00	2025-11-08 01:03:07.180769+00	\N
-d6abfaa0-2424-4926-bcac-866d277f6dcc	2025-11-03	Order Payment - AR-00025 from SHERAZ	160000.00	\N	7958000.00	order_payment	Payment via other	40404163-9ad4-4994-a41f-6317ff41a08c	\N	2025-11-03 18:56:09.78345+00	2025-11-08 01:03:07.180769+00	\N
-6525ac2f-d963-4605-a333-9c14797f4ce9	2025-11-06	Order Payment - AR-00031 from MR IMRAN 	25000.00	\N	7983000.00	order_payment	Payment via other	77790ff1-a2f1-4e2f-a0ec-446d064b3a2b	\N	2025-11-06 10:58:55.032089+00	2025-11-08 01:03:07.180769+00	\N
-5bcdbee7-d98e-4fc7-8b99-12548ea5ded1	2025-11-06	Order Payment - AR-00003 from MRS AMIR	175000.00	\N	8158000.00	order_payment	Payment via other	5f5f7d80-b82a-46c2-afe4-c9a7cf6fd31a	\N	2025-11-06 20:09:47.433437+00	2025-11-08 01:03:07.180769+00	\N
-2bafb59f-80ee-4157-bbda-aa90a3614f82	2025-11-06	Order Payment - AR-00019 from ADEEL & FARAZ	50000.00	\N	8208000.00	order_payment	Payment via other	41d8104f-2e5b-4f1c-9ebc-6260cf6b65df	\N	2025-11-06 20:11:19.066892+00	2025-11-08 01:03:07.180769+00	\N
-0b961fa7-4b86-4ef9-b128-4106a8f7da18	2025-11-06	Order Payment - AR-00023 from ABDUL MOEEZ	200000.00	\N	8408000.00	order_payment	Payment via other	a34dd14c-fffc-41dc-a032-c9d52c1cca36	\N	2025-11-06 20:12:16.955631+00	2025-11-08 01:03:07.180769+00	\N
-fa299a1d-35e6-4619-8d96-7beba69ad3ec	2025-09-25	Advance Payment - Order AR-00024 from ZAHID FAMILY 	250000.00	\N	3325000.00	order_payment	Advance payment recorded at booking via other	69cae7bc-b329-4473-96ba-5ed12531b308	\N	2025-10-30 19:58:22.581395+00	2025-11-08 01:03:07.180769+00	\N
-e25cda7a-7a8a-442c-b986-d0abe3d9cb42	2025-09-25	Advance Payment - Order AR-00026 from SHAHEER	170000.00	\N	3495000.00	order_payment	Advance payment recorded at booking via other	d9f86d8e-3ddf-4504-b12d-2c5b3a43a785	\N	2025-10-30 20:07:47.771533+00	2025-11-08 01:03:07.180769+00	\N
+c9d41640-e0d5-4937-ada1-47fb68cb0625	2025-08-16	Advance payment for Order #AR-00009	300000.00	\N	2435000.00	order_payment	Synced from order advance payment	7b5c58db-90b4-4a99-8bb6-60e04574f9de	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+0b98df20-a344-4563-834b-63cbe766f920	2025-08-19	Advance payment for Order #AR-00010	100000.00	\N	2535000.00	order_payment	Synced from order advance payment	08bffa47-9ea5-44ee-8ea1-4cc71500503b	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+36a50fb9-b508-4cd1-8526-908d55e4fbe1	2025-08-30	Advance payment for Order #AR-00012	160000.00	\N	2695000.00	order_payment	Synced from order advance payment	805c0bf2-b436-48e9-bac4-cfbbfe60b6aa	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+60869773-b0ee-4c3a-b858-db66275fb3b6	2025-09-01	Advance payment for Order #AR-00014	295000.00	\N	2990000.00	order_payment	Synced from order advance payment	89436762-bc61-402f-817b-dd8291efb0d5	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+0b93bc37-34b8-453f-927b-8a62516257f6	2025-09-08	Advance payment for Order #AR-00017	290000.00	\N	3810000.00	order_payment	Synced from order advance payment	0205e1e2-f5e2-4f1f-98f7-4049c677a6ab	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+2ab7fcd9-8b1c-4b45-8b7d-baa7e5fa6913	2025-09-10	Advance payment for Order #AR-00019	130000.00	\N	3940000.00	order_payment	Synced from order advance payment	41d8104f-2e5b-4f1c-9ebc-6260cf6b65df	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+262c36aa-25a2-4e56-971c-887bbfd45406	2025-09-10	Advance payment for Order #AR-00020	275000.00	\N	4215000.00	order_payment	Synced from order advance payment	43ccc8ef-a034-46f5-ba89-7cc35f4fda0f	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+6230ccf5-232b-4fa3-8467-8d1b743cd1cb	2025-09-14	Advance payment for Order #AR-00022	200000.00	\N	4815000.00	order_payment	Synced from order advance payment	50e84559-282c-4165-a575-c30fd1917962	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+a60ed3be-fd73-4d4f-994d-082aea4f4f46	2025-09-15	Advance payment for Order #AR-00013	70000.00	\N	4885000.00	order_payment	Synced from order advance payment	997e880d-8c2b-44b3-93f9-5c6c5e5e7f50	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+a701bf0a-3fe2-46c4-8d99-c75430ac3a1b	2025-09-16	Advance payment for Order #AR-00023	400000.00	\N	5285000.00	order_payment	Synced from order advance payment	a34dd14c-fffc-41dc-a032-c9d52c1cca36	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+e025f360-b083-4b61-819a-aab6bc1d77e1	2025-09-21	Advance payment for Order #AR-00025	360000.00	\N	5645000.00	order_payment	Synced from order advance payment	40404163-9ad4-4994-a41f-6317ff41a08c	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+598506a1-b547-46cd-9bb3-be6f301d8041	2025-09-28	Advance payment for Order #AR-00028	80000.00	\N	6295000.00	order_payment	Synced from order advance payment	413e4b6e-5fc2-43a1-9013-e2df545f354e	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+6deec424-2502-46ff-a198-8838ab170ef5	2025-10-06	Advance payment for Order #AR-00029	100000.00	\N	6395000.00	order_payment	Synced from order advance payment	6f789bd2-215f-4e5a-8ddd-cac4d2df783a	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+a32b3b8e-b7e0-46c6-b53a-2dd37d3a566c	2025-10-06	Advance payment for Order #AR-00030	100000.00	\N	6495000.00	order_payment	Synced from order advance payment	7f3f22a6-a7d5-443c-84cc-14dc1a8563bd	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+6faf3693-b866-4b65-8c9c-98b4f3246fa1	2025-10-11	Advance payment for Order #AR-00033	90000.00	\N	6585000.00	order_payment	Synced from order advance payment	9752100d-0632-42f3-941c-f4d5b45b7ced	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+19fb86c2-5181-4cc4-a70b-13b5f6caae8f	2025-10-11	Advance payment for Order #AR-00031	45000.00	\N	6630000.00	order_payment	Synced from order advance payment	77790ff1-a2f1-4e2f-a0ec-446d064b3a2b	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+6628a66a-8d18-4736-86e6-3d4d0e47b1ae	2025-10-12	Advance payment for Order #AR-00034	105000.00	\N	6735000.00	order_payment	Synced from order advance payment	f357a7c4-919d-47d4-a046-abd7411bef1d	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+69eb7a8a-ec8f-455a-b2c4-839d999e4a05	2025-10-13	Advance payment for Order #AR-00035	200000.00	\N	6935000.00	order_payment	Synced from order advance payment	be05b835-4149-4376-9eda-b197cbc31e62	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+24e81a08-3835-42a6-a256-896269253376	2025-10-16	Advance payment for Order #AR-00036	128000.00	\N	7063000.00	order_payment	Synced from order advance payment	ac05b210-81a0-4aaa-b947-504fd48c0754	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+f22a3c9b-29ef-4635-9fb3-83ceaf807b69	2025-10-20	Advance payment for Order #AR-00038	225000.00	\N	7288000.00	order_payment	Synced from order advance payment	38852765-172b-47d0-a056-45916a80cebb	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+e0852a09-f9b2-4696-b1ca-3d877ace2553	2025-10-27	Advance payment for Order #AR-00039	40000.00	\N	7328000.00	order_payment	Synced from order advance payment	ac4c0655-e060-4847-b4a4-29205da4707f	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+4e1f2c1f-b8f3-4b1d-951e-da0b2d57c5a3	2025-10-28	Advance payment for Order #AR-00040	650000.00	\N	7978000.00	order_payment	Synced from order advance payment	53f6b83c-776f-401a-9f87-8c87ce26a4f9	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+66476d22-51ad-4cbd-b7dd-10d64fd2d3d3	2025-10-29	Advance payment for Order #AR-00041	100000.00	\N	8078000.00	order_payment	Synced from order advance payment	0e6b0142-6ff4-4a7f-a816-b45030731631	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+6ce29a6b-aca1-415b-8405-85c3e4b08b12	2025-11-03	Advance payment for Order #AR-00047	800000.00	\N	9363000.00	order_payment	Synced from order advance payment	00ee4988-2414-4b6a-8801-015896824c95	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+b5607ede-8dfd-426b-8343-95e70530d540	2025-11-03	Advance payment for Order #AR-00045	100000.00	\N	9463000.00	order_payment	Synced from order advance payment	9fc7dd4c-ea2b-4a1e-9ce3-c453344b6502	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+452994df-fe1f-4b32-891a-71796925d8f6	2025-11-03	Advance payment for Order #AR-00049	125000.00	\N	9588000.00	order_payment	Synced from order advance payment	b573e9bc-d314-4e0a-8e34-216bea63cdfd	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+8ff76eef-fc26-43a0-9115-f2c0c7fec5cb	2025-11-08	Advance payment for Order #AR-00051	30000.00	\N	9618000.00	order_payment	Synced from order advance payment	c6ced0b2-38cb-4955-959b-7411e32409b2	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+09308dd6-3751-44d4-842b-36f415f1fc63	2025-09-02	Advance payment for Order #AR-00015	260000.00	\N	3250000.00	order_payment	Synced from order advance payment	8d0519bf-7dcb-4240-a514-2a05cc8614ab	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+081c3006-957a-40bb-812e-a9c567e783e0	2025-09-07	Advance payment for Order #AR-00016	270000.00	\N	3520000.00	order_payment	Synced from order advance payment	ba1b87ab-4c34-4966-9549-80784ed0bf00	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+344f5eeb-8b45-46f6-8d2c-f4447e998128	2025-09-10	Advance payment for Order #AR-00018	60000.00	\N	4275000.00	order_payment	Synced from order advance payment	c397149f-9f92-4478-8b7f-28b394753e39	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+13e99c67-e3b9-4344-aa80-ace606278f74	2025-09-14	Advance payment for Order #AR-00021	340000.00	\N	4615000.00	order_payment	Synced from order advance payment	9307894a-b229-4bf1-8963-54bd58d547d2	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+2fda34b5-9bd1-4cca-99a5-facecce63722	2025-09-25	Advance payment for Order #AR-00026	170000.00	\N	5815000.00	order_payment	Synced from order advance payment	d9f86d8e-3ddf-4504-b12d-2c5b3a43a785	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+34209da7-2b3b-456e-9dfa-192feafff73d	2025-09-25	Advance payment for Order #AR-00024	250000.00	\N	6065000.00	order_payment	Synced from order advance payment	69cae7bc-b329-4473-96ba-5ed12531b308	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+307db1f8-b370-4d08-99aa-c3b3a30d5959	2025-09-27	Advance payment for Order #AR-00027	150000.00	\N	6215000.00	order_payment	Synced from order advance payment	43f8792f-1a4c-4cf4-b507-d08e96ce4171	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+e9683e85-0d25-4f88-9604-b929b42881b1	2025-11-03	Advance payment for Order #AR-00042	170000.00	\N	8248000.00	order_payment	Synced from order advance payment	a239a178-44af-4d3f-ad86-91f20de0f2a7	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+9329f2a9-8aff-465d-9a60-4229b402bc87	2025-11-03	Advance payment for Order #AR-00046	150000.00	\N	8398000.00	order_payment	Synced from order advance payment	54b6e9e7-4e95-463f-992b-f334691b7a2a	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+a7a9d80b-6212-486d-8be1-2a7f2d14c8e8	2025-11-03	Advance payment for Order #AR-00044	65000.00	\N	8463000.00	order_payment	Synced from order advance payment	508f9460-e0f4-446f-9c4b-efe4417fa439	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+51e5b8cf-88f0-49b9-8b5c-173971dc5af9	2025-11-03	Advance payment for Order #AR-00048	100000.00	\N	8563000.00	order_payment	Synced from order advance payment	49974bee-454f-46c7-8c87-611e82b0eaab	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+51cd5ca2-a633-4dd3-9269-e8cdbbd394fa	2025-11-17	Advance payment for Order #AR-00061	56000.00	\N	9779000.00	order_payment	Synced from order advance payment	e48a13a4-5286-4ab6-9f9b-854cbe6bd931	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+5185cc02-6911-48a2-b106-6218fd443961	2025-11-19	Payment for Order #AR-00062	125000.00	\N	10014000.00	order_payment	Payment via other	c84447b4-d0ea-44e6-a182-934c700e0dbe	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+4b2cceeb-0c05-4514-ab6a-81d287552f6e	2025-11-19	Payment for Order #AR-00047	200000.00	\N	10214000.00	order_payment	Payment via other	00ee4988-2414-4b6a-8801-015896824c95	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+e87c7d93-a68f-49c9-a9a9-c1a04963dd26	2025-11-20	Payment for Order #AR-00049	75000.00	\N	10289000.00	order_payment	Payment via other	b573e9bc-d314-4e0a-8e34-216bea63cdfd	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+49f239a6-57d5-4cf0-954f-c3a519f51c10	2025-11-21	Advance payment for Order #AR-00065	65000.00	\N	10354000.00	order_payment	Synced from order advance payment	ae5c369b-6388-43f6-8c34-25bf72bd19b5	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+5cf37d3c-8325-4b94-b514-215ab6e29bab	2025-11-22	Payment for Order #AR-00004	50000.00	\N	10404000.00	order_payment	Payment via other	38e728dd-b176-444a-9180-976b32b3c318	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+eb414fd8-c0fa-42f0-9144-e09815ddc12d	2025-11-22	Payment for Order #AR-00022	80000.00	\N	10524000.00	order_payment	Payment via other	50e84559-282c-4165-a575-c30fd1917962	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+3ed7c8ea-e2f4-46b3-a735-c4afdaab3696	2025-11-25	Payment for Order #AR-00010	100000.00	\N	10938000.00	order_payment	Payment via other	08bffa47-9ea5-44ee-8ea1-4cc71500503b	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+8ae4c423-737a-441d-9f06-42dd436e4a04	2025-07-17	Advance payment for Order #AR-00002	635000.00	\N	635000.00	order_payment	Synced from order advance payment	85c7ee8e-0856-4e38-8478-9651a4aefcae	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+62779836-075c-4a43-abc0-b55b329550eb	2025-07-17	Advance payment for Order #AR-00001	115000.00	\N	750000.00	order_payment	Synced from order advance payment	15f5c2b5-fd18-4c1a-adad-2bf1cc627fc3	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+c71017ad-6351-4ebc-9853-ce20d4601b12	2025-07-21	Advance payment for Order #AR-00003	325000.00	\N	1075000.00	order_payment	Synced from order advance payment	5f5f7d80-b82a-46c2-afe4-c9a7cf6fd31a	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+c98e37ad-abce-4cba-b26f-0f693b5cae0d	2025-07-24	Advance payment for Order #AR-00004	265000.00	\N	1340000.00	order_payment	Synced from order advance payment	38e728dd-b176-444a-9180-976b32b3c318	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+79ffe0ba-cd16-41dd-8a2a-f360dc013f9d	2025-08-02	Advance payment for Order #AR-00005	150000.00	\N	1490000.00	order_payment	Synced from order advance payment	8205d83a-576a-4eb4-b43c-224bfea1cde8	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+77091ea6-c394-4bcf-b79b-14a74b7b7914	2025-08-06	Advance payment for Order #AR-00006	105000.00	\N	1595000.00	order_payment	Synced from order advance payment	bafe46ef-6777-4b06-af1d-afd270354c0c	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+1457c983-5074-4ec8-8248-74dd08f86d54	2025-08-11	Advance payment for Order #AR-00007	400000.00	\N	1995000.00	order_payment	Synced from order advance payment	72974b6f-fc69-49af-b02c-dde30673e0f2	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+4dd1a09a-82eb-4207-a146-a225e12abd03	2025-08-11	Advance payment for Order #AR-00008	140000.00	\N	2135000.00	order_payment	Synced from order advance payment	2c109569-cf67-49ce-b1eb-8f44c635d1c6	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+1a5ae984-0df7-41c6-adfc-fe69812eabcf	2025-11-12	Advance payment for Order #AR-00053	55000.00	\N	9673000.00	order_payment	Synced from order advance payment	dc1e0ba9-98e1-40a2-b8e0-db64ea3c8604	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+e89a5961-b6dc-4abf-b767-db33a4c294a6	2025-11-13	Advance payment for Order #AR-00055	50000.00	\N	9723000.00	order_payment	Synced from order advance payment	9cc26631-0953-4ac2-9555-9d63b33fb987	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+f6c02321-bc9a-485f-b79f-cb9a1e18ba51	2025-11-17	Advance payment for Order #AR-00060	110000.00	\N	9889000.00	order_payment	Synced from order advance payment	167bd157-7439-4112-b0b8-8075f3fd9de8	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+ed749127-ae2a-4d2b-84b6-51a11b62c33d	2025-11-22	Advance payment for Order #AR-00064	40000.00	\N	10444000.00	order_payment	Synced from order advance payment	d3099450-4f50-45bc-b356-a82d84a78b71	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+d138ddde-e0a9-42f8-adbc-cb4a06d4b566	2025-11-23	Advance payment for Order #AR-00066	120000.00	\N	10644000.00	order_payment	Synced from order advance payment	84ec2eda-cce0-44a3-91eb-2e9e2eb8f72e	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+d4722bc2-fa8b-4b5e-875e-be69fe6978b0	2025-11-24	Advance payment for Order #AR-00067	40000.00	\N	10684000.00	order_payment	Synced from order advance payment	c91056db-fdd4-4721-ab3b-026675e5e56b	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+719d1d37-ee8c-4556-9ee2-1250bace4a7e	2025-11-25	Payment for Order #AR-00010	90000.00	\N	10774000.00	order_payment	Payment via other	08bffa47-9ea5-44ee-8ea1-4cc71500503b	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+b27723cd-b5b7-401c-b037-bba30393be9a	2025-11-25	Payment for Order #AR-00004	32000.00	\N	10806000.00	order_payment	Payment via other	38e728dd-b176-444a-9180-976b32b3c318	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+547d6aac-4cc7-44fe-ad96-8e109099b9de	2025-11-25	Payment for Order #AR-00036	32000.00	\N	10838000.00	order_payment	Payment via other	ac05b210-81a0-4aaa-b947-504fd48c0754	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+2dce5ab9-4dd6-4d70-9c50-6e2646bc1ea6	2025-11-25	Payment for Order #AR-00015	100000.00	\N	11038000.00	order_payment	Payment via other	8d0519bf-7dcb-4240-a514-2a05cc8614ab	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+da20034b-80fe-4cf6-a126-abecbbb53883	2025-11-29	Advance payment for Order #AR-00069	95000.00	\N	11133000.00	order_payment	Synced from order advance payment	46e94509-ad3d-4d09-b3a0-85c2cd5b9bc5	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+4a137d87-8325-4658-87f7-ca8c314cfd56	2025-11-29	Advance payment for Order #AR-00068	200000.00	\N	11333000.00	order_payment	Synced from order advance payment	999f5691-c5dc-4824-8b8a-abd7d19e8ff2	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+52b04854-bae3-4ad7-aaad-9937572d8e3b	2025-11-29	Advance payment for Order #AR-00070	30000.00	\N	11363000.00	order_payment	Synced from order advance payment	061121a0-b6d4-4111-af68-5eccf0cbd500	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+e8ced617-3928-493b-be76-e123351f47a9	2025-12-01	Advance payment for Order #AR-00071	122000.00	\N	11485000.00	order_payment	Synced from order advance payment	7fa37438-b485-4292-b221-9ad2cb439f4f	\N	2025-12-03 14:09:03.52026+00	2025-12-03 14:09:03.52026+00	\N
+a158341b-da70-4d38-a13e-279cb4b1341b	2025-12-02	Payment to ASSETS	\N	5000000.00	6485000.00	vendor_payment	OLD ENTRIES JUSTIFIED	\N	9aa5c4d0-304f-410f-b686-c2f682a3d06e	2025-12-02 22:52:55.092603+00	2025-12-02 22:52:55.092603+00	\N
+f9e6ec29-4cb5-4d4d-9a8b-ead733c45f13	2025-12-02	Payment to NADEEM	\N	500000.00	5985000.00	vendor_payment	OLD SETTLEMENT	\N	ca601504-179b-4634-82e2-8dc07c4bf3ab	2025-12-02 22:59:54.56926+00	2025-12-02 22:59:54.56926+00	\N
 \.
 
 
@@ -1440,7 +1235,8 @@ f582fdb7-ad80-4281-8077-29e941432dfa	54b6e9e7-4e95-463f-992b-f334691b7a2a	wallim
 --
 
 COPY "public"."users" ("id", "email", "name", "role", "created_at", "updated_at") FROM stdin;
-755c0f15-990a-4e0d-9a1d-03d5de1be7ed	ahsantariq.ar@gmail.com	Ahsan Tariq	admin	2025-09-25 01:41:16.891303+00	2025-09-25 01:44:25.331577+00
+755c0f15-990a-4e0d-9a1d-03d5de1be7ed	ahsantariq.ar@gmail.com	AR Staff	staff	2025-09-25 01:41:16.891303+00	2025-12-02 19:16:26.585057+00
+f2055315-e56b-4927-bf6d-af94107a5527	ahsantariq1991@gmail.com	Admin	admin	2025-12-02 19:48:33.436936+00	2025-12-02 19:49:01.414321+00
 \.
 
 
@@ -1467,6 +1263,8 @@ a5a0aa53-bd36-4836-b863-649456bc2fa4	50e84559-282c-4165-a575-c30fd1917962	d4cb76
 --
 
 COPY "public"."vendor_ledger" ("id", "vendor_id", "general_ledger_id", "entry_date", "particulars", "debit", "credit", "balance", "notes", "created_at", "updated_at") FROM stdin;
+0bcd9093-ce8f-4cc8-9c03-144ffdf9cbfd	9aa5c4d0-304f-410f-b686-c2f682a3d06e	a158341b-da70-4d38-a13e-279cb4b1341b	2025-12-02	Payment to ASSETS	5000000.00	\N	5000000.00	OLD ENTRIES JUSTIFIED	2025-12-02 22:52:55.092603+00	2025-12-02 22:52:55.092603+00
+50464063-88e3-4425-b743-c5f1d75ebeee	ca601504-179b-4634-82e2-8dc07c4bf3ab	f9e6ec29-4cb5-4d4d-9a8b-ead733c45f13	2025-12-02	Payment to NADEEM	500000.00	\N	500000.00	OLD SETTLEMENT	2025-12-02 22:59:54.56926+00	2025-12-02 22:59:54.56926+00
 \.
 
 
@@ -1538,13 +1336,13 @@ COPY "storage"."vector_indexes" ("id", "name", "bucket_id", "data_type", "dimens
 -- Name: refresh_tokens_id_seq; Type: SEQUENCE SET; Schema: auth; Owner: supabase_auth_admin
 --
 
-SELECT pg_catalog.setval('"auth"."refresh_tokens_id_seq"', 314, true);
+SELECT pg_catalog.setval('"auth"."refresh_tokens_id_seq"', 339, true);
 
 
 --
 -- PostgreSQL database dump complete
 --
 
--- \unrestrict M4gyBiDv7qUHYH9prCdxfAC67qtKChafZh4lEOD5wUguTDlx63zJLBP4Cc8844z
+-- \unrestrict wWg89GKyRlmSQMFv7hyvomgf1LdVRenmOVaaIzrRo1iT4gbAlfl7yq7YHfHYQjQ
 
 RESET ALL;

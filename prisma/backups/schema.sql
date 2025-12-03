@@ -89,10 +89,14 @@ CREATE OR REPLACE FUNCTION "public"."calculate_general_ledger_balance"() RETURNS
 DECLARE
   previous_balance DECIMAL(12, 2);
 BEGIN
-  -- Get the last balance before this entry
+  -- Get the last balance in chronological order (oldest to newest)
+  -- An entry is "before" this one if:
+  -- 1. entry_date is earlier, OR
+  -- 2. entry_date is same but created_at is earlier
   SELECT balance INTO previous_balance
   FROM public.general_ledger
-  WHERE entry_date <= NEW.entry_date AND id != NEW.id
+  WHERE (entry_date < NEW.entry_date) 
+     OR (entry_date = NEW.entry_date AND created_at < NEW.created_at)
   ORDER BY entry_date DESC, created_at DESC
   LIMIT 1;
 
@@ -988,6 +992,10 @@ ALTER TABLE ONLY "public"."vendor_tags"
 
 
 
+CREATE POLICY "Allow authenticated insert" ON "public"."users" FOR INSERT WITH CHECK (("auth"."uid"() = "id"));
+
+
+
 CREATE POLICY "Enable all operations for authenticated users" ON "public"."customers" USING (("auth"."role"() = 'authenticated'::"text"));
 
 
@@ -1001,10 +1009,6 @@ CREATE POLICY "Enable all operations for authenticated users" ON "public"."order
 
 
 CREATE POLICY "Enable all operations for authenticated users" ON "public"."orders" USING (("auth"."role"() = 'authenticated'::"text"));
-
-
-
-CREATE POLICY "Enable all operations for authenticated users" ON "public"."users" USING (("auth"."role"() = 'authenticated'::"text"));
 
 
 
@@ -1061,6 +1065,14 @@ CREATE POLICY "Enable update for authenticated users only" ON "public"."measurem
 
 
 CREATE POLICY "Enable update for authenticated users only" ON "public"."payments" FOR UPDATE USING (("auth"."role"() = 'authenticated'::"text"));
+
+
+
+CREATE POLICY "Users can read own data" ON "public"."users" FOR SELECT USING (("auth"."uid"() = "id"));
+
+
+
+CREATE POLICY "Users can update own data" ON "public"."users" FOR UPDATE USING (("auth"."uid"() = "id"));
 
 
 
