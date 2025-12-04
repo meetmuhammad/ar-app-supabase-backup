@@ -290,6 +290,41 @@ $$;
 ALTER FUNCTION "public"."prevent_advance_paid_modification"() OWNER TO "postgres";
 
 
+CREATE OR REPLACE FUNCTION "public"."recalculate_all_balances"() RETURNS "trigger"
+    LANGUAGE "plpgsql"
+    AS $$
+BEGIN
+  -- Recalculate all balances in chronological order
+  WITH ordered_entries AS (
+    SELECT 
+      id,
+      entry_date,
+      created_at,
+      debit,
+      credit,
+      ROW_NUMBER() OVER (ORDER BY entry_date ASC, created_at ASC) as row_num
+    FROM general_ledger
+  ),
+  running_balance AS (
+    SELECT 
+      id,
+      SUM(COALESCE(debit, 0) - COALESCE(credit, 0)) 
+        OVER (ORDER BY row_num) as new_balance
+    FROM ordered_entries
+  )
+  UPDATE general_ledger gl
+  SET balance = rb.new_balance
+  FROM running_balance rb
+  WHERE gl.id = rb.id;
+  
+  RETURN NULL;
+END;
+$$;
+
+
+ALTER FUNCTION "public"."recalculate_all_balances"() OWNER TO "postgres";
+
+
 CREATE OR REPLACE FUNCTION "public"."recalculate_general_ledger_balances"() RETURNS "void"
     LANGUAGE "plpgsql"
     AS $$
@@ -637,7 +672,7 @@ ALTER TABLE "public"."users" OWNER TO "postgres";
 CREATE TABLE IF NOT EXISTS "public"."vendor_ledger" (
     "id" "uuid" DEFAULT "gen_random_uuid"() NOT NULL,
     "vendor_id" "uuid" NOT NULL,
-    "general_ledger_id" "uuid" NOT NULL,
+    "general_ledger_id" "uuid",
     "entry_date" "date" NOT NULL,
     "particulars" "text" NOT NULL,
     "debit" numeric(12,2),
@@ -891,6 +926,14 @@ CREATE OR REPLACE TRIGGER "trg_calculate_general_ledger_balance" BEFORE INSERT O
 
 
 CREATE OR REPLACE TRIGGER "trg_create_vendor_sub_ledger_entry" AFTER INSERT ON "public"."general_ledger" FOR EACH ROW EXECUTE FUNCTION "public"."create_vendor_sub_ledger_entry"();
+
+
+
+CREATE OR REPLACE TRIGGER "trg_recalc_balance_after_delete" AFTER DELETE ON "public"."general_ledger" FOR EACH STATEMENT EXECUTE FUNCTION "public"."recalculate_all_balances"();
+
+
+
+CREATE OR REPLACE TRIGGER "trg_recalc_balance_after_update" AFTER UPDATE ON "public"."general_ledger" FOR EACH STATEMENT EXECUTE FUNCTION "public"."recalculate_all_balances"();
 
 
 
@@ -1301,6 +1344,12 @@ GRANT ALL ON FUNCTION "public"."increment_counter"("counter_id" integer) TO "ser
 GRANT ALL ON FUNCTION "public"."prevent_advance_paid_modification"() TO "anon";
 GRANT ALL ON FUNCTION "public"."prevent_advance_paid_modification"() TO "authenticated";
 GRANT ALL ON FUNCTION "public"."prevent_advance_paid_modification"() TO "service_role";
+
+
+
+GRANT ALL ON FUNCTION "public"."recalculate_all_balances"() TO "anon";
+GRANT ALL ON FUNCTION "public"."recalculate_all_balances"() TO "authenticated";
+GRANT ALL ON FUNCTION "public"."recalculate_all_balances"() TO "service_role";
 
 
 
