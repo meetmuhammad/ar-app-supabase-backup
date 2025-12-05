@@ -290,6 +290,41 @@ $$;
 ALTER FUNCTION "public"."prevent_advance_paid_modification"() OWNER TO "postgres";
 
 
+CREATE OR REPLACE FUNCTION "public"."recalc_balance_after_delete"() RETURNS "trigger"
+    LANGUAGE "plpgsql"
+    AS $$
+BEGIN
+  -- Recalculate balances only for entries after the deleted one
+  PERFORM recalculate_balances_after_date(OLD.entry_date, OLD.created_at);
+  RETURN OLD;
+END;
+$$;
+
+
+ALTER FUNCTION "public"."recalc_balance_after_delete"() OWNER TO "postgres";
+
+
+CREATE OR REPLACE FUNCTION "public"."recalc_balance_after_update"() RETURNS "trigger"
+    LANGUAGE "plpgsql"
+    AS $$
+BEGIN
+  -- Only recalculate if the amounts changed
+  IF OLD.debit IS DISTINCT FROM NEW.debit OR OLD.credit IS DISTINCT FROM NEW.credit THEN
+    -- Recalculate from the earlier of old/new dates
+    IF OLD.entry_date <= NEW.entry_date THEN
+      PERFORM recalculate_balances_after_date(OLD.entry_date, OLD.created_at);
+    ELSE
+      PERFORM recalculate_balances_after_date(NEW.entry_date, NEW.created_at);
+    END IF;
+  END IF;
+  RETURN NEW;
+END;
+$$;
+
+
+ALTER FUNCTION "public"."recalc_balance_after_update"() OWNER TO "postgres";
+
+
 CREATE OR REPLACE FUNCTION "public"."recalculate_all_balances"() RETURNS "trigger"
     LANGUAGE "plpgsql"
     AS $$
@@ -323,6 +358,55 @@ $$;
 
 
 ALTER FUNCTION "public"."recalculate_all_balances"() OWNER TO "postgres";
+
+
+CREATE OR REPLACE FUNCTION "public"."recalculate_balances_after_date"("from_date" timestamp with time zone, "from_created_at" timestamp with time zone) RETURNS "void"
+    LANGUAGE "plpgsql"
+    AS $$
+DECLARE
+  previous_balance DECIMAL(12, 2);
+BEGIN
+  -- Get the balance just before the affected entry
+  SELECT COALESCE(balance, 0) INTO previous_balance
+  FROM general_ledger
+  WHERE (entry_date < from_date) 
+     OR (entry_date = from_date AND created_at < from_created_at)
+  ORDER BY entry_date DESC, created_at DESC
+  LIMIT 1;
+
+  IF previous_balance IS NULL THEN
+    previous_balance := 0;
+  END IF;
+
+  -- Update all balances from the affected date forward
+  WITH ordered_entries AS (
+    SELECT 
+      id, 
+      entry_date, 
+      created_at, 
+      debit, 
+      credit,
+      ROW_NUMBER() OVER (ORDER BY entry_date ASC, created_at ASC) as row_num
+    FROM general_ledger
+    WHERE (entry_date > from_date) 
+       OR (entry_date = from_date AND created_at >= from_created_at)
+  ),
+  running_balance AS (
+    SELECT 
+      id,
+      previous_balance + SUM(COALESCE(debit, 0) - COALESCE(credit, 0)) 
+        OVER (ORDER BY row_num) as new_balance
+    FROM ordered_entries
+  )
+  UPDATE general_ledger gl
+  SET balance = rb.new_balance
+  FROM running_balance rb
+  WHERE gl.id = rb.id;
+END;
+$$;
+
+
+ALTER FUNCTION "public"."recalculate_balances_after_date"("from_date" timestamp with time zone, "from_created_at" timestamp with time zone) OWNER TO "postgres";
 
 
 CREATE OR REPLACE FUNCTION "public"."recalculate_general_ledger_balances"() RETURNS "void"
@@ -929,11 +1013,11 @@ CREATE OR REPLACE TRIGGER "trg_create_vendor_sub_ledger_entry" AFTER INSERT ON "
 
 
 
-CREATE OR REPLACE TRIGGER "trg_recalc_balance_after_delete" AFTER DELETE ON "public"."general_ledger" FOR EACH STATEMENT EXECUTE FUNCTION "public"."recalculate_all_balances"();
+CREATE OR REPLACE TRIGGER "trg_recalc_balance_after_delete" AFTER DELETE ON "public"."general_ledger" FOR EACH ROW EXECUTE FUNCTION "public"."recalc_balance_after_delete"();
 
 
 
-CREATE OR REPLACE TRIGGER "trg_recalc_balance_after_update" AFTER UPDATE ON "public"."general_ledger" FOR EACH STATEMENT EXECUTE FUNCTION "public"."recalculate_all_balances"();
+CREATE OR REPLACE TRIGGER "trg_recalc_balance_after_update" AFTER UPDATE ON "public"."general_ledger" FOR EACH ROW EXECUTE FUNCTION "public"."recalc_balance_after_update"();
 
 
 
@@ -1347,9 +1431,27 @@ GRANT ALL ON FUNCTION "public"."prevent_advance_paid_modification"() TO "service
 
 
 
+GRANT ALL ON FUNCTION "public"."recalc_balance_after_delete"() TO "anon";
+GRANT ALL ON FUNCTION "public"."recalc_balance_after_delete"() TO "authenticated";
+GRANT ALL ON FUNCTION "public"."recalc_balance_after_delete"() TO "service_role";
+
+
+
+GRANT ALL ON FUNCTION "public"."recalc_balance_after_update"() TO "anon";
+GRANT ALL ON FUNCTION "public"."recalc_balance_after_update"() TO "authenticated";
+GRANT ALL ON FUNCTION "public"."recalc_balance_after_update"() TO "service_role";
+
+
+
 GRANT ALL ON FUNCTION "public"."recalculate_all_balances"() TO "anon";
 GRANT ALL ON FUNCTION "public"."recalculate_all_balances"() TO "authenticated";
 GRANT ALL ON FUNCTION "public"."recalculate_all_balances"() TO "service_role";
+
+
+
+GRANT ALL ON FUNCTION "public"."recalculate_balances_after_date"("from_date" timestamp with time zone, "from_created_at" timestamp with time zone) TO "anon";
+GRANT ALL ON FUNCTION "public"."recalculate_balances_after_date"("from_date" timestamp with time zone, "from_created_at" timestamp with time zone) TO "authenticated";
+GRANT ALL ON FUNCTION "public"."recalculate_balances_after_date"("from_date" timestamp with time zone, "from_created_at" timestamp with time zone) TO "service_role";
 
 
 
