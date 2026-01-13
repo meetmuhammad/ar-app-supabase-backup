@@ -4,7 +4,7 @@ SET session_replication_role = replica;
 -- PostgreSQL database dump
 --
 
--- \restrict 3Aj82eXQd2F4OjUvwAaPcxh2zyl9bpqMYfdjXIdZUxuzyPz3khYrFoZdhSULlIc
+-- \restrict RCImvawf5SGzKacWc0uLRKPIAysMexRJHDNmJJoAGgVv2TZHJpIbpLZ3SERYDk9
 
 -- Dumped from database version 17.4
 -- Dumped by pg_dump version 17.6
@@ -1066,6 +1066,14 @@ COPY "auth"."audit_log_entries" ("instance_id", "id", "payload", "created_at", "
 00000000-0000-0000-0000-000000000000	1b0a7844-e1a2-42ae-ad2a-57601c09365a	{"action":"token_refreshed","actor_id":"f2055315-e56b-4927-bf6d-af94107a5527","actor_username":"ahsantariq1991@gmail.com","actor_via_sso":false,"log_type":"token"}	2026-01-11 13:11:22.987927+00	
 00000000-0000-0000-0000-000000000000	dd2c8486-333a-477f-a20f-13a4b3642dbe	{"action":"token_refreshed","actor_id":"f2055315-e56b-4927-bf6d-af94107a5527","actor_username":"ahsantariq1991@gmail.com","actor_via_sso":false,"log_type":"token"}	2026-01-11 14:11:52.212928+00	
 00000000-0000-0000-0000-000000000000	5d5ea909-47f4-4762-a7e1-e7dc4e32ec1d	{"action":"token_revoked","actor_id":"f2055315-e56b-4927-bf6d-af94107a5527","actor_username":"ahsantariq1991@gmail.com","actor_via_sso":false,"log_type":"token"}	2026-01-11 14:11:52.225818+00	
+00000000-0000-0000-0000-000000000000	53b9b588-28d3-4897-80b6-545b09a36d58	{"action":"token_refreshed","actor_id":"f2055315-e56b-4927-bf6d-af94107a5527","actor_username":"ahsantariq1991@gmail.com","actor_via_sso":false,"log_type":"token"}	2026-01-12 09:00:37.130001+00	
+00000000-0000-0000-0000-000000000000	d1c9edd8-4c46-4418-8dad-06564decb527	{"action":"token_revoked","actor_id":"f2055315-e56b-4927-bf6d-af94107a5527","actor_username":"ahsantariq1991@gmail.com","actor_via_sso":false,"log_type":"token"}	2026-01-12 09:00:37.159696+00	
+00000000-0000-0000-0000-000000000000	e868387c-7c08-4dbf-8f03-2590697d740e	{"action":"token_refreshed","actor_id":"755c0f15-990a-4e0d-9a1d-03d5de1be7ed","actor_username":"ahsantariq.ar@gmail.com","actor_via_sso":false,"log_type":"token"}	2026-01-12 14:03:14.161702+00	
+00000000-0000-0000-0000-000000000000	8ed88efe-5998-4438-97df-8527f700ff05	{"action":"token_revoked","actor_id":"755c0f15-990a-4e0d-9a1d-03d5de1be7ed","actor_username":"ahsantariq.ar@gmail.com","actor_via_sso":false,"log_type":"token"}	2026-01-12 14:03:14.17754+00	
+00000000-0000-0000-0000-000000000000	90f01631-c765-4af8-bf26-7c64260d2c31	{"action":"token_refreshed","actor_id":"f2055315-e56b-4927-bf6d-af94107a5527","actor_username":"ahsantariq1991@gmail.com","actor_via_sso":false,"log_type":"token"}	2026-01-12 18:07:49.269602+00	
+00000000-0000-0000-0000-000000000000	4a5b8b4b-bdbf-47bd-9a76-234240d14211	{"action":"token_revoked","actor_id":"f2055315-e56b-4927-bf6d-af94107a5527","actor_username":"ahsantariq1991@gmail.com","actor_via_sso":false,"log_type":"token"}	2026-01-12 18:07:49.297318+00	
+00000000-0000-0000-0000-000000000000	a8f707c0-4e69-48d0-95ad-784515ef2561	{"action":"token_refreshed","actor_id":"f2055315-e56b-4927-bf6d-af94107a5527","actor_username":"ahsantariq1991@gmail.com","actor_via_sso":false,"log_type":"token"}	2026-01-12 20:17:03.394534+00	
+00000000-0000-0000-0000-000000000000	879e5a9c-5efd-452f-85bd-40a0d2b7bb4a	{"action":"token_revoked","actor_id":"f2055315-e56b-4927-bf6d-af94107a5527","actor_username":"ahsantariq1991@gmail.com","actor_via_sso":false,"log_type":"token"}	2026-01-12 20:17:03.419884+00	
 \.
 
 
@@ -1082,8 +1090,8 @@ COPY "auth"."flow_state" ("id", "user_id", "auth_code", "code_challenge_method",
 --
 
 COPY "auth"."users" ("instance_id", "id", "aud", "role", "email", "encrypted_password", "email_confirmed_at", "invited_at", "confirmation_token", "confirmation_sent_at", "recovery_token", "recovery_sent_at", "email_change_token_new", "email_change", "email_change_sent_at", "last_sign_in_at", "raw_app_meta_data", "raw_user_meta_data", "is_super_admin", "created_at", "updated_at", "phone", "phone_confirmed_at", "phone_change", "phone_change_token", "phone_change_sent_at", "email_change_token_current", "email_change_confirm_status", "banned_until", "reauthentication_token", "reauthentication_sent_at", "is_sso_user", "deleted_at", "is_anonymous") FROM stdin;
-00000000-0000-0000-0000-000000000000	f2055315-e56b-4927-bf6d-af94107a5527	authenticated	authenticated	ahsantariq1991@gmail.com	$2a$10$bhbi78dwWT3zhWCqXmTjTeWQaWoYGLeq2CrUcZFz3KjtLVuNUsyBK	2025-12-02 19:48:33.466079+00	\N		\N		\N			\N	2026-01-06 11:40:37.705586+00	{"provider": "email", "providers": ["email"]}	{"email_verified": true}	\N	2025-12-02 19:48:33.437278+00	2026-01-11 14:11:52.248168+00	\N	\N			\N		0	\N		\N	f	\N	f
-00000000-0000-0000-0000-000000000000	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	authenticated	authenticated	ahsantariq.ar@gmail.com	$2a$10$3DpBPdcFmLkNWZci/zEWR.H.Ix5zP7oVx3xpELlREmYs/nZzCt8K6	2025-09-25 01:41:16.910245+00	\N		\N		\N			\N	2025-12-24 13:58:06.888795+00	{"provider": "email", "providers": ["email"]}	{"email_verified": true}	\N	2025-09-25 01:41:16.891607+00	2026-01-08 07:56:08.425744+00	\N	\N			\N		0	\N		\N	f	\N	f
+00000000-0000-0000-0000-000000000000	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	authenticated	authenticated	ahsantariq.ar@gmail.com	$2a$10$3DpBPdcFmLkNWZci/zEWR.H.Ix5zP7oVx3xpELlREmYs/nZzCt8K6	2025-09-25 01:41:16.910245+00	\N		\N		\N			\N	2025-12-24 13:58:06.888795+00	{"provider": "email", "providers": ["email"]}	{"email_verified": true}	\N	2025-09-25 01:41:16.891607+00	2026-01-12 14:03:14.194455+00	\N	\N			\N		0	\N		\N	f	\N	f
+00000000-0000-0000-0000-000000000000	f2055315-e56b-4927-bf6d-af94107a5527	authenticated	authenticated	ahsantariq1991@gmail.com	$2a$10$bhbi78dwWT3zhWCqXmTjTeWQaWoYGLeq2CrUcZFz3KjtLVuNUsyBK	2025-12-02 19:48:33.466079+00	\N		\N		\N			\N	2026-01-06 11:40:37.705586+00	{"provider": "email", "providers": ["email"]}	{"email_verified": true}	\N	2025-12-02 19:48:33.437278+00	2026-01-12 20:17:03.449005+00	\N	\N			\N		0	\N		\N	f	\N	f
 \.
 
 
@@ -1118,15 +1126,15 @@ COPY "auth"."oauth_clients" ("id", "client_secret_hash", "registration_type", "r
 --
 
 COPY "auth"."sessions" ("id", "user_id", "created_at", "updated_at", "factor_id", "aal", "not_after", "refreshed_at", "user_agent", "ip", "tag", "oauth_client_id", "refresh_token_hmac_key", "refresh_token_counter", "scopes") FROM stdin;
-cda92abf-abb3-4ead-aed9-907194ae02d9	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	2025-12-24 13:58:06.890125+00	2026-01-04 11:19:05.781914+00	\N	aal1	\N	2026-01-04 11:19:05.781795	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36	39.35.115.27	\N	\N	\N	\N	\N
-0449a214-ed9a-4834-80f1-9783ff54256f	f2055315-e56b-4927-bf6d-af94107a5527	2026-01-06 11:40:37.705718+00	2026-01-11 14:11:52.261788+00	\N	aal1	\N	2026-01-11 14:11:52.261658	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36	39.63.223.88	\N	\N	\N	\N	\N
 be0793bc-8058-4638-9ceb-0e823d6d23f5	f2055315-e56b-4927-bf6d-af94107a5527	2025-12-23 16:30:48.328952+00	2026-01-06 11:40:07.876536+00	\N	aal1	\N	2026-01-06 11:40:07.874582	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36	154.192.169.44	\N	\N	\N	\N	\N
 21c1576b-8982-46ea-8726-d75d45075764	f2055315-e56b-4927-bf6d-af94107a5527	2025-12-03 23:00:25.48268+00	2025-12-09 01:38:00.643758+00	\N	aal1	\N	2025-12-09 01:38:00.642579	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36	175.107.239.186	\N	\N	\N	\N	\N
 f76935ad-04b8-430b-8e37-ccbe3953c199	f2055315-e56b-4927-bf6d-af94107a5527	2025-12-04 13:04:19.622213+00	2025-12-04 20:24:04.948501+00	\N	aal1	\N	2025-12-04 20:24:04.947538	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36	175.107.239.186	\N	\N	\N	\N	\N
+cda92abf-abb3-4ead-aed9-907194ae02d9	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	2025-12-24 13:58:06.890125+00	2026-01-12 14:03:14.205248+00	\N	aal1	\N	2026-01-12 14:03:14.204323	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36	39.63.238.80	\N	\N	\N	\N	\N
 29e14421-1c9e-4691-b6b6-e39a4a41c2bc	f2055315-e56b-4927-bf6d-af94107a5527	2025-12-04 13:38:50.207766+00	2025-12-18 16:13:03.289659+00	\N	aal1	\N	2025-12-18 16:13:03.289531	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36	39.63.249.81	\N	\N	\N	\N	\N
 b904b0d7-e684-44b0-af92-adc3ee8ddc3a	f2055315-e56b-4927-bf6d-af94107a5527	2025-12-18 16:13:42.09525+00	2025-12-18 16:13:42.09525+00	\N	aal1	\N	\N	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36	39.63.249.81	\N	\N	\N	\N	\N
 404d75fc-6901-4566-944a-cbb4e54a7847	f2055315-e56b-4927-bf6d-af94107a5527	2025-12-10 16:31:50.542698+00	2025-12-10 16:31:50.542698+00	\N	aal1	\N	\N	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	119.155.183.255	\N	\N	\N	\N	\N
 2f3159cb-b27c-4a16-a72e-89fd2fed71b0	f2055315-e56b-4927-bf6d-af94107a5527	2025-12-18 16:14:26.853448+00	2025-12-23 16:30:38.415231+00	\N	aal1	\N	2025-12-23 16:30:38.41508	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36	154.192.161.111	\N	\N	\N	\N	\N
+0449a214-ed9a-4834-80f1-9783ff54256f	f2055315-e56b-4927-bf6d-af94107a5527	2026-01-06 11:40:37.705718+00	2026-01-12 20:17:03.457313+00	\N	aal1	\N	2026-01-12 20:17:03.457164	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36	154.192.161.25	\N	\N	\N	\N	\N
 983b89b7-cc1e-4106-a772-76cbdeb2c479	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	2025-12-03 15:17:43.51507+00	2025-12-24 13:57:56.190478+00	\N	aal1	\N	2025-12-24 13:57:56.188696	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36	39.35.104.118	\N	\N	\N	\N	\N
 ea8e0972-b135-46d3-a4cc-b4b49db09232	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	2025-12-23 13:38:59.56147+00	2026-01-08 07:56:08.443883+00	\N	aal1	\N	2026-01-08 07:56:08.442073	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36	39.63.231.213	\N	\N	\N	\N	\N
 fc8bf150-aa1c-4847-8a83-2a041d09402f	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	2025-12-03 10:35:25.612968+00	2025-12-25 08:20:04.058965+00	\N	aal1	\N	2025-12-25 08:20:04.058835	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36	182.186.142.85	\N	\N	\N	\N	\N
@@ -1396,7 +1404,6 @@ COPY "auth"."refresh_tokens" ("instance_id", "id", "token", "user_id", "revoked"
 00000000-0000-0000-0000-000000000000	531	qm7kl5pr2pas	f2055315-e56b-4927-bf6d-af94107a5527	t	2026-01-03 23:31:18.128656+00	2026-01-04 09:29:20.849846+00	7xcfiveupfuc	be0793bc-8058-4638-9ceb-0e823d6d23f5
 00000000-0000-0000-0000-000000000000	497	hfcy73h4qbk4	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2025-12-27 09:33:49.805817+00	2026-01-04 09:37:40.540897+00	u6imi2beniqa	cda92abf-abb3-4ead-aed9-907194ae02d9
 00000000-0000-0000-0000-000000000000	533	vcj4bv3egy4q	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2026-01-04 09:37:40.549437+00	2026-01-04 11:19:05.748396+00	hfcy73h4qbk4	cda92abf-abb3-4ead-aed9-907194ae02d9
-00000000-0000-0000-0000-000000000000	534	y3wihmkk2x7j	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	f	2026-01-04 11:19:05.75964+00	2026-01-04 11:19:05.75964+00	vcj4bv3egy4q	cda92abf-abb3-4ead-aed9-907194ae02d9
 00000000-0000-0000-0000-000000000000	532	trh6plxlzhlc	f2055315-e56b-4927-bf6d-af94107a5527	t	2026-01-04 09:29:20.872435+00	2026-01-04 18:34:41.977039+00	qm7kl5pr2pas	be0793bc-8058-4638-9ceb-0e823d6d23f5
 00000000-0000-0000-0000-000000000000	536	nqezdazuei3b	f2055315-e56b-4927-bf6d-af94107a5527	t	2026-01-04 18:34:41.997489+00	2026-01-06 11:40:07.808615+00	trh6plxlzhlc	be0793bc-8058-4638-9ceb-0e823d6d23f5
 00000000-0000-0000-0000-000000000000	537	oqi4edvsweiw	f2055315-e56b-4927-bf6d-af94107a5527	f	2026-01-06 11:40:07.834016+00	2026-01-06 11:40:07.834016+00	nqezdazuei3b	be0793bc-8058-4638-9ceb-0e823d6d23f5
@@ -1412,12 +1419,17 @@ COPY "auth"."refresh_tokens" ("instance_id", "id", "token", "user_id", "revoked"
 00000000-0000-0000-0000-000000000000	547	23i4wjamx37e	f2055315-e56b-4927-bf6d-af94107a5527	t	2026-01-08 19:36:41.681893+00	2026-01-08 20:34:49.457924+00	pig6wwrztpoa	0449a214-ed9a-4834-80f1-9783ff54256f
 00000000-0000-0000-0000-000000000000	542	negutuo4hazz	f2055315-e56b-4927-bf6d-af94107a5527	t	2026-01-07 15:22:03.970474+00	2026-01-10 14:48:19.057856+00	gd5aancdilpw	e91be352-ae00-4223-9e8a-946178e8310c
 00000000-0000-0000-0000-000000000000	548	xxvusfwsqvux	f2055315-e56b-4927-bf6d-af94107a5527	t	2026-01-08 20:34:49.46853+00	2026-01-10 19:45:31.164453+00	23i4wjamx37e	0449a214-ed9a-4834-80f1-9783ff54256f
+00000000-0000-0000-0000-000000000000	534	y3wihmkk2x7j	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2026-01-04 11:19:05.75964+00	2026-01-12 14:03:14.17952+00	vcj4bv3egy4q	cda92abf-abb3-4ead-aed9-907194ae02d9
 00000000-0000-0000-0000-000000000000	549	aq6qusbbftxp	f2055315-e56b-4927-bf6d-af94107a5527	f	2026-01-10 14:48:19.081117+00	2026-01-10 14:48:19.081117+00	negutuo4hazz	e91be352-ae00-4223-9e8a-946178e8310c
 00000000-0000-0000-0000-000000000000	550	xfb5xwc65v4x	f2055315-e56b-4927-bf6d-af94107a5527	t	2026-01-10 19:45:31.18216+00	2026-01-11 09:38:36.62535+00	xxvusfwsqvux	0449a214-ed9a-4834-80f1-9783ff54256f
 00000000-0000-0000-0000-000000000000	551	tgfvypg3wc7i	f2055315-e56b-4927-bf6d-af94107a5527	t	2026-01-11 09:38:36.646382+00	2026-01-11 12:09:36.707321+00	xfb5xwc65v4x	0449a214-ed9a-4834-80f1-9783ff54256f
 00000000-0000-0000-0000-000000000000	552	q3mcniuics7f	f2055315-e56b-4927-bf6d-af94107a5527	t	2026-01-11 12:09:36.726131+00	2026-01-11 13:10:38.831189+00	tgfvypg3wc7i	0449a214-ed9a-4834-80f1-9783ff54256f
 00000000-0000-0000-0000-000000000000	553	rhtzuofyyb4w	f2055315-e56b-4927-bf6d-af94107a5527	t	2026-01-11 13:10:38.843345+00	2026-01-11 14:11:52.227683+00	q3mcniuics7f	0449a214-ed9a-4834-80f1-9783ff54256f
-00000000-0000-0000-0000-000000000000	554	rbpn2pcssynd	f2055315-e56b-4927-bf6d-af94107a5527	f	2026-01-11 14:11:52.236907+00	2026-01-11 14:11:52.236907+00	rhtzuofyyb4w	0449a214-ed9a-4834-80f1-9783ff54256f
+00000000-0000-0000-0000-000000000000	554	rbpn2pcssynd	f2055315-e56b-4927-bf6d-af94107a5527	t	2026-01-11 14:11:52.236907+00	2026-01-12 09:00:37.162768+00	rhtzuofyyb4w	0449a214-ed9a-4834-80f1-9783ff54256f
+00000000-0000-0000-0000-000000000000	556	wlo6gjoc7d6h	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	f	2026-01-12 14:03:14.189116+00	2026-01-12 14:03:14.189116+00	y3wihmkk2x7j	cda92abf-abb3-4ead-aed9-907194ae02d9
+00000000-0000-0000-0000-000000000000	555	o33klmbnvuq6	f2055315-e56b-4927-bf6d-af94107a5527	t	2026-01-12 09:00:37.187633+00	2026-01-12 18:07:49.29996+00	rbpn2pcssynd	0449a214-ed9a-4834-80f1-9783ff54256f
+00000000-0000-0000-0000-000000000000	557	bbmwpchyb35i	f2055315-e56b-4927-bf6d-af94107a5527	t	2026-01-12 18:07:49.324797+00	2026-01-12 20:17:03.42336+00	o33klmbnvuq6	0449a214-ed9a-4834-80f1-9783ff54256f
+00000000-0000-0000-0000-000000000000	558	jsabtvb5domh	f2055315-e56b-4927-bf6d-af94107a5527	f	2026-01-12 20:17:03.440597+00	2026-01-12 20:17:03.440597+00	bbmwpchyb35i	0449a214-ed9a-4834-80f1-9783ff54256f
 \.
 
 
@@ -2159,6 +2171,16 @@ a1674f60-b32e-4f21-a1cb-18ee5ffea7d9	2026-01-11	Payment to IKRA STUDIO	\N	35000.
 e96cfa08-8664-4bae-9067-e65ab345cfe6	2026-01-11	Payment to FIXED EXPENSES	\N	2500.00	-4571.00	vendor_payment	MAALI	\N	bac92c51-5dcf-4eda-8d06-c88a6321f09e	2026-01-11 09:49:52.755128+00	2026-01-11 09:49:52.755128+00	\N
 30ad5da9-26b5-4a43-96f8-5b7e654c99dd	2026-01-11	Payment to BINA AUNTY	\N	20000.00	-24571.00	vendor_payment	\N	\N	5c82022d-e122-41ca-bdef-b312bbcf4097	2026-01-11 09:55:34.458597+00	2026-01-11 09:55:34.458597+00	\N
 c6f9ae37-7f0a-4380-9cea-897b1488f600	2026-01-11	Payment to ALI	\N	25000.00	-49571.00	vendor_payment	\N	\N	e461d8e2-9302-4eef-84b6-bfe2b39f7c9d	2026-01-11 09:58:58.667647+00	2026-01-11 09:58:58.667647+00	\N
+09cccb1f-33dd-4cac-a44d-226590af2f10	2026-01-12	Payment to IDREES SUPERVISOR	\N	3000.00	-52571.00	vendor_payment	\N	\N	239a1b8d-930a-4a82-88e3-f9a33b6f2389	2026-01-12 18:14:10.696597+00	2026-01-12 18:14:10.696597+00	\N
+b87f1b2f-261c-41b6-91f2-1765d26db9a4	2026-01-12	Payment to LABOUR	\N	7000.00	-59571.00	vendor_payment	\N	\N	ef875eda-b70f-4634-8f6a-9ece4b8a6b16	2026-01-12 18:14:25.849247+00	2026-01-12 18:14:25.849247+00	\N
+3d9daba5-9af1-447b-bf58-b495605b9297	2026-01-12	cable and light	\N	2000.00	-61571.00	miscellaneous	\N	\N	\N	2026-01-12 18:14:48.39004+00	2026-01-12 18:14:48.39004+00	\N
+f098dc31-d35f-4dea-bff6-df2564317eaf	2026-01-12	Payment to USMAN VIDEOGRAPHER	\N	70000.00	-131571.00	vendor_payment	\N	\N	99ada48a-7ca9-49ed-afaf-ad17ddadff13	2026-01-12 18:15:06.852429+00	2026-01-12 18:15:06.852429+00	\N
+8e8fe4ce-f20c-4c3f-a1d2-6d9ba4b9a5dd	2026-01-12	Payment to PURCHASES	\N	8400.00	-139971.00	vendor_payment	tr	\N	24c0a9f7-036e-46f0-8722-43ad18688410	2026-01-12 18:17:34.11989+00	2026-01-12 18:17:34.11989+00	\N
+340f7508-4909-4e76-9757-14b29530b158	2026-01-12	Payment to UMAIR	\N	20000.00	-159971.00	vendor_payment	\N	\N	a637d0da-3eb5-4211-9797-c752d133ab53	2026-01-12 18:17:55.591386+00	2026-01-12 18:17:55.591386+00	\N
+23efe15c-ae2d-46ab-997e-9c23ab4592da	2026-01-12	Payment to FOOD	\N	8000.00	-167971.00	vendor_payment	BUDDIES	\N	ff897faf-04ad-404d-9906-5c12c68ec1af	2026-01-12 18:18:14.713487+00	2026-01-12 18:18:14.713487+00	\N
+ceaed025-993b-4e20-a628-4a32eb34e975	2026-01-12	Payment to MASTER AMJAD	\N	5090.00	-173061.00	vendor_payment	GAS BILL	\N	578d875b-28e6-4d89-8700-5512e91e4032	2026-01-12 18:18:44.675169+00	2026-01-12 18:18:44.675169+00	\N
+8d2e5cd8-ab99-4b1b-ba02-6dafe1b14b48	2026-01-12	Payment to CHARITY	\N	5000.00	-178061.00	vendor_payment	\N	\N	455648d8-6f37-40d5-a09d-e646d8887039	2026-01-12 18:19:00.269938+00	2026-01-12 18:19:00.269938+00	\N
+2d888b26-58f9-4617-8c3e-ad0f2539bfc7	2026-01-12	Payment to MARKETING	\N	10000.00	-188061.00	vendor_payment	NAYAPAY	\N	65e301bb-2ca9-431f-bc77-c0e81fe1983b	2026-01-12 18:19:55.829148+00	2026-01-12 18:19:55.829148+00	\N
 \.
 
 
@@ -2764,6 +2786,15 @@ e5092bbb-e0d7-43fc-aef2-7a01a8d0a124	aa489f4f-b5fd-4a76-8e59-e01936420c8b	\N	202
 012e6e21-4258-45d4-9452-633156ccfd31	5c82022d-e122-41ca-bdef-b312bbcf4097	\N	2026-01-11	DECEMBER	\N	20000.00	0.00	\N	2026-01-11 09:56:01.817006+00	2026-01-11 09:56:01.817006+00
 238d8410-6956-4c49-8877-3b13f57e8965	e461d8e2-9302-4eef-84b6-bfe2b39f7c9d	c6f9ae37-7f0a-4380-9cea-897b1488f600	2026-01-11	Payment to ALI	25000.00	\N	25000.00	\N	2026-01-11 09:58:58.667647+00	2026-01-11 09:58:58.667647+00
 bbf523e4-5e6f-45e0-8dd8-30edc81c4896	e461d8e2-9302-4eef-84b6-bfe2b39f7c9d	\N	2026-01-11	DECEMBER PAY	\N	25000.00	0.00	\N	2026-01-11 09:59:21.061947+00	2026-01-11 09:59:21.061947+00
+3aa39471-925e-4e35-9a96-f0b9b9f2bd61	239a1b8d-930a-4a82-88e3-f9a33b6f2389	09cccb1f-33dd-4cac-a44d-226590af2f10	2026-01-12	Payment to IDREES SUPERVISOR	3000.00	\N	-787000.00	\N	2026-01-12 18:14:10.696597+00	2026-01-12 18:14:10.696597+00
+abdba2fd-093c-4d90-ac13-50983dc7baa6	ef875eda-b70f-4634-8f6a-9ece4b8a6b16	b87f1b2f-261c-41b6-91f2-1765d26db9a4	2026-01-12	Payment to LABOUR	7000.00	\N	-208800.00	\N	2026-01-12 18:14:25.849247+00	2026-01-12 18:14:25.849247+00
+f5c331d1-238f-4314-a26c-374e329d9c3d	99ada48a-7ca9-49ed-afaf-ad17ddadff13	f098dc31-d35f-4dea-bff6-df2564317eaf	2026-01-12	Payment to USMAN VIDEOGRAPHER	70000.00	\N	70000.00	\N	2026-01-12 18:15:06.852429+00	2026-01-12 18:15:06.852429+00
+ca1218b2-aa04-4f4a-8b65-6a4dec1d0f1d	24c0a9f7-036e-46f0-8722-43ad18688410	8e8fe4ce-f20c-4c3f-a1d2-6d9ba4b9a5dd	2026-01-12	Payment to PURCHASES	8400.00	\N	564501.00	tr	2026-01-12 18:17:34.11989+00	2026-01-12 18:17:34.11989+00
+b32178f2-f984-4978-9421-81c7296ef037	a637d0da-3eb5-4211-9797-c752d133ab53	340f7508-4909-4e76-9757-14b29530b158	2026-01-12	Payment to UMAIR	20000.00	\N	35000.00	\N	2026-01-12 18:17:55.591386+00	2026-01-12 18:17:55.591386+00
+fc39e9bd-3f06-4819-aa40-c185fc207247	ff897faf-04ad-404d-9906-5c12c68ec1af	23efe15c-ae2d-46ab-997e-9c23ab4592da	2026-01-12	Payment to FOOD	8000.00	\N	107140.00	BUDDIES	2026-01-12 18:18:14.713487+00	2026-01-12 18:18:14.713487+00
+735c4d7e-f57c-422b-bf36-a0306a6d04e3	578d875b-28e6-4d89-8700-5512e91e4032	ceaed025-993b-4e20-a628-4a32eb34e975	2026-01-12	Payment to MASTER AMJAD	5090.00	\N	19216.00	GAS BILL	2026-01-12 18:18:44.675169+00	2026-01-12 18:18:44.675169+00
+d9cc99a2-2d5d-4cad-b0dd-788e69de102a	455648d8-6f37-40d5-a09d-e646d8887039	8d2e5cd8-ab99-4b1b-ba02-6dafe1b14b48	2026-01-12	Payment to CHARITY	5000.00	\N	30000.00	\N	2026-01-12 18:19:00.269938+00	2026-01-12 18:19:00.269938+00
+2c6001f0-c9e4-445f-a24f-a8160b142d29	65e301bb-2ca9-431f-bc77-c0e81fe1983b	2d888b26-58f9-4617-8c3e-ad0f2539bfc7	2026-01-12	Payment to MARKETING	10000.00	\N	-83240.00	NAYAPAY	2026-01-12 18:19:55.829148+00	2026-01-12 18:19:55.829148+00
 \.
 
 
@@ -2835,13 +2866,13 @@ COPY "storage"."vector_indexes" ("id", "name", "bucket_id", "data_type", "dimens
 -- Name: refresh_tokens_id_seq; Type: SEQUENCE SET; Schema: auth; Owner: supabase_auth_admin
 --
 
-SELECT pg_catalog.setval('"auth"."refresh_tokens_id_seq"', 554, true);
+SELECT pg_catalog.setval('"auth"."refresh_tokens_id_seq"', 558, true);
 
 
 --
 -- PostgreSQL database dump complete
 --
 
--- \unrestrict 3Aj82eXQd2F4OjUvwAaPcxh2zyl9bpqMYfdjXIdZUxuzyPz3khYrFoZdhSULlIc
+-- \unrestrict RCImvawf5SGzKacWc0uLRKPIAysMexRJHDNmJJoAGgVv2TZHJpIbpLZ3SERYDk9
 
 RESET ALL;
