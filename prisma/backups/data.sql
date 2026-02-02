@@ -4,7 +4,7 @@ SET session_replication_role = replica;
 -- PostgreSQL database dump
 --
 
--- \restrict bG9ggnbJABU2sJGSqSC0iefSIuacDJapdWZMexiLOgd5l8hIfR6j8xjzJbbIsj1
+-- \restrict bMP1W71xIgr3DlWde47K1dNNS5tnENPmmbn1UgLsxzv2OKZMH9BxqKwyinGdWZQ
 
 -- Dumped from database version 17.4
 -- Dumped by pg_dump version 17.6
@@ -1212,6 +1212,8 @@ COPY "auth"."audit_log_entries" ("instance_id", "id", "payload", "created_at", "
 00000000-0000-0000-0000-000000000000	459ae1e8-4a52-4c4f-adeb-45f08a96ecf0	{"action":"token_revoked","actor_id":"f2055315-e56b-4927-bf6d-af94107a5527","actor_username":"ahsantariq1991@gmail.com","actor_via_sso":false,"log_type":"token"}	2026-01-29 18:13:03.028543+00	
 00000000-0000-0000-0000-000000000000	2cf20f51-268b-4ba9-830e-13d1618aa5b8	{"action":"token_refreshed","actor_id":"755c0f15-990a-4e0d-9a1d-03d5de1be7ed","actor_username":"ahsantariq.ar@gmail.com","actor_via_sso":false,"log_type":"token"}	2026-01-31 14:11:56.849888+00	
 00000000-0000-0000-0000-000000000000	b14281e0-8766-4400-8555-3149933fb351	{"action":"token_revoked","actor_id":"755c0f15-990a-4e0d-9a1d-03d5de1be7ed","actor_username":"ahsantariq.ar@gmail.com","actor_via_sso":false,"log_type":"token"}	2026-01-31 14:11:56.883151+00	
+00000000-0000-0000-0000-000000000000	5fa18832-3f10-48e4-8fc8-f66b7b602d61	{"action":"token_refreshed","actor_id":"755c0f15-990a-4e0d-9a1d-03d5de1be7ed","actor_username":"ahsantariq.ar@gmail.com","actor_via_sso":false,"log_type":"token"}	2026-02-01 07:26:35.88383+00	
+00000000-0000-0000-0000-000000000000	6295ba24-efa5-4d49-80d8-c8120098dcbc	{"action":"token_revoked","actor_id":"755c0f15-990a-4e0d-9a1d-03d5de1be7ed","actor_username":"ahsantariq.ar@gmail.com","actor_via_sso":false,"log_type":"token"}	2026-02-01 07:26:35.908728+00	
 \.
 
 
@@ -1229,7 +1231,7 @@ COPY "auth"."flow_state" ("id", "user_id", "auth_code", "code_challenge_method",
 
 COPY "auth"."users" ("instance_id", "id", "aud", "role", "email", "encrypted_password", "email_confirmed_at", "invited_at", "confirmation_token", "confirmation_sent_at", "recovery_token", "recovery_sent_at", "email_change_token_new", "email_change", "email_change_sent_at", "last_sign_in_at", "raw_app_meta_data", "raw_user_meta_data", "is_super_admin", "created_at", "updated_at", "phone", "phone_confirmed_at", "phone_change", "phone_change_token", "phone_change_sent_at", "email_change_token_current", "email_change_confirm_status", "banned_until", "reauthentication_token", "reauthentication_sent_at", "is_sso_user", "deleted_at", "is_anonymous") FROM stdin;
 00000000-0000-0000-0000-000000000000	f2055315-e56b-4927-bf6d-af94107a5527	authenticated	authenticated	ahsantariq1991@gmail.com	$2a$10$bhbi78dwWT3zhWCqXmTjTeWQaWoYGLeq2CrUcZFz3KjtLVuNUsyBK	2025-12-02 19:48:33.466079+00	\N		\N		\N			\N	2026-01-27 12:35:52.164526+00	{"provider": "email", "providers": ["email"]}	{"email_verified": true}	\N	2025-12-02 19:48:33.437278+00	2026-01-29 18:13:03.066355+00	\N	\N			\N		0	\N		\N	f	\N	f
-00000000-0000-0000-0000-000000000000	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	authenticated	authenticated	ahsantariq.ar@gmail.com	$2a$10$3DpBPdcFmLkNWZci/zEWR.H.Ix5zP7oVx3xpELlREmYs/nZzCt8K6	2025-09-25 01:41:16.910245+00	\N		\N		\N			\N	2026-01-19 08:40:04.93411+00	{"provider": "email", "providers": ["email"]}	{"email_verified": true}	\N	2025-09-25 01:41:16.891607+00	2026-01-31 14:11:56.929922+00	\N	\N			\N		0	\N		\N	f	\N	f
+00000000-0000-0000-0000-000000000000	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	authenticated	authenticated	ahsantariq.ar@gmail.com	$2a$10$3DpBPdcFmLkNWZci/zEWR.H.Ix5zP7oVx3xpELlREmYs/nZzCt8K6	2025-09-25 01:41:16.910245+00	\N		\N		\N			\N	2026-01-19 08:40:04.93411+00	{"provider": "email", "providers": ["email"]}	{"email_verified": true}	\N	2025-09-25 01:41:16.891607+00	2026-02-01 07:26:35.957168+00	\N	\N			\N		0	\N		\N	f	\N	f
 \.
 
 
@@ -1270,11 +1272,11 @@ be0793bc-8058-4638-9ceb-0e823d6d23f5	f2055315-e56b-4927-bf6d-af94107a5527	2025-1
 9cb659a4-7a11-4920-80aa-511f14695254	f2055315-e56b-4927-bf6d-af94107a5527	2026-01-27 12:35:52.164655+00	2026-01-29 18:13:03.082358+00	\N	aal1	\N	2026-01-29 18:13:03.08166	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36	154.192.161.94	\N	\N	\N	\N	\N
 146a6b2c-05ba-4020-8b36-e4fd5d692c73	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	2025-12-03 17:34:24.173194+00	2026-01-31 14:11:56.945907+00	\N	aal1	\N	2026-01-31 14:11:56.945797	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36	154.192.161.94	\N	\N	\N	\N	\N
 f76935ad-04b8-430b-8e37-ccbe3953c199	f2055315-e56b-4927-bf6d-af94107a5527	2025-12-04 13:04:19.622213+00	2025-12-04 20:24:04.948501+00	\N	aal1	\N	2025-12-04 20:24:04.947538	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36	175.107.239.186	\N	\N	\N	\N	\N
+fc8bf150-aa1c-4847-8a83-2a041d09402f	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	2025-12-03 10:35:25.612968+00	2026-02-01 07:26:35.968597+00	\N	aal1	\N	2026-02-01 07:26:35.966331	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36	154.192.161.94	\N	\N	\N	\N	\N
 29e14421-1c9e-4691-b6b6-e39a4a41c2bc	f2055315-e56b-4927-bf6d-af94107a5527	2025-12-04 13:38:50.207766+00	2025-12-18 16:13:03.289659+00	\N	aal1	\N	2025-12-18 16:13:03.289531	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36	39.63.249.81	\N	\N	\N	\N	\N
 b904b0d7-e684-44b0-af92-adc3ee8ddc3a	f2055315-e56b-4927-bf6d-af94107a5527	2025-12-18 16:13:42.09525+00	2025-12-18 16:13:42.09525+00	\N	aal1	\N	\N	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36	39.63.249.81	\N	\N	\N	\N	\N
 404d75fc-6901-4566-944a-cbb4e54a7847	f2055315-e56b-4927-bf6d-af94107a5527	2025-12-10 16:31:50.542698+00	2025-12-10 16:31:50.542698+00	\N	aal1	\N	\N	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36	119.155.183.255	\N	\N	\N	\N	\N
 2f3159cb-b27c-4a16-a72e-89fd2fed71b0	f2055315-e56b-4927-bf6d-af94107a5527	2025-12-18 16:14:26.853448+00	2025-12-23 16:30:38.415231+00	\N	aal1	\N	2025-12-23 16:30:38.41508	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36	154.192.161.111	\N	\N	\N	\N	\N
-fc8bf150-aa1c-4847-8a83-2a041d09402f	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	2025-12-03 10:35:25.612968+00	2026-01-26 16:53:01.760097+00	\N	aal1	\N	2026-01-26 16:53:01.760003	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36	182.186.192.149	\N	\N	\N	\N	\N
 983b89b7-cc1e-4106-a772-76cbdeb2c479	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	2025-12-03 15:17:43.51507+00	2025-12-24 13:57:56.190478+00	\N	aal1	\N	2025-12-24 13:57:56.188696	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36	39.35.104.118	\N	\N	\N	\N	\N
 0449a214-ed9a-4834-80f1-9783ff54256f	f2055315-e56b-4927-bf6d-af94107a5527	2026-01-06 11:40:37.705718+00	2026-01-27 12:35:28.432944+00	\N	aal1	\N	2026-01-27 12:35:28.431197	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36	154.192.161.231	\N	\N	\N	\N	\N
 21c1576b-8982-46ea-8726-d75d45075764	f2055315-e56b-4927-bf6d-af94107a5527	2025-12-03 23:00:25.48268+00	2026-01-19 12:06:47.696091+00	\N	aal1	\N	2026-01-19 12:06:47.691322	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36	72.255.39.46	\N	\N	\N	\N	\N
@@ -1620,7 +1622,9 @@ COPY "auth"."refresh_tokens" ("instance_id", "id", "token", "user_id", "revoked"
 00000000-0000-0000-0000-000000000000	599	3ka3ll2td7ct	f2055315-e56b-4927-bf6d-af94107a5527	t	2026-01-22 20:47:55.442918+00	2026-01-24 16:12:06.788974+00	wuhkexoata4t	0449a214-ed9a-4834-80f1-9783ff54256f
 00000000-0000-0000-0000-000000000000	625	hdtjcaxo32h5	f2055315-e56b-4927-bf6d-af94107a5527	t	2026-01-29 16:00:36.969733+00	2026-01-29 18:13:03.031828+00	5p7ew3tcwocz	9cb659a4-7a11-4920-80aa-511f14695254
 00000000-0000-0000-0000-000000000000	626	pcuqsr7gref5	f2055315-e56b-4927-bf6d-af94107a5527	f	2026-01-29 18:13:03.053434+00	2026-01-29 18:13:03.053434+00	hdtjcaxo32h5	9cb659a4-7a11-4920-80aa-511f14695254
+00000000-0000-0000-0000-000000000000	612	ykvga3dy2p5s	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2026-01-26 16:53:01.754314+00	2026-02-01 07:26:35.911943+00	snr7moy2x7p5	fc8bf150-aa1c-4847-8a83-2a041d09402f
 00000000-0000-0000-0000-000000000000	602	4abnx224yahy	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2026-01-25 09:32:44.746174+00	2026-01-25 11:00:59.387933+00	252g335pj7rs	146a6b2c-05ba-4020-8b36-e4fd5d692c73
+00000000-0000-0000-0000-000000000000	628	dyqfrdt3kllh	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	f	2026-02-01 07:26:35.936968+00	2026-02-01 07:26:35.936968+00	ykvga3dy2p5s	fc8bf150-aa1c-4847-8a83-2a041d09402f
 00000000-0000-0000-0000-000000000000	603	skdpebbpgj7s	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2026-01-25 11:00:59.399459+00	2026-01-25 12:15:54.29494+00	4abnx224yahy	146a6b2c-05ba-4020-8b36-e4fd5d692c73
 00000000-0000-0000-0000-000000000000	604	gnvnuuio444k	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2026-01-25 12:15:54.312017+00	2026-01-26 08:58:10.986269+00	skdpebbpgj7s	146a6b2c-05ba-4020-8b36-e4fd5d692c73
 00000000-0000-0000-0000-000000000000	601	iqqsy7mnap3n	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2026-01-24 16:51:30.705415+00	2026-01-26 10:25:09.752632+00	pabrs6fstui7	fc8bf150-aa1c-4847-8a83-2a041d09402f
@@ -1630,7 +1634,6 @@ COPY "auth"."refresh_tokens" ("instance_id", "id", "token", "user_id", "revoked"
 00000000-0000-0000-0000-000000000000	608	w54uoc6izyef	f2055315-e56b-4927-bf6d-af94107a5527	t	2026-01-26 11:51:16.012923+00	2026-01-26 12:53:48.127491+00	lbhttn4gkc7e	0449a214-ed9a-4834-80f1-9783ff54256f
 00000000-0000-0000-0000-000000000000	610	l3l3bgnoteej	f2055315-e56b-4927-bf6d-af94107a5527	t	2026-01-26 12:53:48.143972+00	2026-01-26 16:39:52.777289+00	w54uoc6izyef	0449a214-ed9a-4834-80f1-9783ff54256f
 00000000-0000-0000-0000-000000000000	606	snr7moy2x7p5	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2026-01-26 10:25:09.773044+00	2026-01-26 16:53:01.748709+00	iqqsy7mnap3n	fc8bf150-aa1c-4847-8a83-2a041d09402f
-00000000-0000-0000-0000-000000000000	612	ykvga3dy2p5s	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	f	2026-01-26 16:53:01.754314+00	2026-01-26 16:53:01.754314+00	snr7moy2x7p5	fc8bf150-aa1c-4847-8a83-2a041d09402f
 00000000-0000-0000-0000-000000000000	609	pk7wf36r46e7	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2026-01-26 12:30:05.255127+00	2026-01-27 09:19:22.890861+00	trkgprkklznn	146a6b2c-05ba-4020-8b36-e4fd5d692c73
 00000000-0000-0000-0000-000000000000	613	elljkztpqn53	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2026-01-27 09:19:22.916735+00	2026-01-27 11:21:05.821095+00	pk7wf36r46e7	146a6b2c-05ba-4020-8b36-e4fd5d692c73
 00000000-0000-0000-0000-000000000000	611	k4m26w6eey4u	f2055315-e56b-4927-bf6d-af94107a5527	t	2026-01-26 16:39:52.79944+00	2026-01-27 12:35:28.39624+00	l3l3bgnoteej	0449a214-ed9a-4834-80f1-9783ff54256f
@@ -3379,13 +3382,13 @@ COPY "storage"."vector_indexes" ("id", "name", "bucket_id", "data_type", "dimens
 -- Name: refresh_tokens_id_seq; Type: SEQUENCE SET; Schema: auth; Owner: supabase_auth_admin
 --
 
-SELECT pg_catalog.setval('"auth"."refresh_tokens_id_seq"', 627, true);
+SELECT pg_catalog.setval('"auth"."refresh_tokens_id_seq"', 628, true);
 
 
 --
 -- PostgreSQL database dump complete
 --
 
--- \unrestrict bG9ggnbJABU2sJGSqSC0iefSIuacDJapdWZMexiLOgd5l8hIfR6j8xjzJbbIsj1
+-- \unrestrict bMP1W71xIgr3DlWde47K1dNNS5tnENPmmbn1UgLsxzv2OKZMH9BxqKwyinGdWZQ
 
 RESET ALL;
