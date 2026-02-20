@@ -13,6 +13,11 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 
+
+
+ALTER SCHEMA "public" OWNER TO "postgres";
+
+
 COMMENT ON SCHEMA "public" IS 'standard public schema';
 
 
@@ -654,7 +659,7 @@ CREATE TABLE IF NOT EXISTS "public"."orders" (
     "measurement_id" "uuid",
     "status" "public"."order_status" DEFAULT 'In Process'::"public"."order_status" NOT NULL,
     CONSTRAINT "check_advance_not_exceed_total" CHECK ((("advance_paid" IS NULL) OR ("total_amount" IS NULL) OR ("advance_paid" <= "total_amount"))),
-    CONSTRAINT "orders_payment_method_check" CHECK ((("payment_method")::"text" = ANY ((ARRAY['cash'::character varying, 'bank'::character varying, 'other'::character varying])::"text"[])))
+    CONSTRAINT "orders_payment_method_check" CHECK ((("payment_method")::"text" = ANY (ARRAY[('cash'::character varying)::"text", ('bank'::character varying)::"text", ('other'::character varying)::"text"])))
 );
 
 
@@ -713,7 +718,7 @@ CREATE TABLE IF NOT EXISTS "public"."payments" (
     "updated_at" timestamp with time zone DEFAULT "timezone"('utc'::"text", "now"()) NOT NULL,
     "recorded_by" "uuid",
     CONSTRAINT "payments_amount_check" CHECK (("amount" > (0)::numeric)),
-    CONSTRAINT "payments_payment_method_check" CHECK ((("payment_method")::"text" = ANY ((ARRAY['cash'::character varying, 'bank'::character varying, 'card'::character varying, 'online'::character varying, 'other'::character varying])::"text"[])))
+    CONSTRAINT "payments_payment_method_check" CHECK ((("payment_method")::"text" = ANY (ARRAY[('cash'::character varying)::"text", ('bank'::character varying)::"text", ('card'::character varying)::"text", ('online'::character varying)::"text", ('other'::character varying)::"text"])))
 );
 
 
@@ -1238,7 +1243,8 @@ ALTER TABLE "public"."vendors" ENABLE ROW LEVEL SECURITY;
 ALTER PUBLICATION "supabase_realtime" OWNER TO "postgres";
 
 
-GRANT USAGE ON SCHEMA "public" TO "postgres";
+REVOKE USAGE ON SCHEMA "public" FROM PUBLIC;
+GRANT ALL ON SCHEMA "public" TO PUBLIC;
 GRANT USAGE ON SCHEMA "public" TO "anon";
 GRANT USAGE ON SCHEMA "public" TO "authenticated";
 GRANT USAGE ON SCHEMA "public" TO "service_role";
@@ -1567,9 +1573,6 @@ ALTER DEFAULT PRIVILEGES FOR ROLE "postgres" IN SCHEMA "public" GRANT ALL ON SEQ
 
 
 
-
-
-
 ALTER DEFAULT PRIVILEGES FOR ROLE "postgres" IN SCHEMA "public" GRANT ALL ON FUNCTIONS TO "postgres";
 ALTER DEFAULT PRIVILEGES FOR ROLE "postgres" IN SCHEMA "public" GRANT ALL ON FUNCTIONS TO "anon";
 ALTER DEFAULT PRIVILEGES FOR ROLE "postgres" IN SCHEMA "public" GRANT ALL ON FUNCTIONS TO "authenticated";
@@ -1577,16 +1580,10 @@ ALTER DEFAULT PRIVILEGES FOR ROLE "postgres" IN SCHEMA "public" GRANT ALL ON FUN
 
 
 
-
-
-
 ALTER DEFAULT PRIVILEGES FOR ROLE "postgres" IN SCHEMA "public" GRANT ALL ON TABLES TO "postgres";
 ALTER DEFAULT PRIVILEGES FOR ROLE "postgres" IN SCHEMA "public" GRANT ALL ON TABLES TO "anon";
 ALTER DEFAULT PRIVILEGES FOR ROLE "postgres" IN SCHEMA "public" GRANT ALL ON TABLES TO "authenticated";
 ALTER DEFAULT PRIVILEGES FOR ROLE "postgres" IN SCHEMA "public" GRANT ALL ON TABLES TO "service_role";
-
-
-
 
 
 
