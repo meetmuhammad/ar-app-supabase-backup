@@ -899,6 +899,10 @@ CREATE INDEX "idx_general_ledger_entry_date" ON "public"."general_ledger" USING 
 
 
 
+CREATE INDEX "idx_general_ledger_entry_type" ON "public"."general_ledger" USING "btree" ("entry_type");
+
+
+
 CREATE INDEX "idx_general_ledger_order_id" ON "public"."general_ledger" USING "btree" ("order_id");
 
 
@@ -972,6 +976,10 @@ CREATE INDEX "idx_payments_recorded_by" ON "public"."payments" USING "btree" ("r
 
 
 CREATE INDEX "idx_vendor_ledger_entry_date" ON "public"."vendor_ledger" USING "btree" ("entry_date" DESC);
+
+
+
+CREATE INDEX "idx_vendor_ledger_general_ledger_id" ON "public"."vendor_ledger" USING "btree" ("general_ledger_id");
 
 
 
