@@ -4,7 +4,7 @@ SET session_replication_role = replica;
 -- PostgreSQL database dump
 --
 
--- \restrict dEPMS2V1x3xfWDmxRZTc1gVLl8DBmIbGK2Rg4Y0VkAdVgsau6SQFbwstftnX5wL
+-- \restrict dPHjxoGLcXVXeXfr8x3wTcajgchiHlzcZ0KOTCDmiS1xPjodTbeSOrQNzxhp5gW
 
 -- Dumped from database version 17.4
 -- Dumped by pg_dump version 17.6
@@ -2194,6 +2194,8 @@ COPY "auth"."audit_log_entries" ("instance_id", "id", "payload", "created_at", "
 00000000-0000-0000-0000-000000000000	e5ac8418-1297-43ac-a1ab-6ac4fcc5fcf4	{"action":"token_revoked","actor_id":"755c0f15-990a-4e0d-9a1d-03d5de1be7ed","actor_username":"ahsantariq.ar@gmail.com","actor_via_sso":false,"log_type":"token"}	2026-05-05 11:32:09.585112+00	
 00000000-0000-0000-0000-000000000000	89e29e49-8946-4c5b-be2d-bcb8d4a7d41c	{"action":"token_refreshed","actor_id":"f2055315-e56b-4927-bf6d-af94107a5527","actor_username":"ahsantariq1991@gmail.com","actor_via_sso":false,"log_type":"token"}	2026-05-05 20:56:28.163408+00	
 00000000-0000-0000-0000-000000000000	bc0dae8a-d375-4511-ad8f-4b4237b1e145	{"action":"token_revoked","actor_id":"f2055315-e56b-4927-bf6d-af94107a5527","actor_username":"ahsantariq1991@gmail.com","actor_via_sso":false,"log_type":"token"}	2026-05-05 20:56:28.18709+00	
+00000000-0000-0000-0000-000000000000	cbe92c3f-216c-4f09-8ce0-db380ce41195	{"action":"token_refreshed","actor_id":"f2055315-e56b-4927-bf6d-af94107a5527","actor_username":"ahsantariq1991@gmail.com","actor_via_sso":false,"log_type":"token"}	2026-05-06 12:40:09.818531+00	
+00000000-0000-0000-0000-000000000000	86e350b7-99f9-435b-86e1-ed1c5e7c8eb4	{"action":"token_revoked","actor_id":"f2055315-e56b-4927-bf6d-af94107a5527","actor_username":"ahsantariq1991@gmail.com","actor_via_sso":false,"log_type":"token"}	2026-05-06 12:40:09.848598+00	
 \.
 
 
@@ -2218,7 +2220,7 @@ COPY "auth"."flow_state" ("id", "user_id", "auth_code", "code_challenge_method",
 --
 
 COPY "auth"."users" ("instance_id", "id", "aud", "role", "email", "encrypted_password", "email_confirmed_at", "invited_at", "confirmation_token", "confirmation_sent_at", "recovery_token", "recovery_sent_at", "email_change_token_new", "email_change", "email_change_sent_at", "last_sign_in_at", "raw_app_meta_data", "raw_user_meta_data", "is_super_admin", "created_at", "updated_at", "phone", "phone_confirmed_at", "phone_change", "phone_change_token", "phone_change_sent_at", "email_change_token_current", "email_change_confirm_status", "banned_until", "reauthentication_token", "reauthentication_sent_at", "is_sso_user", "deleted_at", "is_anonymous") FROM stdin;
-00000000-0000-0000-0000-000000000000	f2055315-e56b-4927-bf6d-af94107a5527	authenticated	authenticated	ahsantariq1991@gmail.com	$2a$06$2x6Ui8Sfr5T58X3OKBqYF.asNgmCtCom1UtJ6WnRa5gRz0wA2S5dO	2026-02-20 10:28:26.144292+00	\N		\N	4ca9f740a9c1768870352ad719a4ff5bfa61bd43897cf02accf12c4a	2026-02-20 10:21:39.720007+00			\N	2026-04-16 10:27:18.806062+00	{"provider": "email", "providers": ["email"]}	{"email_verified": true}	\N	2025-12-02 19:48:33.437278+00	2026-05-05 20:56:28.222912+00	\N	\N			\N		0	\N		\N	f	\N	f
+00000000-0000-0000-0000-000000000000	f2055315-e56b-4927-bf6d-af94107a5527	authenticated	authenticated	ahsantariq1991@gmail.com	$2a$06$2x6Ui8Sfr5T58X3OKBqYF.asNgmCtCom1UtJ6WnRa5gRz0wA2S5dO	2026-02-20 10:28:26.144292+00	\N		\N	4ca9f740a9c1768870352ad719a4ff5bfa61bd43897cf02accf12c4a	2026-02-20 10:21:39.720007+00			\N	2026-04-16 10:27:18.806062+00	{"provider": "email", "providers": ["email"]}	{"email_verified": true}	\N	2025-12-02 19:48:33.437278+00	2026-05-06 12:40:09.895988+00	\N	\N			\N		0	\N		\N	f	\N	f
 00000000-0000-0000-0000-000000000000	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	authenticated	authenticated	ahsantariq.ar@gmail.com	$2a$10$3DpBPdcFmLkNWZci/zEWR.H.Ix5zP7oVx3xpELlREmYs/nZzCt8K6	2025-09-25 01:41:16.910245+00	\N		\N		\N			\N	2026-04-27 12:32:34.770646+00	{"provider": "email", "providers": ["email"]}	{"email_verified": true}	\N	2025-09-25 01:41:16.891607+00	2026-05-05 11:32:09.605288+00	\N	\N			\N		0	\N		\N	f	\N	f
 \.
 
@@ -2268,9 +2270,9 @@ b904b0d7-e684-44b0-af92-adc3ee8ddc3a	f2055315-e56b-4927-bf6d-af94107a5527	2025-1
 983b89b7-cc1e-4106-a772-76cbdeb2c479	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	2025-12-03 15:17:43.51507+00	2025-12-24 13:57:56.190478+00	\N	aal1	\N	2025-12-24 13:57:56.188696	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36	39.35.104.118	\N	\N	\N	\N	\N
 0449a214-ed9a-4834-80f1-9783ff54256f	f2055315-e56b-4927-bf6d-af94107a5527	2026-01-06 11:40:37.705718+00	2026-01-27 12:35:28.432944+00	\N	aal1	\N	2026-01-27 12:35:28.431197	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36	154.192.161.231	\N	\N	\N	\N	\N
 52182c6d-01a1-419c-a801-5051c8259eb8	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	2026-03-09 20:04:42.394378+00	2026-04-30 14:50:00.908612+00	\N	aal1	\N	2026-04-30 14:50:00.908493	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36	39.63.226.44	\N	\N	\N	\N	\N
-6a6640ef-5061-4d11-a6dc-4f7c9eddcf4e	f2055315-e56b-4927-bf6d-af94107a5527	2026-04-16 10:27:18.806157+00	2026-05-05 20:56:28.233741+00	\N	aal1	\N	2026-05-05 20:56:28.233636	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36	154.80.38.135	\N	\N	\N	\N	\N
 9cb659a4-7a11-4920-80aa-511f14695254	f2055315-e56b-4927-bf6d-af94107a5527	2026-01-27 12:35:52.164655+00	2026-02-18 22:58:18.654495+00	\N	aal1	\N	2026-02-18 22:58:18.653073	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36	154.192.169.161	\N	\N	\N	\N	\N
 21c1576b-8982-46ea-8726-d75d45075764	f2055315-e56b-4927-bf6d-af94107a5527	2025-12-03 23:00:25.48268+00	2026-02-19 07:09:08.700012+00	\N	aal1	\N	2026-02-19 07:09:08.69874	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36	72.255.51.34	\N	\N	\N	\N	\N
+6a6640ef-5061-4d11-a6dc-4f7c9eddcf4e	f2055315-e56b-4927-bf6d-af94107a5527	2026-04-16 10:27:18.806157+00	2026-05-06 12:40:09.907669+00	\N	aal1	\N	2026-05-06 12:40:09.907542	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36	154.192.169.185	\N	\N	\N	\N	\N
 14cc552e-9782-49d7-bf4b-7ab1d980d555	f2055315-e56b-4927-bf6d-af94107a5527	2026-04-08 10:08:02.212516+00	2026-04-16 10:27:07.60049+00	\N	aal1	\N	2026-04-16 10:27:07.600387	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36	154.192.161.203	\N	\N	\N	\N	\N
 b8482f54-9f1a-4292-9268-0001dedebb55	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	2026-02-26 09:43:27.66397+00	2026-04-16 11:19:28.50148+00	\N	aal1	\N	2026-04-16 11:19:28.500087	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36	39.63.248.4	\N	\N	\N	\N	\N
 fc8bf150-aa1c-4847-8a83-2a041d09402f	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	2025-12-03 10:35:25.612968+00	2026-03-07 18:21:37.01467+00	\N	aal1	\N	2026-03-07 18:21:37.014342	Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36	182.186.128.106	\N	\N	\N	\N	\N
@@ -3160,7 +3162,8 @@ COPY "auth"."refresh_tokens" ("instance_id", "id", "token", "user_id", "revoked"
 00000000-0000-0000-0000-000000000000	1120	q7rgevtch4ql	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	t	2026-05-05 08:13:28.814305+00	2026-05-05 11:32:09.586338+00	swj5dihl77if	f25fa760-5d63-48f8-ac8d-00b4f603acbe
 00000000-0000-0000-0000-000000000000	1122	6mzx4vye6uhu	755c0f15-990a-4e0d-9a1d-03d5de1be7ed	f	2026-05-05 11:32:09.600045+00	2026-05-05 11:32:09.600045+00	q7rgevtch4ql	f25fa760-5d63-48f8-ac8d-00b4f603acbe
 00000000-0000-0000-0000-000000000000	1119	obaq4vpk3wr4	f2055315-e56b-4927-bf6d-af94107a5527	t	2026-05-04 16:06:20.66763+00	2026-05-05 20:56:28.188819+00	ek2jbkflzhmg	6a6640ef-5061-4d11-a6dc-4f7c9eddcf4e
-00000000-0000-0000-0000-000000000000	1123	4yjl6ckpsnqv	f2055315-e56b-4927-bf6d-af94107a5527	f	2026-05-05 20:56:28.211711+00	2026-05-05 20:56:28.211711+00	obaq4vpk3wr4	6a6640ef-5061-4d11-a6dc-4f7c9eddcf4e
+00000000-0000-0000-0000-000000000000	1123	4yjl6ckpsnqv	f2055315-e56b-4927-bf6d-af94107a5527	t	2026-05-05 20:56:28.211711+00	2026-05-06 12:40:09.851313+00	obaq4vpk3wr4	6a6640ef-5061-4d11-a6dc-4f7c9eddcf4e
+00000000-0000-0000-0000-000000000000	1124	llqxmqvx7rn7	f2055315-e56b-4927-bf6d-af94107a5527	f	2026-05-06 12:40:09.880285+00	2026-05-06 12:40:09.880285+00	4yjl6ckpsnqv	6a6640ef-5061-4d11-a6dc-4f7c9eddcf4e
 \.
 
 
@@ -3525,6 +3528,7 @@ a19c6667-0dfc-457f-b301-13b1acf269eb	AR-00104	807eaf6e-d1f5-449e-bcfc-2f27e036d2
 27a4f902-4adf-4b42-b431-c8d2d2961081	AR-00111	893eda74-a0fe-4d2e-8f0f-909b04e5e15d	2026-03-30	2026-04-20			2026-03-30 15:45:00.155382+00	2026-04-30 09:50:16.886249+00	110000.00	\N	\N	other	59cb91c0-5716-4e91-b8e7-e6e396716ced	Delivered
 52b4169d-5925-40b2-80e5-45be4552a93d	AR-00116	813896d4-c1bf-405d-8785-36962484b8dc	2026-04-12	2026-05-01			2026-04-12 12:22:49.986058+00	2026-04-12 12:23:33.070376+00	400000.00	230000.00	\N	other	0adc5d5d-8927-456b-b1f3-42ffebf11d74	In Process
 89c20a60-9318-4951-8129-d168e9a1d697	AR-00117	f4a2ad49-a848-4eb2-976c-762840257f69	2026-05-03	2026-05-28			2026-05-03 16:02:55.687326+00	2026-05-03 16:02:55.687326+00	168000.00	100000.00	\N	other	\N	In Process
+7ea983c0-42a9-4f1c-a00a-8023bb45ae69	AR-00118	813896d4-c1bf-405d-8785-36962484b8dc	2026-05-06	2026-05-13			2026-05-06 12:51:36.243085+00	2026-05-06 12:51:36.243085+00	75000.00	\N	\N	other	0adc5d5d-8927-456b-b1f3-42ffebf11d74	In Process
 \.
 
 
@@ -4803,6 +4807,8 @@ bdc87fd5-328a-46ab-9600-5a7e980eb08f	79db47c6-b44f-4570-83fc-869200510c1a	wallim
 b7a52c09-0e69-4a4c-8bf6-0547fb71ccd8	27a4f902-4adf-4b42-b431-c8d2d2961081	wallima	HJ DSN \n2PC\nIN NAVY BLUE CLR SHAWL LAPAL\nEMB ON LAPAL AND CUFF\nWITH PLEATED SHIRT AND SEQ BOW	2026-04-30 09:50:17.403826+00	2026-04-30 09:50:17.403826+00
 d3e8e883-4998-44fd-91f9-101f25bfaf7e	0f16a7c6-fe4a-4271-8854-7e0832618edb	nikkah	POWDER PINK DSN ONLY MOTIFS WITH BORDER IN SHERWANI\nON OFFWHITE CLR\nBAN EMB DSN SAME AS HS\nWITH OFF WHITE PANT	2026-04-30 09:51:18.820024+00	2026-04-30 09:51:18.820024+00
 5108780a-30a1-4da0-befd-c18043842f2a	89c20a60-9318-4951-8129-d168e9a1d697	nikkah	7 WAISTCOATS WITH SUIT STITCHING	2026-05-03 16:02:56.057583+00	2026-05-03 16:02:56.057583+00
+4b6e9d48-2b11-489f-86bf-605278522bb9	7ea983c0-42a9-4f1c-a00a-8023bb45ae69	other	wash n wear suit with sayyam open waist coat sevorski	2026-05-06 12:51:36.603851+00	2026-05-06 12:51:36.603851+00
+04b3a05d-e916-4252-807b-d49f56b68ae4	7ea983c0-42a9-4f1c-a00a-8023bb45ae69	mehndi	embroided kurta and trouser zinc color	2026-05-06 12:51:36.603851+00	2026-05-06 12:51:36.603851+00
 \.
 
 
@@ -5851,13 +5857,13 @@ COPY "storage"."vector_indexes" ("id", "name", "bucket_id", "data_type", "dimens
 -- Name: refresh_tokens_id_seq; Type: SEQUENCE SET; Schema: auth; Owner: supabase_auth_admin
 --
 
-SELECT pg_catalog.setval('"auth"."refresh_tokens_id_seq"', 1123, true);
+SELECT pg_catalog.setval('"auth"."refresh_tokens_id_seq"', 1124, true);
 
 
 --
 -- PostgreSQL database dump complete
 --
 
--- \unrestrict dEPMS2V1x3xfWDmxRZTc1gVLl8DBmIbGK2Rg4Y0VkAdVgsau6SQFbwstftnX5wL
+-- \unrestrict dPHjxoGLcXVXeXfr8x3wTcajgchiHlzcZ0KOTCDmiS1xPjodTbeSOrQNzxhp5gW
 
 RESET ALL;
